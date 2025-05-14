@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Charactermovementscript : MonoBehaviour
+public class Scottie_Controller : MonoBehaviour
 {
     public float speed = 5; //public -> can see in unity
     private float movement; //private -> can only be seen/changed/referenced to in the script
@@ -13,7 +13,7 @@ public class Charactermovementscript : MonoBehaviour
 
     public Vector3 respawnPosition; //Store a respawn pos the player will go to whenever she dies
 
-    public LevelManager LvlManager; //Make a ref to lvlmanager script
+    //public LevelManager LvlManager; //Make a ref to lvlmanager script
 
     public bool canMove = true; //When game is paused, player cannot move
 
@@ -27,7 +27,7 @@ public class Charactermovementscript : MonoBehaviour
 
         respawnPosition = transform.position; //When game starts, respawn pos = current player pos
 
-        theLevelManager = FindAnyObjectByType<LvlManager>();
+        //LvlManager = FindAnyObjectByType<LvlManager>();
         //Can't use GetComponent to get LevelManager script component bc this script is attatched to the "Player" game object. They are diff gam objs, so we have to use FindObjectOfType<>.
     }
 
@@ -40,7 +40,6 @@ public class Charactermovementscript : MonoBehaviour
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, realGround); //Groundcheck
 
         Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.velocity = new Vector2(movement, rigidbody.velocity.y);
