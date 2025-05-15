@@ -293,10 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e4d1995f7e0644ab4f59b80e70457c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rigidbody: {fileID: 0}
-  respawnPosition: {x: 0, y: 0, z: 0}
-  canMove: 1
+  MoveSpeed: 5
 --- !u!1 &1979207196
 GameObject:
   m_ObjectHideFlags: 0

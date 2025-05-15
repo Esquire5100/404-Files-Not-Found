@@ -4,75 +4,45 @@ using UnityEngine;
 
 public class Scottie_Controller : MonoBehaviour
 {
-    public float speed = 5; //public -> can see in unity
-    private float movement; //private -> can only be seen/changed/referenced to in the script
-    private float horizontalInput;
+    public float MoveSpeed = 5f; //how fast the character moves
 
-    new public Rigidbody2D rigidbody; //make reference to the Rigidbody2D component in unity
+    private Rigidbody2D rb; //make a ref to the rigidbody2D component
+    private float movement;
 
-    private Animator myAnim; //Store a ref to animtions to access later
+    private bool facingRight = true;
 
-    public Vector3 respawnPosition; //Store a respawn pos the player will go to whenever she dies
-
-    //public LevelManager LvlManager; //Make a ref to lvlmanager script
-
-    public bool canMove = true; //When game is paused, player cannot move
-
-    // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        //Checks the obj "rigidbody" is tagged to for a component called "Rigidbody2D". In this case, it's the player because we are currently in the player script.
-        //i.e. GetComponent can only be used within the same script/current game obj
-        myAnim = GetComponent<Animator>();
-
-        respawnPosition = transform.position; //When game starts, respawn pos = current player pos
-
-        //LvlManager = FindAnyObjectByType<LvlManager>();
-        //Can't use GetComponent to get LevelManager script component bc this script is attatched to the "Player" game object. They are diff gam objs, so we have to use FindObjectOfType<>.
+        rb = GetComponent<Rigidbody2D>(); //Checks the current obj for a component called "Rigidbody2D". In this case, the current obj is the player because we are currently in the player script.
+        //(GetComponent can only be used within the same script/current game obj)
     }
 
-    // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        //Get horizontal input (-1 for left, 1 for right, 0 for none)
+        movement = Input.GetAxisRaw("Horizontal");
 
-        if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
-        else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        //For making sure the character faces the direction it's moving in
+        if (movement < 0)
+        {
+            //moving left -> sprite flips to the left
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = true;
+            facingRight = false;
+        }
 
-        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = new Vector2(movement, rigidbody.velocity.y);
-
-        //Setting up Parameters in the Animator
-        myAnim.SetFloat("Speed", Mathf.Abs(rigidbody.velocity.x));
+        if (movement > 0)
+        {
+            //moving right -> sprite doesnt flip
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = false;
+            facingRight = true;
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D other) //when player collider comes in contact with another collider
+    void FixedUpdate()
     {
-
-    }
-
-    float moveDirection = 0;
-    //Code for left and right movement
-    public void Move(float dir)
-    {
-        if (dir > 0)
-        {
-            rigidbody.velocity = new Vector2(speed, rigidbody.velocity.y);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
-        else if (dir < 0)
-        {
-            rigidbody.velocity = new Vector2(-speed, rigidbody.velocity.y);
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        }
-        else
-        {
-            rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
-        }
-
-        moveDirection = dir;
+        // Move the character left or right
+        rb.velocity = new Vector2(movement * MoveSpeed, rb.velocity.y);
     }
 }
