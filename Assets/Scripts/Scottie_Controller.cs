@@ -51,7 +51,7 @@ public class Scottie_Controller : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            SceneManager.LoadScene("Game Over");
+            //SceneManager.LoadScene("Game Over");
         }
     }
 }
