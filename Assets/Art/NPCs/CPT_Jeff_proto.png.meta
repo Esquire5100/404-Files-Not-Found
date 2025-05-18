@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d55ea1701cbae64ebf934cad31bbc79
+guid: 570dd9ec45e923547a5f757f616c5b2e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Prototype_Scott_Idle_0
+      name: CPT_Jeff_proto_0
       rect:
         serializedVersion: 2
-        x: 317
-        y: 59
-        width: 412
-        height: 850
+        x: 840
+        y: 46
+        width: 353
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2381ccf540875344b8d9940b0dfbc25d
-      internalID: -1732963639
+      spriteID: 63c2f7aff4e16c74db7851ee707fd1c0
+      internalID: 860988935
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Prototype_Scott_Idle_0: -1732963639
+      CPT_Jeff_proto_0: 860988935
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
