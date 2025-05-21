@@ -46,12 +46,4 @@ public class Scottie_Controller : MonoBehaviour
         // Move the character left or right
         rb.velocity = new Vector2(movement * MoveSpeed, rb.velocity.y);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            SceneManager.LoadScene("Game Over");
-        }
-    }
 }

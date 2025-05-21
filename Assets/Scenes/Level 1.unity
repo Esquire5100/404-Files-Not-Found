@@ -685,6 +685,8 @@ MonoBehaviour:
   waitTime: 2
   movingRight: 0
   sr: {fileID: 542679766}
+  player: {fileID: 427382077}
+  FOVTransform: {fileID: 1909046064}
 --- !u!50 &542679769
 Rigidbody2D:
   serializedVersion: 4
@@ -1224,6 +1226,7 @@ MonoBehaviour:
   WhoICanSee:
     serializedVersion: 2
     m_Bits: 320
+  guard: {fileID: 542679768}
 --- !u!68 &1909046066
 EdgeCollider2D:
   m_ObjectHideFlags: 0
