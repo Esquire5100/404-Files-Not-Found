@@ -64,7 +64,7 @@ public class Guard_Controller : MonoBehaviour
         {
             //Move to player pos
             Vector2 direction = (player.position - transform.position).normalized;
-            enemyRb.velocity = new Vector2(direction.x * moveSpeed, enemyRb.velocity.y);
+            enemyRb.velocity = new Vector2(direction.x * moveSpeed * 3.5f, enemyRb.velocity.y);
 
             //Flip sprite and FOV to face player
             if (direction.x > 0.1f) //Face right

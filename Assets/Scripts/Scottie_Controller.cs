@@ -8,14 +8,15 @@ public class Scottie_Controller : MonoBehaviour
     public float MoveSpeed = 5f; //how fast the character moves
 
     private Rigidbody2D rb; //make a ref to the rigidbody2D component
+    private SpriteRenderer sr;
     private float movement;
 
-    private bool facingRight = true;
+    private bool isHidden = false; //is 'false' by default because we want the default tag to be "Player"
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); //Checks the current obj for a component called "Rigidbody2D". In this case, the current obj is the player because we are currently in the player script.
-        //(GetComponent can only be used within the same script/current game obj)
+        rb = GetComponent<Rigidbody2D>(); //Get easy access to the Rigidbody2D component
+        sr = GetComponent<SpriteRenderer>(); //Get easy access to the SpriteRenderer component
     }
 
     void Update()
@@ -27,17 +28,20 @@ public class Scottie_Controller : MonoBehaviour
         if (movement < 0)
         {
             //moving left -> sprite flips to the left
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.flipX = true;
-            facingRight = false;
+            sr.flipX = true;
         }
 
         if (movement > 0)
         {
             //moving right -> sprite doesnt flip
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.flipX = false;
-            facingRight = true;
+            sr.flipX = false;
+        }
+
+        //Toggle between "Player" and "Hidden" Tags in unity (so that the enemies can't detect the player)
+        if (Input.GetKeyDown("e"))
+        {
+            isHidden = !isHidden; //Changes 'isHidden' to true
+            gameObject.tag = isHidden ? "Hidden" : "Player"; //The "?" means "value if true" : "value if false". It's cleaner than a lot of if-else statements
         }
     }
 

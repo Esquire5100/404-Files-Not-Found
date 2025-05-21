@@ -35,8 +35,8 @@ public class FOV_Script : MonoBehaviour
             if (result.collider != null && result.collider.CompareTag("Player")) //The && is a double check to make sure it is specifically the player that is detected and not the ground or bg
             {
                 //...then change colour to a light red and start chasing the player
-                sr.color = new Color32(255, 150, 150, 255); 
-                guard.StartChase(other.transform); 
+                sr.color = new Color32(255, 150, 150, 255);
+                guard.StartChase(other.transform);
             }
 
             //If player is not detected (blocked/not visible) then...
@@ -45,6 +45,12 @@ public class FOV_Script : MonoBehaviour
                 sr.color = new Color32(255, 255, 255, 255); //Reset the colours back to normal
                 guard.StopChase(); //Stop chasing the player
             }
+        }
+
+        if (other.CompareTag("Hidden"))
+        {
+            sr.color = new Color32(255, 255, 255, 255); //Reset the colours back to normal
+            guard.StopChase(); //Stop chasing the player
         }
     }
 
