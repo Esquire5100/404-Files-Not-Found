@@ -70,12 +70,12 @@ public class Guard_Controller : MonoBehaviour
             if (direction.x > 0.1f) //Face right
             {
                 sr.flipX = true;
-                FOVTransform.localScale = new Vector3(3.7f, FOVTransform.localPosition.y, 0); //Moves the FOV following the parents' (guard)
+                FOVTransform.localScale = new Vector3(-1, 1, 1); //Moves the FOV following the parents' (guard)
             }
             else if (direction.x < -0.1f) //Face left
             {
                 sr.flipX = false;
-                FOVTransform.localScale = new Vector3(-1, 1, 1); //Moves the FOV with an offset, otherwise the FOV will be inaccurate to where we want it to be
+                FOVTransform.localScale = new Vector3(1, 1, 1); //Moves the FOV with an offset, otherwise the FOV will be inaccurate to where we want it to be
             }
         }
 
@@ -86,7 +86,8 @@ public class Guard_Controller : MonoBehaviour
             {
                 enemyRb.velocity = new Vector2(moveSpeed, enemyRb.velocity.y);
                 sr.flipX = true; //Flips the sprite so it faces the direction it's moving
-                FOVTransform.localScale = new Vector3(3.7f, FOVTransform.localPosition.y, 0); 
+                FOVTransform.localScale = new Vector3(-1, 1, 1);
+                FOVTransform.GetComponent<EdgeCollider2D>().offset = new Vector3(3.7f, 0, 0); //Offset to make the collider be in the desired position: in front of the guards face
 
                 //If enemy is moving right and has gone past the right point, it should pause for a bit, turn around, then move left
                 if (transform.position.x >= rightPoint.position.x)
@@ -99,7 +100,8 @@ public class Guard_Controller : MonoBehaviour
             {
                 enemyRb.velocity = new Vector2(-moveSpeed, enemyRb.velocity.y);
                 sr.flipX = false; //Doesn't flip the sprite so it faces the direction it's moving
-                FOVTransform.localScale = new Vector3(-1, 1, 1);
+                FOVTransform.localScale = new Vector3(1, 1, 1);
+                FOVTransform.GetComponent<EdgeCollider2D>().offset = new Vector3(0, 0, 0); //Reset the offset to make the collider be in the desired position: in front of the guards face
 
                 //If enemy is moving left and has gone past the left point, it should pause for a bit, turn around, then move right
                 if (transform.position.x <= leftPoint.position.x)
