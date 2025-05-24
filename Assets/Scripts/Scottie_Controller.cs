@@ -13,6 +13,9 @@ public class Scottie_Controller : MonoBehaviour
 
     private bool isHidden = false; //is 'false' by default because we want the default tag to be "Player"
 
+    //Audio Manager
+    AudioManager audioManager;      //reference Audio Manager Script
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //Get easy access to the Rigidbody2D component
@@ -49,5 +52,12 @@ public class Scottie_Controller : MonoBehaviour
     {
         // Move the character left or right
         rb.velocity = new Vector2(movement * MoveSpeed, rb.velocity.y);
+    }
+
+    //Audio Scripts
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
     }
 }
