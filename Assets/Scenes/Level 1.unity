@@ -1580,6 +1580,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   guard: {fileID: 542679768}
+  lightTransform: {fileID: 0}
 --- !u!68 &1909046066
 EdgeCollider2D:
   m_ObjectHideFlags: 0

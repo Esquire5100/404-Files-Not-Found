@@ -9,6 +9,7 @@ public class FOV_Script : MonoBehaviour
     public Guard_Controller guard; //Ref to the Guard Controller script
 
     private Transform player;
+    public Transform lightTransform; //Make ref to the light GameObj (child)
 
     // Start is called before the first frame update
     void Start()
