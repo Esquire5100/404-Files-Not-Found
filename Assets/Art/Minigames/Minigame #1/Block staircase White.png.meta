@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3cede5f1de74d32499c5103ffe3ff07f
+guid: 8fc611ade5b3d57478bfe21dce47b82a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,70 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Camera Sprite Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 2664
-        width: 1336
-        height: 624
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c45d0329509437748aac39c4588c7a62
-      internalID: -1534328244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camera Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 3680
-        y: 2244
-        width: 712
-        height: 1044
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eda6372e4369f5940856b22f56e4c8c8
-      internalID: 586721703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camera Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 6588
-        y: 2664
-        width: 1332
-        height: 624
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d029964c517fd440a39ea91d67ab308
-      internalID: 1999679746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -195,17 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Camera Sprite Sheet_0: -1534328244
-      Camera Sprite Sheet_1: -389680034
-      Camera Sprite Sheet_2: 586721703
-      Camera Sprite Sheet_3: 1893582357
-      Camera Sprite Sheet_4: 1999679746
-      Camera Sprite Sheet_5: -1955112675
-      Camera Sprite Sheet_6: 660881225
-      Camera Sprite Sheet_7: -1935426841
-      Camera Sprite Sheet_8: -1155651745
-      Camera Sprite Sheet_9: -399592176
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
