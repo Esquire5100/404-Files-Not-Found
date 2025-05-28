@@ -276,6 +276,8 @@ MonoBehaviour:
   leftCamera: {fileID: -1534328244, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
   centreCamera: {fileID: 586721703, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
   rightCamera: {fileID: 1999679746, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
+  FOVTransform: {fileID: 1157782053}
+  lightTransform: {fileID: 1221307777}
 --- !u!212 &209495785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -317,7 +319,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1534328244, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
+  m_Sprite: {fileID: 586721703, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

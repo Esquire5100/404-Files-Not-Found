@@ -11,6 +11,8 @@ public class SecurityCamera : MonoBehaviour
     public Sprite centreCamera;                         //centre
     public Sprite rightCamera;                          //right
 
+    public Transform FOVTransform;                      //Ref to the FOV GameObj (child)
+    public Transform lightTransform;                    //Make ref to the light GameObj (child)
 
     // Start is called before the first frame update
     void Start()        
@@ -31,10 +33,13 @@ public class SecurityCamera : MonoBehaviour
         {
             yield return new WaitForSeconds(3f);
             sr.sprite = leftCamera;
+
             yield return new WaitForSeconds(3f);
             sr.sprite = centreCamera;
+            
             yield return new WaitForSeconds(3f);
             sr.sprite = rightCamera;
+
             yield return new WaitForSeconds(3f);
             sr.sprite = centreCamera;
         }
