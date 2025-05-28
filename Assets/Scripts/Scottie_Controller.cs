@@ -13,13 +13,15 @@ public class Scottie_Controller : MonoBehaviour
 
     private bool isHidden = false; //is 'false' by default because we want the default tag to be "Player"
 
-    //Audio Manager
-    AudioManager audioManager;      //reference Audio Manager Script
+    private Animator myAnim; //Store a ref to animtions to access later
+
+    AudioManager audioManager; //reference the Audio Manager Script
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //Get easy access to the Rigidbody2D component
         sr = GetComponent<SpriteRenderer>(); //Get easy access to the SpriteRenderer component
+        myAnim = GetComponent<Animator>(); //Get easy access to the Animator component
     }
 
     void Update()
@@ -46,6 +48,9 @@ public class Scottie_Controller : MonoBehaviour
             isHidden = !isHidden; //Changes 'isHidden' to true
             gameObject.tag = isHidden ? "Hidden" : "Player"; //The "?" means "value if true" : "value if false". It's cleaner than a lot of if-else statements
         }
+
+        //Setting up Parameters in the Animator
+        myAnim.SetFloat("MoveSpeed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
     }
 
     void FixedUpdate()
