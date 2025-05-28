@@ -25,7 +25,7 @@ public class SecurityCamera : MonoBehaviour
         
     }
 
-    IEnumerator ChangeSpriteAfterDelay()                //Make sprite change after specified times        
+    IEnumerator ChangeSpriteAfterDelay()               //Make sprite change after specified times (the sprites make it look like it's oscillating)  
     {
         for(; ; )
         {
@@ -35,6 +35,8 @@ public class SecurityCamera : MonoBehaviour
             sr.sprite = centreCamera;
             yield return new WaitForSeconds(3f);
             sr.sprite = rightCamera;
+            yield return new WaitForSeconds(3f);
+            sr.sprite = centreCamera;
         }
         
     }
