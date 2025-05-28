@@ -121,7 +121,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1443
+        width: 249
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e249d0434d5d647ba596a7e43283f7
+      internalID: -576215507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1443
+        width: 276
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a804133dd4c449642b1af3cfbb36cf61
+      internalID: -493160634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1443
+        width: 276
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc319c3aa61b3747aed49e695e3360b
+      internalID: 48358130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1443
+        width: 276
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a696f4216c0534d4c94253019c462b6d
+      internalID: -1152162335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 1443
+        width: 276
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c2d66078c40e94da1236ca374a9010
+      internalID: 2060072831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 750
+        width: 276
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d82fcde18cbe1f4d86445caaa8e5dc2
+      internalID: 1812543881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 750
+        width: 276
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82298067f504f244b23b3f6d3bee5f3
+      internalID: -463013316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 750
+        width: 276
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c6c39aaebc84b4b949d280e4dccab8
+      internalID: -1591498369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 750
+        width: 276
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d2b335c20516c4ea390c27add63d2e
+      internalID: 282027130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 750
+        width: 276
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8e8d7767dd7f046aeef992e712a040
+      internalID: -692524504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +342,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scott_INVIS_Idle_0: -576215507
+      Scott_INVIS_Idle_1: -493160634
+      Scott_INVIS_Idle_2: 48358130
+      Scott_INVIS_Idle_3: -1152162335
+      Scott_INVIS_Idle_4: 2060072831
+      Scott_INVIS_Idle_5: 1812543881
+      Scott_INVIS_Idle_6: -463013316
+      Scott_INVIS_Idle_7: -1591498369
+      Scott_INVIS_Idle_8: 282027130
+      Scott_INVIS_Idle_9: -692524504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

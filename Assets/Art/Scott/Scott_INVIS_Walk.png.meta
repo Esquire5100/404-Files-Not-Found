@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1448
+        width: 332
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a909675644621141b3f66a4498e53d2
+      internalID: 487274962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1448
+        width: 261
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d163e4562649c644be8d2a6775f3613
+      internalID: -1912449596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1448
+        width: 304
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfca262fe14cabc48ae3724e97510944
+      internalID: 232555832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1445
+        width: 381
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6253fad499dab49805834e745b84f4
+      internalID: 1013494958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 748
+        width: 298
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ce95ed8f64c8a47904cad2fbee8ea7
+      internalID: 750686956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_INVIS_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 753
+        width: 299
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f397f132870eb141adb86e68c57af57
+      internalID: 152106678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scott_INVIS_Walk_0: 487274962
+      Scott_INVIS_Walk_1: -1912449596
+      Scott_INVIS_Walk_2: 232555832
+      Scott_INVIS_Walk_3: 1013494958
+      Scott_INVIS_Walk_4: 750686956
+      Scott_INVIS_Walk_5: 152106678
+      Scott_INVIS_Walk_6: -2143613836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
