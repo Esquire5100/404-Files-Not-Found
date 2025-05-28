@@ -37,9 +37,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Files");
     }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }
