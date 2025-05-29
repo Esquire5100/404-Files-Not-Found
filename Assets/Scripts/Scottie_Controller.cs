@@ -20,14 +20,15 @@ public class Scottie_Controller : MonoBehaviour
 
     LvlManager thelvlManager;                                                    //Reference Level Manager
 
-    private SpriteRenderer rend;                                                 //define player's layer in the game
+    private bool canHide = false;                                                //Define if player is able to hde or not
+    private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();                                        //Get easy access to the Rigidbody2D component
         sr = GetComponent<SpriteRenderer>();                                     //Get easy access to the SpriteRenderer component
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
-        thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
+        thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manag
     }
 
     void Update()
@@ -50,6 +51,17 @@ public class Scottie_Controller : MonoBehaviour
 
         //Setting up Parameters in the Animator
         myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
+
+        if (canHide)
+        {
+            Physics2D.IgnoreLayerCollision(3, 6, true);
+            sr.sortingOrder = 0;
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(3,6, false);
+            sr.sortingOrder = 3;
+        }
     }
 
     //Audio Scripts
@@ -77,5 +89,33 @@ public class Scottie_Controller : MonoBehaviour
         }
         moveDirection = dir;
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+
+    {
+        if(other.gameObject.name.Equals("Table"))                                //If name of gameObject is detected, player is able to hide in said object
+        {
+        canHide = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)                               //If name of gameObject is exited, player will not be hide anymore
+    {
+        if(other.gameObject.name.Equals("Table"))
+        {
+            canHide = false;
+        }
+    }
+
+    public void Hide()
+    {
+        if (canHide)
+        {
+            hiding = true;
+        }
+        else
+        {
+            hiding = false;
+        }
+    }
 }
