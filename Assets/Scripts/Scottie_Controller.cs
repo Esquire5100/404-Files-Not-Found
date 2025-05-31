@@ -28,7 +28,7 @@ public class Scottie_Controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();                                        //Get easy access to the Rigidbody2D component
         sr = GetComponent<SpriteRenderer>();                                     //Get easy access to the SpriteRenderer component
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
-        thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manag
+        thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
     }
 
     void Update()
@@ -52,16 +52,6 @@ public class Scottie_Controller : MonoBehaviour
         //Setting up Parameters in the Animator
         myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
 
-        if (canHide)
-        {
-            Physics2D.IgnoreLayerCollision(3, 6, true);
-            sr.sortingOrder = 0;
-        }
-        else
-        {
-            Physics2D.IgnoreLayerCollision(3,6, false);
-            sr.sortingOrder = 3;
-        }
     }
 
     //Audio Scripts
@@ -90,12 +80,24 @@ public class Scottie_Controller : MonoBehaviour
         moveDirection = dir;
     }
 
+   /*public void FixedUpdate()
+    {
+        if (!hiding)
+        {
+            rb.velocity = new Vector2 (dir, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2.zero;
+        }
+    }*/
+
     private void OnTriggerEnter2D(Collider2D other)
 
     {
         if(other.gameObject.name.Equals("Table"))                                //If name of gameObject is detected, player is able to hide in said object
         {
-        canHide = true;
+            canHide = true;
         }
     }
 
@@ -111,10 +113,14 @@ public class Scottie_Controller : MonoBehaviour
     {
         if (canHide)
         {
+            Physics2D.IgnoreLayerCollision(6, 11, true);
+            sr.sortingOrder = 1;
             hiding = true;
         }
         else
         {
+            Physics2D.IgnoreLayerCollision(6, 11, false);
+            sr.sortingOrder = 2;
             hiding = false;
         }
     }

@@ -8,11 +8,12 @@ TagManager:
   - FOV
   - Audio
   - Hidden
+  - Table
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Prop
+  - 
   - Water
   - UI
   - Player
@@ -20,7 +21,7 @@ TagManager:
   - Ground
   - Background
   - Foreground
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3209347477
+    locked: 0
+  - name: Prop
+    uniqueID: 104947397
     locked: 0
   - name: Default
     uniqueID: 0
