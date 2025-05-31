@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 72970e3448e376d4fad512ddc3c3211d
+guid: 116d4984cc439b64f8597e0ec4297184
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Interact button hack_0
+      name: MM_Play_0
       rect:
         serializedVersion: 2
-        x: 365
-        y: 958
-        width: 3312
-        height: 2029
+        x: 62
+        y: 150
+        width: 396
+        height: 203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd6737efd225ae40b77dd145686ffa7
-      internalID: 1830858233
+      spriteID: 161ce1036ff22184dae89f804b5efe0d
+      internalID: 644396286
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Interact button hack_0: 1830858233
+      MM_Play_0: 644396286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

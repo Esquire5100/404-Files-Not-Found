@@ -37,13 +37,9 @@ public class SecurityCamera : MonoBehaviour
     {
         for (; ; )                                      //Infinite loop to keep oscillating
         {
-            yield return new WaitForSeconds(3f);        //Wait 3 seconds before switching
-            sr.sprite = leftCamera;                     //Switch sprite to left-facing camera
-            SetActiveLight(leftLight);                  //Enable only the left light
-
-            yield return new WaitForSeconds(3f);
-            sr.sprite = centreCamera;
-            SetActiveLight(centreLight);
+            yield return new WaitForSeconds(3f);        //Wait 3s
+            sr.sprite = centreCamera;                   //Switch sprite to centre camera
+            SetActiveLight(centreLight);                //Enable only the centre light + FOV
 
             yield return new WaitForSeconds(3f);
             sr.sprite = rightCamera;
@@ -52,6 +48,10 @@ public class SecurityCamera : MonoBehaviour
             yield return new WaitForSeconds(3f);
             sr.sprite = centreCamera;
             SetActiveLight(centreLight);
+
+            yield return new WaitForSeconds(3f);
+            sr.sprite = leftCamera;
+            SetActiveLight(leftLight);
         }
     }
 
