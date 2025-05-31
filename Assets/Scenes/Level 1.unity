@@ -4918,10 +4918,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11097205939478381, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1534328244, guid: 3cede5f1de74d32499c5103ffe3ff07f, type: 3}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera
@@ -4966,18 +4962,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3599706574476694967, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3775651966352902310, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1188642186}
-    - target: {fileID: 6132358613419508399, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6260924190232973038, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: player
       value: 
@@ -5072,8 +5060,9 @@ SceneRoots:
   - {fileID: 721332842}
   - {fileID: 1549105379}
   - {fileID: 441081031}
-  - {fileID: 1513151534}
   - {fileID: 1980677822}
+  - {fileID: 180206443}
+  - {fileID: 1513151534}
   - {fileID: 1188642186}
   - {fileID: 1602719675408075736}
   - {fileID: 342720536279414798}
@@ -5082,4 +5071,3 @@ SceneRoots:
   - {fileID: 1142635244}
   - {fileID: 1211679795}
   - {fileID: 1932129371}
-  - {fileID: 180206443}
