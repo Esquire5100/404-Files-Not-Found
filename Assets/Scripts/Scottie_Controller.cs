@@ -80,18 +80,6 @@ public class Scottie_Controller : MonoBehaviour
         moveDirection = dir;
     }
 
-   /*public void FixedUpdate()
-    {
-        if (!hiding)
-        {
-            rb.velocity = new Vector2 (dir, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2.zero;
-        }
-    }*/
-
     private void OnTriggerEnter2D(Collider2D other)
 
     {
