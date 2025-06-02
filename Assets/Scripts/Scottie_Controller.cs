@@ -99,10 +99,10 @@ public class Scottie_Controller : MonoBehaviour
 
     public void Hide()
     {
-        if (canHide)
+        if(canHide)
         {
             Physics2D.IgnoreLayerCollision(6, 11, true);
-            sr.sortingOrder = 1;
+            sr.sortingOrder = 0;
             hiding = true;
         }
         else
