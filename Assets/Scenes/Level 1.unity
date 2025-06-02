@@ -2852,7 +2852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014975351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1188642179}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014975351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3498,6 +3510,7 @@ GameObject:
   - component: {fileID: 1188642182}
   - component: {fileID: 1188642181}
   - component: {fileID: 1188642180}
+  - component: {fileID: 1188642187}
   m_Layer: 6
   m_Name: Scott
   m_TagString: Player
@@ -3539,6 +3552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3.5
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.5
+  flashSpeed: 10
 --- !u!50 &1188642182
 Rigidbody2D:
   serializedVersion: 4
@@ -3724,6 +3740,21 @@ Transform:
   - {fileID: 1293293696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1188642187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188642179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8881e6120da61d74395a0a3aed791f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlightPrefab: {fileID: 7925247515659130630, guid: aef2a25ea4c472145a591afcb408bfb0, type: 3}
+  interval: 5
+  toggleButton: {fileID: 1014975350}
 --- !u!4 &1263457924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
@@ -5013,6 +5044,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.45
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (1)
