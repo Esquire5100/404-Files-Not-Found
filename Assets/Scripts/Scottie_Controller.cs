@@ -42,12 +42,12 @@ public class Scottie_Controller : MonoBehaviour
             Move(moveDirection);
         }
 
-        //Toggle between "Player" and "Hidden" Tags in unity (so that the enemies can't detect the player)
+        /*Toggle between "Player" and "Hidden" Tags in unity (so that the enemies can't detect the player)
         if (Input.GetKeyDown("e"))
         {
             isHidden = !isHidden;                                               //Changes 'isHidden' to true
             gameObject.tag = isHidden ? "Hidden" : "Player";                    //The "?" means "value if true" : "value if false". It's cleaner than a lot of if-else statements
-        }
+        }*/
 
         //Setting up Parameters in the Animator
         myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
@@ -61,6 +61,7 @@ public class Scottie_Controller : MonoBehaviour
         //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
     }
 
+    //Movement Script
     public void Move(float dir)
     {
         if (dir > 0)
@@ -80,6 +81,8 @@ public class Scottie_Controller : MonoBehaviour
         moveDirection = dir;
     }
 
+
+    //Hiding Script
     private void OnTriggerEnter2D(Collider2D other)
 
     {
@@ -97,16 +100,19 @@ public class Scottie_Controller : MonoBehaviour
         }
     }
 
+    //Mobile Control for hiding
     public void Hide()
     {
-        if(canHide)
+        if(!hiding && canHide)
         {
+            Physics2D.IgnoreLayerCollision(6, 7, true);
             Physics2D.IgnoreLayerCollision(6, 11, true);
             sr.sortingOrder = 0;
             hiding = true;
         }
         else
         {
+            Physics2D.IgnoreLayerCollision(6, 7, false);
             Physics2D.IgnoreLayerCollision(6, 11, false);
             sr.sortingOrder = 2;
             hiding = false;
