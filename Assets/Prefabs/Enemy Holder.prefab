@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6554877263498358674}
   - component: {fileID: 6905749011170673017}
   - component: {fileID: 2969502912032753366}
+  - component: {fileID: 6934326144498069277}
   m_Layer: 11
   m_Name: Cpt Jeff
   m_TagString: Untagged
@@ -144,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 942926805
   m_SortingLayer: -2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 860988935, guid: 570dd9ec45e923547a5f757f616c5b2e, type: 3}
+  m_Sprite: {fileID: -1282282017, guid: 03d25439cc982d2408f942cd8a7ceb4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,7 +192,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.412, y: 3.288}
+    oldSize: {x: 1.21875, y: 2.9140625}
     newSize: {x: 1.412, y: 3.288}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -236,7 +237,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.412, y: 3.288}
+    oldSize: {x: 1.21875, y: 2.9140625}
     newSize: {x: 1.412, y: 3.288}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -293,6 +294,27 @@ MonoBehaviour:
   player: {fileID: 0}
   FOVTransform: {fileID: 3926697622940064577}
   lightTransform: {fileID: 6645312042026440867}
+--- !u!95 &6934326144498069277
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042470884535909501}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78bc1035b0e495746a3b33db1becff44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3563421178902449965
 GameObject:
   m_ObjectHideFlags: 0
