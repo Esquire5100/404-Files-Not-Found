@@ -17,9 +17,9 @@ public class LevelExit : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.collider.CompareTag("Player")) //If the Player hits the object...
+        if (other.CompareTag("Player")) //If the Player hits the object...
         {
             SceneManager.LoadScene("Level 2"); //...then bring player to the next level
         }
