@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e59a473282a56084383bbcc942dddabe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - uiCodeImage: {instanceID: 0}
+  - uiCodeInput: {instanceID: 0}
+  - uiErrorsText: {instanceID: 0}
+  - uiRefreshButton: {instanceID: 0}
+  - uiSubmitButton: {instanceID: 0}
+  - captchaGenerator: {fileID: 11400000, guid: afc376682990eb3448e9622d88bc03c4, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
