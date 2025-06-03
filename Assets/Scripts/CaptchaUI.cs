@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //This script handles the UI logic for displaying and validating a captcha
 public class CaptchaUI : MonoBehaviour
@@ -7,7 +8,8 @@ public class CaptchaUI : MonoBehaviour
     [Header("UI References :")] //Organises the Inspector
     [SerializeField] private Image uiCodeImage; //Ref to the UI image that shows the captcha sprite
     [SerializeField] private InputField uiCodeInput; //Ref the input area where the player types the captcha
-    [SerializeField] private Text uiErrorsText; //Ref to the text used for showing errors
+    [SerializeField] private Text uiErrorsText; //Ref to the text shown when u put the wrong code
+    [SerializeField] private Text uiSuccessText; //Ref to the text shown when u put the right code
     [SerializeField] private Button uiRefreshButton; //Button to refresh the captcha
     [SerializeField] private Button uiSubmitButton; //Button to submit the entered captcha
 
@@ -33,6 +35,7 @@ public class CaptchaUI : MonoBehaviour
         currentCaptcha = captchaGenerator.Generate();              //Get a new captcha
         uiCodeImage.sprite = currentCaptcha.Image;                 //Set image to match current captcha
         uiErrorsText.gameObject.SetActive(false);                  //Hide error text if visible
+        uiSuccessText.gameObject.SetActive(false);
     }
 
     //Checks if the player's input matches current captcha
@@ -44,11 +47,16 @@ public class CaptchaUI : MonoBehaviour
         {
             // Correct captcha: hide the error message
             uiErrorsText.gameObject.SetActive(false);
+            uiSuccessText.gameObject.SetActive(true);
+
+            new WaitForSeconds(2f);
+            SceneManager.LoadScene("Level 1"); //bring player back to their position
         }
         else
         {
             // Incorrect captcha: show the error message
             uiErrorsText.gameObject.SetActive(true);
+            uiSuccessText.gameObject.SetActive(false);
         }
     }
 }
