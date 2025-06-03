@@ -47,11 +47,11 @@ public class FOV_Script : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Hidden"))
+        /*if (other.CompareTag("Hidden"))
         {
             sr.color = new Color32(255, 255, 255, 255); //Reset the colours back to normal
             guard.StopChase(); //Stop chasing the player
-        }
+        }*/
     }
 
     void OnTriggerExit2D(Collider2D other)

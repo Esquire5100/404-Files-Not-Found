@@ -23,6 +23,9 @@ public class Scottie_Controller : MonoBehaviour
     private bool canHide = false;                                                //Define if player is able to hde or not
     private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
 
+    public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
+    private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
+
     //FlashLight Varibles
     public GameObject flashlight;
     /*public Color flashColor = Color.white;
@@ -115,6 +118,16 @@ public class Scottie_Controller : MonoBehaviour
         {
             canHide = true;
         }
+
+        
+    }
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Stairs") && !hasTeleported) //If the tag is stairs and the player has not yet teleported
+        {
+            StartCoroutine(UseStairs());
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)                               //If name of gameObject is exited, player will not be hide anymore
@@ -123,6 +136,18 @@ public class Scottie_Controller : MonoBehaviour
         {
             canHide = false;
         }
+
+        if (other.CompareTag("Stairs"))
+        {
+            hasTeleported = false; //Reset when leaving the stairs
+        }
+    }
+
+    private IEnumerator UseStairs()
+    {
+        yield return new WaitForSeconds(2);
+        transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
+        hasTeleported = true;
     }
 
     //Mobile Control for hiding

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9027112556330916428}
   - component: {fileID: 896115302412738428}
   - component: {fileID: 7956763616201125153}
+  - component: {fileID: 8268862629423509515}
   m_Layer: 7
   m_Name: Chasing Jeff
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 860988935, guid: 570dd9ec45e923547a5f757f616c5b2e, type: 3}
+  m_Sprite: {fileID: 597053663, guid: 7932238deef1cdc44988053c1854d84f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.412, y: 3.288}
+    oldSize: {x: 2.203125, y: 2.578125}
     newSize: {x: 1.412, y: 3.288}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -170,7 +171,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.412, y: 3.288}
+    oldSize: {x: 2.203125, y: 2.578125}
     newSize: {x: 1.412, y: 3.288}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -222,6 +223,27 @@ MonoBehaviour:
   movingRight: 0
   sr: {fileID: 9124396181755768878}
   lightTransform: {fileID: 2517678801375601757}
+--- !u!95 &8268862629423509515
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384689153265835189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78bc1035b0e495746a3b33db1becff44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6401219561496049311
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +296,7 @@ MonoBehaviour:
   m_Intensity: 6
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 69c8ddf9d771c459d5eb333895c14abf00000000
+  m_ApplyToSortingLayers: 69c8ddf9d771c459d5eb333800000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

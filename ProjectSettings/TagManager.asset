@@ -7,9 +7,9 @@ TagManager:
   - Enemy
   - FOV
   - Audio
-  - Hidden
   - Table
   - Lift
+  - Stairs
   layers:
   - Default
   - TransparentFX
