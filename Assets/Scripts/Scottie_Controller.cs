@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public class Scottie_Controller : MonoBehaviour
     private SpriteRenderer sr;
     private float movement;
     private float moveDirection = 0;
+    public bool canMove = true;
 
     private bool isHidden = false;                                               //is 'false' by default because we want the default tag to be "Player"
 
@@ -22,6 +24,9 @@ public class Scottie_Controller : MonoBehaviour
 
     private bool canHide = false;                                                //Define if player is able to hde or not
     private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
+    public bool IsHiding {  get; private set; }                                  //Allows guards FOV's scipt to determine if player is hding and adjust behaviour
+    public Sprite normalSprite;                                                  //Allow to assign normal sprite directly from inspector
+    public Sprite crouchingSprite;                                                  //Allow to assign hiding sprite directly from inspector
 
     public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
     private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
@@ -42,7 +47,7 @@ public class Scottie_Controller : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();                                     //Get easy access to the SpriteRenderer component
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
-        //material = sr.material;
+        sr.sprite = normalSprite;
     }
 
     void Update()
@@ -92,8 +97,14 @@ public class Scottie_Controller : MonoBehaviour
     //Movement Script
     public void Move(float dir)
     {
-        if (dir > 0)
+        if (!canMove)
         {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            return;
+        }
+
+        if (dir > 0)
+        {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
         }
@@ -158,14 +169,20 @@ public class Scottie_Controller : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 7, true);
             Physics2D.IgnoreLayerCollision(6, 11, true);
             sr.sortingOrder = 0;
+            sr.sprite = crouchingSprite;
             hiding = true;
+            IsHiding = true;
+            canMove = false;
         }
         else
         {
             Physics2D.IgnoreLayerCollision(6, 7, false);
             Physics2D.IgnoreLayerCollision(6, 11, false);
             sr.sortingOrder = 2;
+            sr.sprite = normalSprite;
             hiding = false;
+            IsHiding = false;
+            canMove = true;
         }
     }
 
