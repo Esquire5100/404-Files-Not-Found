@@ -31,6 +31,11 @@ public class Scottie_Controller : MonoBehaviour
     public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
     private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
 
+    public HackableObject hackableObject;
+
+    private bool playerInTrigger = false;
+    private bool uiButtonPressed = false;
+
     //FlashLight Varibles
     public GameObject flashlight;
     /*public Color flashColor = Color.white;
@@ -129,8 +134,11 @@ public class Scottie_Controller : MonoBehaviour
         {
             canHide = true;
         }
+        if (other.gameObject.CompareTag("Hackable"))
+        {
+            playerInTrigger = true;
+        }
 
-        
     }
     
     private void OnTriggerStay2D(Collider2D other)
@@ -152,6 +160,11 @@ public class Scottie_Controller : MonoBehaviour
         {
             hasTeleported = false; //Reset when leaving the stairs
         }
+
+        if (other.gameObject.CompareTag("Hackable"))
+        {
+            playerInTrigger = false;
+        }
     }
 
     private IEnumerator UseStairs()
@@ -160,6 +173,22 @@ public class Scottie_Controller : MonoBehaviour
         transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
         hasTeleported = true;
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.Comparetag("Hackable"))
+        {
+            playerInTrigger = true;
+        }
+    }*/
+
+    /*private void OnTriggerExit2D(Collider other)
+    {
+        if (other.CompareTag("Hackable"))
+        {
+            playerInTrigger = false;
+        }
+    }*/
 
     //Mobile Control for hiding
     public void Hide()
@@ -173,6 +202,7 @@ public class Scottie_Controller : MonoBehaviour
             hiding = true;
             IsHiding = true;
             canMove = false;
+            
         }
         else
         {
@@ -183,6 +213,7 @@ public class Scottie_Controller : MonoBehaviour
             hiding = false;
             IsHiding = false;
             canMove = true;
+           
         }
     }
 
@@ -199,5 +230,27 @@ public class Scottie_Controller : MonoBehaviour
         flashlight.SetActive(flashlight); 
         yield return new WaitForSeconds(1.5f);
         flashlight.SetActive(false);
+    }
+
+    public void OnHackButtonPressed()
+    {
+        uiButtonPressed = true;
+        Hack();
+    }
+    public void Hack()
+    {
+        if (hackableObject != null && playerInTrigger && uiButtonPressed)
+        {
+            hackableObject.Hack();
+            StartCoroutine(LoadCaptchaSceneAsync());
+        }
+    }
+    private IEnumerator LoadCaptchaSceneAsync()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }
