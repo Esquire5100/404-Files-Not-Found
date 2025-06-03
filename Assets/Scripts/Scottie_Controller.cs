@@ -24,13 +24,14 @@ public class Scottie_Controller : MonoBehaviour
     private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
 
     //FlashLight Varibles
-    public Color flashColor = Color.white;
+    public GameObject flashlight;
+    /*public Color flashColor = Color.white;
     public float flashDuration = 0.5f;
     public float flashSpeed = 10f;
 
     private Material material;
     private float flashTime = 0f;
-    private bool isFlashing = false;
+    private bool isFlashing = false;*/
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class Scottie_Controller : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();                                     //Get easy access to the SpriteRenderer component
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
-        material = sr.material;
+        //material = sr.material;
     }
 
     void Update()
@@ -62,7 +63,7 @@ public class Scottie_Controller : MonoBehaviour
         //Setting up Parameters in the Animator
         myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
 
-        if (isFlashing)
+        /*if (isFlashing)
         {
             flashTime += Time.deltaTime * flashSpeed;
             float flashAmount = Mathf.PingPong(flashTime, flashDuration) / flashDuration;
@@ -74,7 +75,7 @@ public class Scottie_Controller : MonoBehaviour
                 isFlashing = false;
                 material.SetFloat("_FlashAmount", 0);
             }
-        }
+        }*/
 
     }
 
@@ -143,9 +144,18 @@ public class Scottie_Controller : MonoBehaviour
         }
     }
 
-    public void Flash()
+    public void Flashlight()
     {
-        isFlashing = true;
-        flashTime = 0;
+        /*isFlashing = true;
+        flashTime = 0;*/
+
+        StartCoroutine(DeactivateAfterDelay());
+    }
+
+    private IEnumerator DeactivateAfterDelay() //Activate preset flashlight, wait for 2s, then deactivate
+    {
+        flashlight.SetActive(flashlight); 
+        yield return new WaitForSeconds(1.5f);
+        flashlight.SetActive(false);
     }
 }

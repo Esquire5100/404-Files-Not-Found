@@ -23,41 +23,44 @@ public class Guard_Controller : MonoBehaviour
     public Transform FOVTransform; //Ref to the FOV GameObj (child)
     public Transform lightTransform; //Make ref to the light GameObj (child)
 
+    private Animator myAnim;                                                     //Store a ref to animtions to access later
+
     //Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>(); //Get access to the enemy Rigidbody2D component
         sr = GetComponent<SpriteRenderer>(); //Get access to the Sprite Renderer component
+        myAnim = GetComponent<Animator>();  //Get access to the Animator component
     }
 
     //Update is called once per frame
     void Update()
     {
-        //if enemy is moving right and has gone past the right point, it should turn and move left
-        //if (movingRight && (transform.position.x > rightPoint.position.x))
-        //{
-        //movingRight = false;
-        //}
+        /*if enemy is moving right and has gone past the right point, it should turn and move left
+        if (movingRight && (transform.position.x > rightPoint.position.x))
+        {
+            movingRight = false;
+        }
 
-        //if enemy is moving left and has gone past the left point, it should turn and move right
-        //if (!movingRight && (transform.position.x < leftPoint.position.x))
-        //{
-        //movingRight = true;
-        //}
+        if enemy is moving left and has gone past the left point, it should turn and move right
+        if (!movingRight && (transform.position.x < leftPoint.position.x))
+        {
+            movingRight = true;
+        }
 
-        //if (movingRight)
-        //{
-        //enemyRb.velocity = new Vector2(moveSpeed, enemyRb.velocity.y);
-        //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        //spriteRenderer.flipX = true;
-        //}
+        if (movingRight)
+        {
+            enemyRb.velocity = new Vector2(moveSpeed, enemyRb.velocity.y);
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = true;
+        }
 
-        //else
-        //{
-        //enemyRb.velocity = new Vector2(-moveSpeed, enemyRb.velocity.y);
-        //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        //spriteRenderer.flipX = false;
-        //}
+        else
+        {
+            enemyRb.velocity = new Vector2(-moveSpeed, enemyRb.velocity.y);
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.flipX = false;
+        }*/
 
         //The code above made it such that the enemy was constantly moving. I want the guard to stop for a while at the end point, then turn and continue moving. The code below makes it as such.
 
@@ -70,13 +73,11 @@ public class Guard_Controller : MonoBehaviour
             //Flip sprite and FOV to face player
             if (direction.x > 0.1f) //Face right
             {
-                sr.flipX = true;
                 FOVTransform.localScale = new Vector3(-1, 1, 1); //Moves the FOV following the parents' (guard)
                 lightTransform.localEulerAngles = new Vector3(0, 0, -107.853f); //Moves the light following the parents' (guard)
             }
             else if (direction.x < -0.1f) //Face left
             {
-                sr.flipX = false;
                 FOVTransform.localScale = new Vector3(1, 1, 1); //Moves the FOV with an offset, otherwise the FOV will be inaccurate to where we want it to be
                 lightTransform.localEulerAngles = new Vector3(0, 0, 107.853f); //Moves the light with an offset, otherwise the light will be inaccurate to where we want it to be
             }
@@ -88,10 +89,9 @@ public class Guard_Controller : MonoBehaviour
             if (movingRight)
             {
                 enemyRb.velocity = new Vector2(moveSpeed, enemyRb.velocity.y);
-                sr.flipX = true; //Flips the sprite so it faces the direction it's moving
                 FOVTransform.localScale = new Vector3(-1, 1, 1);
                 //FOVTransform.GetComponent<EdgeCollider2D>().offset = new Vector3(3.7f, 0, 0); //Offset to make the collider be in the desired position: in front of the guards face
-                lightTransform.localEulerAngles = new Vector3(0, 0, -107.853f);
+                lightTransform.localEulerAngles = new Vector3(0, 0, -108.402f);
 
                 //If enemy is moving right and has gone past the right point, it should pause for a bit, turn around, then move left
                 if (transform.position.x >= rightPoint.position.x)
@@ -103,10 +103,9 @@ public class Guard_Controller : MonoBehaviour
             else
             {
                 enemyRb.velocity = new Vector2(-moveSpeed, enemyRb.velocity.y);
-                sr.flipX = false; //Doesn't flip the sprite so it faces the direction it's moving
                 FOVTransform.localScale = new Vector3(1, 1, 1);
                 //FOVTransform.GetComponent<EdgeCollider2D>().offset = new Vector3(0, 0, 0); //Reset the offset to make the collider be in the desired position: in front of the guards face
-                lightTransform.localEulerAngles = new Vector3(0, 0, 107.853f);
+                lightTransform.localEulerAngles = new Vector3(0, 0, 108.402f);
 
                 //If enemy is moving left and has gone past the left point, it should pause for a bit, turn around, then move right
                 if (transform.position.x <= leftPoint.position.x)
@@ -121,6 +120,10 @@ public class Guard_Controller : MonoBehaviour
             //Stop the enemy's movement while waiting
             enemyRb.velocity = Vector2.zero;
         }
+
+        //Setting up Parameters in the Animator
+        myAnim.SetFloat("Speed", Mathf.Abs(enemyRb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
+        myAnim.SetFloat("Chase", Mathf.Abs(enemyRb.velocity.x));
     }
 
     //Coroutine for pausing movement, then turning around
