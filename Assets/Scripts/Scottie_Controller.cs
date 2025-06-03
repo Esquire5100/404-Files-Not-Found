@@ -134,8 +134,10 @@ public class Scottie_Controller : MonoBehaviour
         {
             canHide = true;
         }
-        if (other.gameObject.CompareTag("Hackable"))
+
+        if (other.CompareTag("Hackable"))
         {
+            hackableObject = other.GetComponent<HackableObject>();
             playerInTrigger = true;
         }
 
@@ -163,6 +165,7 @@ public class Scottie_Controller : MonoBehaviour
 
         if (other.gameObject.CompareTag("Hackable"))
         {
+            hackableObject = null;
             playerInTrigger = false;
         }
     }
@@ -234,15 +237,35 @@ public class Scottie_Controller : MonoBehaviour
 
     public void OnHackButtonPressed()
     {
+        Debug.Log("Hack button pressed");
         uiButtonPressed = true;
         Hack();
     }
     public void Hack()
     {
+        /*if (hackableObject != null && playerInTrigger && uiButtonPressed)
+        {
+            Debug.Log("can hack");
+            hackableObject.Hack();
+            Debug.Log("e");
+            StartCoroutine(LoadCaptchaSceneAsync());
+        }*/
+
+        Debug.Log("Hack() called");
+        Debug.Log($"hackableObject != null: {hackableObject != null}");
+        Debug.Log($"playerInTrigger: {playerInTrigger}");
+        Debug.Log($"uiButtonPressed: {uiButtonPressed}");
+
         if (hackableObject != null && playerInTrigger && uiButtonPressed)
         {
+            Debug.Log("can hack");
             hackableObject.Hack();
+            Debug.Log("e");
             StartCoroutine(LoadCaptchaSceneAsync());
+        }
+        else
+        {
+            Debug.Log("Hack conditions not met.");
         }
     }
     private IEnumerator LoadCaptchaSceneAsync()

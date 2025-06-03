@@ -1799,7 +1799,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1188642181}
         m_TargetAssemblyTypeName: Scottie_Controller, Assembly-CSharp
-        m_MethodName: Hack
+        m_MethodName: OnHackButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
