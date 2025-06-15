@@ -46,6 +46,14 @@ public class Scottie_Controller : MonoBehaviour
     private float flashTime = 0f;
     private bool isFlashing = false;*/
 
+    public Button actionButton;
+    public Image buttonIcon;
+    public Sprite defaultIcon;
+    public Sprite hackIcon;
+    public Sprite hideIcon;
+    private enum ActionMode { None, Hide, Hack }
+    private ActionMode currentMode = ActionMode.None;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();                                        //Get easy access to the Rigidbody2D component
@@ -53,6 +61,7 @@ public class Scottie_Controller : MonoBehaviour
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
         sr.sprite = normalSprite;
+        UpdateActionButtonUI();
     }
 
     void Update()
@@ -133,12 +142,16 @@ public class Scottie_Controller : MonoBehaviour
         if(other.gameObject.name.Equals("Table"))                                //If name of gameObject is detected, player is able to hide in said object
         {
             canHide = true;
+            currentMode = ActionMode.Hide;
+            UpdateActionButtonUI();
         }
 
         if (other.CompareTag("Hackable"))
         {
             hackableObject = other.GetComponent<HackableObject>();
             playerInTrigger = true;
+            currentMode = ActionMode.Hack;
+            UpdateActionButtonUI();
         }
 
     }
@@ -156,6 +169,11 @@ public class Scottie_Controller : MonoBehaviour
         if(other.gameObject.name.Equals("Table"))
         {
             canHide = false;
+            if (currentMode == ActionMode.Hide)
+            {
+                currentMode = ActionMode.None;
+                UpdateActionButtonUI();
+            }
         }
 
         if (other.CompareTag("Stairs"))
@@ -167,6 +185,11 @@ public class Scottie_Controller : MonoBehaviour
         {
             hackableObject = null;
             playerInTrigger = false;
+            if (currentMode == ActionMode.Hack)
+            {
+                currentMode = ActionMode.None;
+                UpdateActionButtonUI();
+            }
         }
     }
 
@@ -205,7 +228,6 @@ public class Scottie_Controller : MonoBehaviour
             hiding = true;
             IsHiding = true;
             canMove = false;
-            
         }
         else
         {
@@ -216,7 +238,6 @@ public class Scottie_Controller : MonoBehaviour
             hiding = false;
             IsHiding = false;
             canMove = true;
-           
         }
     }
 
@@ -249,12 +270,13 @@ public class Scottie_Controller : MonoBehaviour
             hackableObject.Hack();
             Debug.Log("e");
             StartCoroutine(LoadCaptchaSceneAsync());
-        }*/
+        }
 
         Debug.Log("Hack() called");
         Debug.Log($"hackableObject != null: {hackableObject != null}");
         Debug.Log($"playerInTrigger: {playerInTrigger}");
-        Debug.Log($"uiButtonPressed: {uiButtonPressed}");
+        Debug.Log($"uiButtonPressed: {uiButtonPressed}"); 
+        */
 
         if (hackableObject != null && playerInTrigger && uiButtonPressed)
         {
@@ -274,6 +296,48 @@ public class Scottie_Controller : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             yield return null;
+        }
+    }
+
+    private void UpdateActionButtonUI()
+    {
+        switch (currentMode)
+        {
+            case ActionMode.Hide:
+                if (buttonIcon != null && hideIcon != null)
+                {
+                    buttonIcon.sprite = hideIcon;
+                    buttonIcon.gameObject.SetActive(true); // re-enable if hidden
+                }
+                actionButton.onClick.RemoveAllListeners();
+                actionButton.onClick.AddListener(() => {
+                    Hide();
+                    UpdateActionButtonUI(); // refresh after action
+                });
+                break;
+
+            case ActionMode.Hack:
+                if (buttonIcon != null && hackIcon != null)
+                {
+                    buttonIcon.sprite = hackIcon;
+                    buttonIcon.gameObject.SetActive(true); // re-enable if hidden
+                }
+                actionButton.onClick.RemoveAllListeners();
+                actionButton.onClick.AddListener(OnHackButtonPressed);
+                break;
+
+            default:
+                if (buttonIcon != null)
+                {
+                    // OPTION 1: Set default icon
+                    if (defaultIcon != null)
+                    {
+                        buttonIcon.sprite = defaultIcon;
+                        buttonIcon.gameObject.SetActive(true);
+                    }
+                }
+                actionButton.onClick.RemoveAllListeners();
+                break;
         }
     }
 }
