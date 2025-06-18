@@ -58,7 +58,22 @@ public class Scottie_Controller : MonoBehaviour
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
         sr.sprite = normalSprite;
+
+        //Restore position if saved
+        if (PlayerPrefs.HasKey("PlayerPosX") && PlayerPrefs.HasKey("PlayerPosY"))
+        {
+            float x = PlayerPrefs.GetFloat("PlayerPosX");
+            float y = PlayerPrefs.GetFloat("PlayerPosY");
+            transform.position = new Vector2(x, y);
+        }
+
         UpdateActionButtonUI();
+
+        /*//If there's a saved position from before entering Captcha, teleport back to it
+        if (GameData.SavedPlayerPosition != Vector2.zero)
+        {
+            transform.position = GameData.SavedPlayerPosition;
+        }*/
     }
 
     void Update()
@@ -130,7 +145,6 @@ public class Scottie_Controller : MonoBehaviour
         }
         moveDirection = dir;
     }
-
 
     //Hiding Script
     private void OnTriggerEnter2D(Collider2D other)
@@ -260,20 +274,34 @@ public class Scottie_Controller : MonoBehaviour
             Debug.Log("can hack");
             hackableObject.Hack();
 
+            //Save player position
+            PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+            PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+
+            //Save file count
+            PlayerPrefs.SetInt("FileCount", thelvlManager.FileCount);
+            PlayerPrefs.Save(); //actually saves the stuff to disk
+
             Debug.Log("Captcha");
             StartCoroutine(LoadCaptchaSceneAsync());
+
+            /*Debug.Log("Captcha");
+            GameData.SavedPlayerPosition = transform.position; //Save current player position before loading the Captcha popup
+            StartCoroutine(LoadCaptchaSceneAsync());*/
         }
         else
         {
             Debug.Log("Hack conditions not met.");
         }
     }
+
+    // Load the Captcha scene additively (like a popup)
     private IEnumerator LoadCaptchaSceneAsync()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha", LoadSceneMode.Additive);
         while (!asyncLoad.isDone)
         {
-            yield return null;
+            yield return null;  //Wait until scene is fully loaded
         }
     }
 

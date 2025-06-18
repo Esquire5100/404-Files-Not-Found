@@ -157,8 +157,8 @@ MonoBehaviour:
   sr: {fileID: 38055443}
   closed: {fileID: -528456384, guid: 566bab8aa46641944a3963e454e28bda, type: 3}
   open: {fileID: -1510125271, guid: b268d21e53c17114e81ac079a9bbb91f, type: 3}
-  player: {fileID: 0}
-  stairsTarget: {fileID: 0}
+  player: {fileID: 562966872}
+  stairsTarget: {fileID: 277608831}
 --- !u!61 &38055441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -538,6 +538,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
   m_PrefabInstance: {fileID: 1903406736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &277608831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277608832}
+  m_Layer: 0
+  m_Name: stairsTarget (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &277608832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277608831}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.380001, y: 9.1, z: -0.036683455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2124607345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &359310380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
@@ -741,6 +772,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287817877}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &675901725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675901726}
+  m_Layer: 0
+  m_Name: stairsTarget (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &675901726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675901725}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.380001, y: 5.3, z: -0.036683455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2089219201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736527340
 GameObject:
@@ -2090,8 +2152,8 @@ MonoBehaviour:
   sr: {fileID: 2089219200}
   closed: {fileID: -528456384, guid: 566bab8aa46641944a3963e454e28bda, type: 3}
   open: {fileID: -1510125271, guid: b268d21e53c17114e81ac079a9bbb91f, type: 3}
-  player: {fileID: 0}
-  stairsTarget: {fileID: 0}
+  player: {fileID: 562966872}
+  stairsTarget: {fileID: 675901725}
 --- !u!61 &2089219198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2228,7 +2290,8 @@ Transform:
   m_LocalPosition: {x: 23.93, y: 11.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 675901726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2124607340
@@ -2266,8 +2329,8 @@ MonoBehaviour:
   sr: {fileID: 2124607344}
   closed: {fileID: -528456384, guid: 566bab8aa46641944a3963e454e28bda, type: 3}
   open: {fileID: -1510125271, guid: b268d21e53c17114e81ac079a9bbb91f, type: 3}
-  player: {fileID: 0}
-  stairsTarget: {fileID: 0}
+  player: {fileID: 562966872}
+  stairsTarget: {fileID: 277608831}
 --- !u!61 &2124607342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2404,7 +2467,8 @@ Transform:
   m_LocalPosition: {x: 23.93, y: 2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 277608832}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &342720536279414798
