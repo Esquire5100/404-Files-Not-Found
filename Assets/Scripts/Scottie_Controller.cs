@@ -28,9 +28,6 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite normalSprite;                                                  //Allow to assign normal sprite directly from inspector
     public Sprite crouchingSprite;                                                  //Allow to assign hiding sprite directly from inspector
 
-    public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
-    private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
-
     public HackableObject hackableObject;
 
     private bool playerInTrigger = false;
@@ -156,14 +153,6 @@ public class Scottie_Controller : MonoBehaviour
 
     }
     
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Stairs") && !hasTeleported) //If the tag is stairs and the player has not yet teleported
-        {
-            StartCoroutine(UseStairs());
-        }
-    }
-
     private void OnTriggerExit2D(Collider2D other)                               //If name of gameObject is exited, player will not be hide anymore
     {
         if(other.gameObject.name.Equals("Table"))
@@ -176,11 +165,6 @@ public class Scottie_Controller : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Stairs"))
-        {
-            hasTeleported = false; //Reset when leaving the stairs
-        }
-
         if (other.gameObject.CompareTag("Hackable"))
         {
             hackableObject = null;
@@ -191,13 +175,6 @@ public class Scottie_Controller : MonoBehaviour
                 UpdateActionButtonUI();
             }
         }
-    }
-
-    private IEnumerator UseStairs()
-    {
-        yield return new WaitForSeconds(2);
-        transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
-        hasTeleported = true;
     }
 
     /*private void OnTriggerEnter2D(Collider2D other)
@@ -282,7 +259,8 @@ public class Scottie_Controller : MonoBehaviour
         {
             Debug.Log("can hack");
             hackableObject.Hack();
-            Debug.Log("e");
+
+            Debug.Log("Captcha");
             StartCoroutine(LoadCaptchaSceneAsync());
         }
         else

@@ -1,23 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 //This script handles the UI logic for displaying and validating a captcha
 public class CaptchaUI : MonoBehaviour
 {
     [Header("UI References :")] //Organises the Inspector
-    [SerializeField] private Image uiCodeImage; //Ref to the UI image that shows the captcha sprite
+    [SerializeField] private UnityEngine.UI.Image uiCodeImage; //Ref to the UI image that shows the captcha sprite
     [SerializeField] private InputField uiCodeInput; //Ref the input area where the player types the captcha
     [SerializeField] private Text uiErrorsText; //Ref to the text shown when u put the wrong code
     [SerializeField] private Text uiSuccessText; //Ref to the text shown when u put the right code
-    [SerializeField] private Button uiRefreshButton; //Button to refresh the captcha
-    [SerializeField] private Button uiSubmitButton; //Button to submit the entered captcha
+    [SerializeField] private UnityEngine.UI.Button uiRefreshButton; //Button to refresh the captcha
+    [SerializeField] private UnityEngine.UI.Button uiSubmitButton; //Button to submit the entered captcha
 
     [Header("Captcha Generator :")]
 
     [SerializeField] private CaptchaGenerator captchaGenerator; //Ref to the CaptchaGenerator script
     
     private Captcha currentCaptcha; //Holds the current captcha
+
+    private LvlManager theLvlManager; //make ref to lvlmanager script
+
+    public int fileValue = 1;
 
     //Start is called before the first frame update
     private void Start()
@@ -27,6 +32,8 @@ public class CaptchaUI : MonoBehaviour
         //Set up buttons
         uiRefreshButton.onClick.AddListener(GenerateCaptcha); //Refresh button calls GenerateCaptcha
         uiSubmitButton.onClick.AddListener(Submit);           //Submit button calls Submit
+
+        theLvlManager = FindAnyObjectByType<LvlManager>();
     }
 
     //Generate a new captcha from the generator and update UI
@@ -49,8 +56,10 @@ public class CaptchaUI : MonoBehaviour
             uiErrorsText.gameObject.SetActive(false);
             uiSuccessText.gameObject.SetActive(true);
 
-            new WaitForSeconds(2f);
+            new WaitForSeconds(3f);
             SceneManager.LoadScene("Level 1"); //bring player back to their position
+
+            theLvlManager.AddFiles(fileValue);
         }
         else
         {
