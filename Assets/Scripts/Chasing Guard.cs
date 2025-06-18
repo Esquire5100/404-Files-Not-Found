@@ -35,12 +35,12 @@ public class ChasingGuard : MonoBehaviour
             //Flip sprite and FOV to face player
             if (direction.x > 0.1f) //Face right
             {
-                sr.flipX = true;
+                sr.flipX = false;
                 lightTransform.localEulerAngles = new Vector3(0, 0, -107.853f); //Moves the light following the parents' (guard)
             }
             else if (direction.x < -0.1f) //Face left
             {
-                sr.flipX = false;
+                sr.flipX = true;
                 lightTransform.localEulerAngles = new Vector3(0, 0, 107.853f); //Moves the light with an offset, otherwise the light will be inaccurate to where we want it to be
             }
         }

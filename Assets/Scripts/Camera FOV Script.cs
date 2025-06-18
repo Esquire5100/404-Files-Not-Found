@@ -61,7 +61,7 @@ public class CameraFOVScript : MonoBehaviour
             }
             else
             {
-                // Despawn guards when player is no longer visible
+                //Despawn guards when player is no longer visible
                 foreach (GameObject g in activeGuards)
                 {
                     if (g != null)

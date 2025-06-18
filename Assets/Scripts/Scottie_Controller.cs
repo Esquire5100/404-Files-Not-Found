@@ -7,6 +7,35 @@ using UnityEngine.SceneManagement;
 
 public class Scottie_Controller : MonoBehaviour
 {
+
+    private static Scottie_Controller instance;                                  //Singleton reference to ensure only one player exists
+
+    void Awake()
+    {
+        // Single instance logic to prevent duplicates on scene reloads
+        if (instance == null)
+        {
+            instance = this;
+            // Only mark as persistent if this GameObject is a root object
+            if (transform.parent == null)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("Scottie_Controller must be on a root GameObject for DontDestroyOnLoad to work.");
+            }
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate players
+            return;
+        }
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
+    }
+
     public float MoveSpeed;                                                      //Control Speed that the player is moving around the world
     private Rigidbody2D rb;                                                      //make a ref to the rigidbody2D component
     private SpriteRenderer sr;
@@ -59,21 +88,21 @@ public class Scottie_Controller : MonoBehaviour
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
         sr.sprite = normalSprite;
 
-        //Restore position if saved
+        /*//Restore position if saved
         if (PlayerPrefs.HasKey("PlayerPosX") && PlayerPrefs.HasKey("PlayerPosY"))
         {
             float x = PlayerPrefs.GetFloat("PlayerPosX");
             float y = PlayerPrefs.GetFloat("PlayerPosY");
             transform.position = new Vector2(x, y);
-        }
+        }*/
 
-        UpdateActionButtonUI();
-
-        /*//If there's a saved position from before entering Captcha, teleport back to it
+        //If there's a saved position from before entering Captcha, teleport back to it
         if (GameData.SavedPlayerPosition != Vector2.zero)
         {
             transform.position = GameData.SavedPlayerPosition;
-        }*/
+        }
+
+        UpdateActionButtonUI();
     }
 
     void Update()
@@ -113,12 +142,6 @@ public class Scottie_Controller : MonoBehaviour
 
     }
 
-    //Audio Scripts
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
-    }
 
     //Movement Script
     public void Move(float dir)
@@ -274,7 +297,7 @@ public class Scottie_Controller : MonoBehaviour
             Debug.Log("can hack");
             hackableObject.Hack();
 
-            //Save player position
+            /*//Save player position
             PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
             PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
 
@@ -283,11 +306,11 @@ public class Scottie_Controller : MonoBehaviour
             PlayerPrefs.Save(); //actually saves the stuff to disk
 
             Debug.Log("Captcha");
-            StartCoroutine(LoadCaptchaSceneAsync());
-
-            /*Debug.Log("Captcha");
-            GameData.SavedPlayerPosition = transform.position; //Save current player position before loading the Captcha popup
             StartCoroutine(LoadCaptchaSceneAsync());*/
+
+            GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
+            Debug.Log("Captcha");
+            StartCoroutine(LoadCaptchaSceneAsync());
         }
         else
         {
@@ -295,7 +318,6 @@ public class Scottie_Controller : MonoBehaviour
         }
     }
 
-    // Load the Captcha scene additively (like a popup)
     private IEnumerator LoadCaptchaSceneAsync()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha", LoadSceneMode.Additive);
@@ -316,7 +338,8 @@ public class Scottie_Controller : MonoBehaviour
                     buttonIcon.gameObject.SetActive(true); // re-enable if hidden
                 }
                 actionButton.onClick.RemoveAllListeners();
-                actionButton.onClick.AddListener(() => {
+                actionButton.onClick.AddListener(() => 
+                {
                     Hide();
                     UpdateActionButtonUI(); // refresh after action
                 });

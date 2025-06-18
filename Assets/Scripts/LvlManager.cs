@@ -22,7 +22,19 @@ public class LvlManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); //Prevent it from being destroyed on scene change
+
+            //Make sure this GameObject is at the root level, otherwise DontDestroyOnLoad will warn
+            if (transform.parent == null)
+            {
+                DontDestroyOnLoad(gameObject); //Prevent it from being destroyed on scene change
+            }
+            else
+            {
+                Debug.LogWarning("LvlManager must be on a root GameObject for DontDestroyOnLoad to work.");
+            }
+
+            // Listen for scene loads to re-assign UI references
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -44,11 +56,11 @@ public class LvlManager : MonoBehaviour
                 FileCounter = counterObj.GetComponent<TextMeshProUGUI>();
         }
 
-        //Load saved FileCount
+        /*//Load saved FileCount
         if (PlayerPrefs.HasKey("FileCount"))
         {
             FileCount = PlayerPrefs.GetInt("FileCount");
-        }
+        }*/
 
         UpdateUI();
     }
@@ -57,8 +69,8 @@ public class LvlManager : MonoBehaviour
     {
         FileCount += FilestoAdd; //essentially means "x + 1" in simple math terms
 
-        PlayerPrefs.SetInt("FileCount", FileCount); // Auto-save new value
-        PlayerPrefs.Save();
+        /*PlayerPrefs.SetInt("FileCount", FileCount); // Auto-save new value
+        PlayerPrefs.Save();*/
 
         UpdateUI();
     }
@@ -91,6 +103,28 @@ public class LvlManager : MonoBehaviour
         }
     }*/
 
+    // Re-assign FileCounter when the scene is loaded again (e.g., returning from Captcha)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Try to re-link the FileCounter text component
+        GameObject counterObj = GameObject.Find("FileCounter");
+        if (counterObj != null)
+        {
+            FileCounter = counterObj.GetComponent<TextMeshProUGUI>();
+            UpdateUI(); // Refresh UI once found
+        }
+        else
+        {
+            Debug.LogWarning("FileCounter not found in scene " + scene.name);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from event to avoid memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     //Open the captcha popup (ontop of current Level scene)
     public void OpenPopup()
     {
@@ -102,5 +136,4 @@ public class LvlManager : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync("Captcha");
     }
-
 }

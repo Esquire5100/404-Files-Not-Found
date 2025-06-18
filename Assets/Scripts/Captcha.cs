@@ -11,4 +11,3 @@ public class Captcha
     //The value that the user must enter to match the captcha image
     public string Value;
 }
-

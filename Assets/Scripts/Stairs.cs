@@ -28,8 +28,11 @@ public class Stairs : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Collider Triggered");
+
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Tag = Player");
             player = other.gameObject;
             StartCoroutine(UseStairs());
         }

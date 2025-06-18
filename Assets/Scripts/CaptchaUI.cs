@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 
 //This script handles the UI logic for displaying and validating a captcha
 public class CaptchaUI : MonoBehaviour
@@ -56,16 +57,33 @@ public class CaptchaUI : MonoBehaviour
             uiErrorsText.gameObject.SetActive(false);
             uiSuccessText.gameObject.SetActive(true);
 
-            new WaitForSeconds(3f);
-            SceneManager.LoadScene("Level 1"); //bring player back to their position
-
-            theLvlManager.AddFiles(fileValue);
+            //Start coroutine to wait, +1 files to the counter, then return to level 1
+            StartCoroutine(SuccessSequence());
         }
         else
         {
-            // Incorrect captcha: show the error message
+            //Incorrect captcha: show the error message
             uiErrorsText.gameObject.SetActive(true);
             uiSuccessText.gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator SuccessSequence()
+    {
+        //Give player the file
+        if (LvlManager.Instance != null)
+        {
+            LvlManager.Instance.AddFiles(fileValue);
+            Debug.Log("File added! Total: " + LvlManager.Instance.FileCount);
+        }
+        else
+        {
+            Debug.LogWarning("LvlManager.Instance is null.");
+        }
+
+        yield return new WaitForSeconds(2f); //show success message for 2 seconds
+
+        //Return to Level 1
+        SceneManager.LoadScene("Level 1");
     }
 }
