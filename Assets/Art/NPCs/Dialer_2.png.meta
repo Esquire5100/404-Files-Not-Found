@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 580c66c9bcbb53e4185d945d35670ae1
+guid: c10382d20d9d3504c868252ee49275f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Victory_Tabs_0
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 572
-        width: 864
-        height: 451
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1693e71544b3874fa13988145e0c813
-      internalID: -542200947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Victory_Tabs_1
-      rect:
-        serializedVersion: 2
-        x: 1114
-        y: 540
-        width: 731
-        height: 509
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63760c1732987e040a006a662e50cf03
-      internalID: -1208663193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Victory_Tabs_2
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 56
-        width: 864
-        height: 451
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb58eb8a1156f6a4f9bfd8648c9228c7
-      internalID: -389608858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Victory_Tabs_3
-      rect:
-        serializedVersion: 2
-        x: 1114
-        y: 24
-        width: 731
-        height: 509
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cca5d204b4cfd54c8e8358d0ad53b78
-      internalID: 1384684608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Victory_Tabs_0: -542200947
-      Victory_Tabs_1: -1208663193
-      Victory_Tabs_2: -389608858
-      Victory_Tabs_3: 1384684608
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

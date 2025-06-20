@@ -43,7 +43,7 @@ public class Scottie_Controller : MonoBehaviour
     private float moveDirection = 0;
     public bool canMove = true;
 
-    private bool isHidden = false;                                               //is 'false' by default because we want the default tag to be "Player"
+    //private bool isHidden = false;                                               //is 'false' by default because we want the default tag to be "Player"
 
     private Animator myAnim;                                                     //Store a ref to animtions to access later
 

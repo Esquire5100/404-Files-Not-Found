@@ -11,7 +11,7 @@ public class Stairs : MonoBehaviour
 
     public GameObject player; 
     public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
-    private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
+    //private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,7 @@ public class Stairs : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hasTeleported = false; //Reset when leaving the stairs
+            //hasTeleported = false; //Reset when leaving the stairs
 
             sr.sprite = closed;
         }
@@ -57,6 +57,6 @@ public class Stairs : MonoBehaviour
 
         sr.sprite = closed; // Switch back to closed after teleport
 
-        hasTeleported = true;
+        //hasTeleported = true;
     }
 }
