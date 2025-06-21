@@ -34,9 +34,16 @@ public class VN_Pregame : MonoBehaviour
         //Enable text(box) functions
         yield return new WaitForSeconds(1f);
         textBox.SetActive(true);
+        PhionaTalk.Play();
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(8f);
+        PhionaTalk.Stop();
         responses.SetActive(true);
+
+    }
+
+    public void What()
+    {
 
     }
 
