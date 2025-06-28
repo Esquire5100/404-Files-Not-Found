@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject CreditsMainTab;
     public GameObject CreditsMiniTab;
+    public GameObject SettingsTab;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Files");
     }
 
-    public void OpenCreditsTab()
+    public void OpenCreditsTabs()
     {
         CreditsMainTab.SetActive(true);
         CreditsMiniTab.SetActive(true);
@@ -50,5 +51,10 @@ public class MainMenu : MonoBehaviour
     public void OpenCreditsMiniTab()
     {
         CreditsMiniTab.SetActive(true);
+    }
+
+    public void OpenSettingsTab()
+    {
+        SettingsTab.SetActive(true);
     }
 }
