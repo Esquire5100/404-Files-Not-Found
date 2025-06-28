@@ -289,6 +289,14 @@ MonoBehaviour:
   CreditsMainTab: {fileID: 510776710}
   CreditsMiniTab: {fileID: 1204794906}
   SettingsTab: {fileID: 0}
+  Lvl1: {fileID: 0}
+  Lvl2: {fileID: 0}
+  Lvl3: {fileID: 0}
+  FilesTab: {fileID: 0}
+  Confirm1Tab: {fileID: 0}
+  Confirm2Tab: {fileID: 0}
+  Confirm3Tab: {fileID: 0}
+  eventPos: 0
 --- !u!114 &166529158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,7 +1320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1204794907
 RectTransform:
   m_ObjectHideFlags: 0
