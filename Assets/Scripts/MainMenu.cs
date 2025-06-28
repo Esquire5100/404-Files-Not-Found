@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Visual Novel (Pregame)");
     }
 
     public void Settings()
