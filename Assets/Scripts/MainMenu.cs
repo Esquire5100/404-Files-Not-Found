@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void NewGame()
+    public void Play()
     {
         SceneManager.LoadScene("Visual Novel (Pregame)");
     }
