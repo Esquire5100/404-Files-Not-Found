@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Settings_UI_Icons_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 105
+        width: 91
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f6d609bf5c55d4a923ba466a7a0676
+      internalID: -116580867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings_UI_Icons_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 85
+        width: 122
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299f493842b7f29418dbe47eed5c2e72
+      internalID: 1365809237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +174,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Settings_UI_Icons_0: 349465002
+      Settings_UI_Icons_1: -116580867
+      Settings_UI_Icons_10: -1632385185
+      Settings_UI_Icons_11: -2030038322
+      Settings_UI_Icons_12: -1758536566
+      Settings_UI_Icons_2: 1365809237
+      Settings_UI_Icons_4: 916704886
+      Settings_UI_Icons_5: 217162648
+      Settings_UI_Icons_6: -884644499
+      Settings_UI_Icons_7: -564469611
+      Settings_UI_Icons_8: -301984753
+      Settings_UI_Icons_9: 1083319626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

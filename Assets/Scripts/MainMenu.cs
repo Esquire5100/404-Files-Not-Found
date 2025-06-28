@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject CreditsMainTab;
+    public GameObject CreditsMiniTab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +39,16 @@ public class MainMenu : MonoBehaviour
     public void Files()
     {
         SceneManager.LoadScene("Files");
+    }
+
+    public void OpenCreditsTab()
+    {
+        CreditsMainTab.SetActive(true);
+        CreditsMiniTab.SetActive(true);
+    }
+
+    public void OpenCreditsMiniTab()
+    {
+        CreditsMiniTab.SetActive(true);
     }
 }
