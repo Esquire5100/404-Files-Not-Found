@@ -156,11 +156,13 @@ public class Scottie_Controller : MonoBehaviour
         {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
+            audioManager.PlaySFX(audioManager.WalkSFX);
         }
         else if (dir < 0)
         {
             rb.velocity = new Vector2(-MoveSpeed, rb.velocity.y);                //Move Left
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);               //When move left, face left
+            audioManager.PlaySFX(audioManager.WalkSFX);
         }
         else
         {

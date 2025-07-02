@@ -16,6 +16,8 @@ public class ChasingGuard : MonoBehaviour
     private Transform player; //Ref to the player
     public Transform lightTransform; //Make ref to the light GameObj (child)
 
+    AudioManager audioManager;
+
     //Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,7 @@ public class ChasingGuard : MonoBehaviour
     {
         player = target; //Assign the player reference
         isChasing = true; //Enable chasing behaviour
+        audioManager.PlaySFX(audioManager.AlertMusic);
     }
 
     public void StopChase()

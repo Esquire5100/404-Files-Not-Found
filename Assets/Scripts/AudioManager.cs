@@ -13,13 +13,14 @@ public class AudioManager : MonoBehaviour
     [Header("-----------Audio Clip-----------")]
     public AudioClip LevelMusic;
     public AudioClip MainMenu;
+    public AudioClip LoseGameSFX;
     public AudioClip WhooshSFX;
     public AudioClip FlashbangSFX;
     public AudioClip DistractionSFX;           //Pen Dropping
     public AudioClip AlertMusic;
     public AudioClip LiftSFX;
-    public AudioClip LoseGameSFX;
     public AudioClip ClickSFX;
+    public AudioClip WalkSFX;
 
     //Music to start playing when the level starts
     private void Start()
