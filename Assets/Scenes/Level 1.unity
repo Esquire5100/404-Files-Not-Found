@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 736527342}
   - component: {fileID: 736527341}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LevelExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2589,6 +2589,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6383135172755981681, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: AlertMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f5ca26c8fd2c664ba94c173b37dde93, type: 3}
+    - target: {fileID: 6383135172755981681, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: LevelMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
+    - target: {fileID: 6383135172755981681, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: LoseGameSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e5fdbe0b8842694eb14a24b7ba944e6, type: 3}
     - target: {fileID: 6714573156673224392, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.44

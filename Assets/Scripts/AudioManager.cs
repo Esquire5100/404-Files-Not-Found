@@ -11,15 +11,20 @@ public class AudioManager : MonoBehaviour
 
     //Add Audio clips to each varible
     [Header("-----------Audio Clip-----------")]
-    public AudioClip background;
-    //public AudioClip gameover;
-    //public AudioClip hacking;
-    //public AudioClip XX;
+    public AudioClip LevelMusic;
+    public AudioClip MainMenu;
+    public AudioClip WhooshSFX;
+    public AudioClip FlashbangSFX;
+    public AudioClip DistractionSFX;           //Pen Dropping
+    public AudioClip AlertMusic;
+    public AudioClip LiftSFX;
+    public AudioClip LoseGameSFX;
+    public AudioClip ClickSFX;
 
     //Music to start playing when the level starts
     private void Start()
     {
-        musicSource.clip = background;
+        musicSource.clip = LevelMusic;
         musicSource.Play();
     }
 
