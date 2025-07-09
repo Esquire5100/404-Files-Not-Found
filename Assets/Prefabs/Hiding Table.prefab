@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6088680337790978262}
   m_Layer: 0
-  m_Name: Table
+  m_Name: Hiding Table
   m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

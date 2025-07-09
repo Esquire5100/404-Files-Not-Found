@@ -116,15 +116,19 @@ public class Scottie_Controller : MonoBehaviour
             Move(moveDirection);
         }
 
-        /*Toggle between "Player" and "Hidden" Tags in unity (so that the enemies can't detect the player)
-        if (Input.GetKeyDown("e"))
+        // Null check for Animator and Rigidbody
+        if (myAnim != null && rb != null)
         {
-            isHidden = !isHidden;                                               //Changes 'isHidden' to true
-            gameObject.tag = isHidden ? "Hidden" : "Player";                    //The "?" means "value if true" : "value if false". It's cleaner than a lot of if-else statements
-        }*/
+            myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        }
+        else
+        {
+            if (myAnim == null)
+                Debug.LogError("Animator component is not assigned!");
 
-        //Setting up Parameters in the Animator
-        myAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));                     //"Mathf.abs()" returns the value of velocity of rigidbody along the x axis
+            if (rb == null)
+                Debug.LogError("Rigidbody component is not assigned!");
+        }
 
         /*if (isFlashing)
         {
@@ -140,6 +144,12 @@ public class Scottie_Controller : MonoBehaviour
             }
         }*/
 
+        /*Toggle between "Player" and "Hidden" Tags in unity (so that the enemies can't detect the player)
+        if (Input.GetKeyDown("e"))
+        {
+            isHidden = !isHidden;                                               //Changes 'isHidden' to true
+            gameObject.tag = isHidden ? "Hidden" : "Player";                    //The "?" means "value if true" : "value if false". It's cleaner than a lot of if-else statements
+        }*/
     }
 
 
