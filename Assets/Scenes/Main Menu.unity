@@ -1329,7 +1329,6 @@ MonoBehaviour:
   Confirm1Tab: {fileID: 0}
   Confirm2Tab: {fileID: 0}
   Confirm3Tab: {fileID: 0}
-  eventPos: 0
 --- !u!1 &1615098899
 GameObject:
   m_ObjectHideFlags: 0
