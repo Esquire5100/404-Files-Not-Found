@@ -2589,6 +2589,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5528393305737328624, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1045d6b4a5d03284c925915c3827eb2d, type: 3}
     - target: {fileID: 6383135172755981681, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
       propertyPath: AlertMusic
       value: 
@@ -2640,6 +2644,22 @@ PrefabInstance:
     - target: {fileID: 6714573156673224392, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319644999199895547, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319644999199895547, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319644999199895547, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -101.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319644999199895547, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.11619949
       objectReference: {fileID: 0}
     - target: {fileID: 8740944882508063583, guid: c49c0add20291a94495d2cc8811a6fe1, type: 3}
       propertyPath: m_Name
