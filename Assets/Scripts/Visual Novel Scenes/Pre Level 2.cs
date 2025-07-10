@@ -110,11 +110,11 @@ public class PreLevel2 : MonoBehaviour
     {
         if (eventPos == 1)
         {
-            StartCoroutine(ResponseOneW());
+            StartCoroutine(ResponseOne());
         }
     }
 
-    private IEnumerator ResponseOneW()
+    private IEnumerator ResponseOne()
     {
         yield return new WaitForSeconds(0.03f);
         responses.SetActive(false);                                                 //Disable the buttons so the player can't keep clicking them
@@ -152,10 +152,10 @@ public class PreLevel2 : MonoBehaviour
     {
         if (eventPos == 1)
         {
-            StartCoroutine(ResponseTwoSW());
+            StartCoroutine(ResponseTwo());
         }
     }
-    private IEnumerator ResponseTwoSW()
+    private IEnumerator ResponseTwo()
     {
         yield return new WaitForSeconds(0.03f);
         responses.SetActive(false);                                                           //Disable the buttons so the player can't keep clicking them
@@ -182,15 +182,15 @@ public class PreLevel2 : MonoBehaviour
     {
         if (eventPos == 2)
         {
-            StartCoroutine(ResponseOne());
+            StartCoroutine(ResponseOneuh());
         }
     }
 
-    private IEnumerator ResponseOne()
+    private IEnumerator ResponseOneuh()
     {
         yield return new WaitForSeconds(0.03f);
         responses1.SetActive(false);                                                //Disable the buttons so the player can't keep clicking them
-        PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
+        PhionaShout.Play();                                                          //Play the sfx for Phiona talking
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
 
         textToSpeak = "That's what I thought.";                       //Define the text that needs to be printed
@@ -201,7 +201,7 @@ public class PreLevel2 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
         yield return new WaitForSeconds(2f);
-        PhionaTalk.Stop();
+        PhionaShout.Stop();
 
         yield return new WaitForSeconds(1.5f);
         charPhiona.GetComponent<Image>().sprite = PhionaNeutral;                    //Change Phiona's sprite
