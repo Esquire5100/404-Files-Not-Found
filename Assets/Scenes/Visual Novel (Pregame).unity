@@ -164,7 +164,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08ab099b01daab64eba5b22f39555cb7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2140c4e77d6e9da47ad01f3e482d6c64, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.0005
   m_Pitch: 2.54
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
