@@ -91,34 +91,33 @@ public class MainMenu : MonoBehaviour
 
     //Files Buttons
     //Tab selection
-    public void Tab1()
-    {
-        Lvl1.SetActive(true);
-        Lvl2.SetActive(false);
-        Lvl3.SetActive(false);
-        FilesTab.SetActive(false);
-    }
 
-    public void Tab2()
+    public void SelectTab(string tabName)
     {
-        Lvl1.SetActive(false);
-        Lvl2.SetActive(true);
-        Lvl3.SetActive(false);
-        FilesTab.SetActive(false);
-    }
-    public void Tab3()
-    {
-        Lvl1.SetActive(false);
-        Lvl2.SetActive(false);
-        Lvl3.SetActive(true);
-        FilesTab.SetActive(false);
-    }
-    public void fileTab()
-    {
+        // Deactivate all tabs first
         Lvl1.SetActive(false);
         Lvl2.SetActive(false);
         Lvl3.SetActive(false);
-        FilesTab.SetActive(true);
+        FilesTab.SetActive(false);
+
+        switch (tabName)
+        {
+            case "Tab1":
+                Lvl1.SetActive(true);
+                break;
+            case "Tab2":
+                Lvl2.SetActive(true);
+                break;
+            case "Tab3":
+                Lvl3.SetActive(true);
+                break;
+            case "FileTab":
+                FilesTab.SetActive(true);
+                break;
+            default:
+                Debug.LogWarning("Invalid tab name: " + tabName);
+                break;
+        }
     }
 
     //Level Selection

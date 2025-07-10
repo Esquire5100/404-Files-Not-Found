@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: File_Zipped_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 240
+        width: 3747
+        height: 2965
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000978ba5e7e5d54485c8f61bae76115
+      internalID: 1146294346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +153,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      File_Zipped_0: -1883560959
+      File_Zipped_1: 163685946
+      File_Zipped_10: 942044449
+      File_Zipped_11: -22890141
+      File_Zipped_12: 1146294346
+      File_Zipped_13: -790736084
+      File_Zipped_14: -851427609
+      File_Zipped_2: 831550568
+      File_Zipped_3: -1318846192
+      File_Zipped_4: 1467534433
+      File_Zipped_5: -1260467159
+      File_Zipped_6: 1067596780
+      File_Zipped_7: 1468187618
+      File_Zipped_8: -1234009474
+      File_Zipped_9: -1729740082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
