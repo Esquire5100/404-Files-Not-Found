@@ -21,7 +21,7 @@ public class LevelExit : MonoBehaviour
     {
         if (other.CompareTag("Player")) //If the Player hits the object...
         {
-            SceneManager.LoadScene("Level 2"); //...then bring player to the next level
+            SceneManager.LoadScene("Main Menu"); //...then bring player to the next level
         }
     }
 }

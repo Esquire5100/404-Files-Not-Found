@@ -75,6 +75,8 @@ public class CaptchaUI : MonoBehaviour
         {
             LvlManager.Instance.AddFiles(fileValue);
             Debug.Log("File added! Total: " + LvlManager.Instance.FileCount);
+
+            LvlManager.Instance.SaveRunToTotal();
         }
         else
         {
@@ -83,7 +85,7 @@ public class CaptchaUI : MonoBehaviour
 
         yield return new WaitForSeconds(2f); //show success message for 2 seconds
 
-        //Return to Level 1
-        SceneManager.LoadScene("Level 1");
+        //Return to Level 1 (close the popup)
+        LvlManager.Instance.ClosePopup();
     }
 }

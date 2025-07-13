@@ -52,7 +52,7 @@ public class Stairs : MonoBehaviour
     {
         sr.sprite = open; // Show open before teleport
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         player.transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
 
         sr.sprite = closed; // Switch back to closed after teleport

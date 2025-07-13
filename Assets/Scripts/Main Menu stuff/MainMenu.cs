@@ -57,6 +57,11 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void Mainmenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void Settings()
     {
         SceneManager.LoadScene("Settings");

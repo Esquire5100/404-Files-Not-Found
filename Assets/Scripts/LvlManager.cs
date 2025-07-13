@@ -121,7 +121,7 @@ public class LvlManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Unsubscribe from event to avoid memory leaks
+        //Unsubscribe from event to avoid memory leaks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -135,5 +135,14 @@ public class LvlManager : MonoBehaviour
     public void ClosePopup()
     {
         SceneManager.UnloadSceneAsync("Captcha");
+
+        UpdateUI(); //refresh the FileCounter
+    }
+
+    //Call this when the level ends to save how many files were stolen in this run
+    public void SaveRunToTotal()
+    {
+        string levelName = SceneManager.GetActiveScene().name; //Use current scene name as the level identifier
+        FileProgressTracker.AddFiles(levelName, FileCount);    //Add this run’s files to the total tracker
     }
 }

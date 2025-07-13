@@ -154,7 +154,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
 
         yield return new WaitForSeconds(1.5f);
