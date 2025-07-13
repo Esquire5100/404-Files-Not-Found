@@ -73,7 +73,7 @@ public class CaptchaUI : MonoBehaviour
         //Give player the file
         if (LvlManager.Instance != null)
         {
-            LvlManager.Instance.AddFiles(fileValue);
+            LvlManager.Instance.AddFiles(1);
             Debug.Log("File added! Total: " + LvlManager.Instance.FileCount);
 
             LvlManager.Instance.SaveRunToTotal();
