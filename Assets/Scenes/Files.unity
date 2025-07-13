@@ -2298,7 +2298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400413874
 Transform:
   m_ObjectHideFlags: 0
@@ -10040,6 +10040,14 @@ MonoBehaviour:
   Hacking: {fileID: 1494869725}
   Flashbang: {fileID: 522862180}
   NightMode: {fileID: 400413873}
+  btnPhiona: {fileID: 246889085}
+  btnDialer: {fileID: 1791463409}
+  btnScottie: {fileID: 2102035850}
+  btnSecurity: {fileID: 1683180725}
+  btnKeycard: {fileID: 1084847336}
+  btnHacking: {fileID: 1515257885}
+  btnFlashbang: {fileID: 1605437428}
+  btnNightMode: {fileID: 2121607598}
 --- !u!1 &1494869725
 GameObject:
   m_ObjectHideFlags: 0
@@ -10853,6 +10861,9 @@ MonoBehaviour:
   level1Text: {fileID: 747039424}
   level2Text: {fileID: 656941469}
   level3Text: {fileID: 1306347903}
+  Tab1: {fileID: 1132185264}
+  Tab2: {fileID: 1640445614}
+  Tab3: {fileID: 1284997405}
 --- !u!1 &1593689718
 GameObject:
   m_ObjectHideFlags: 0

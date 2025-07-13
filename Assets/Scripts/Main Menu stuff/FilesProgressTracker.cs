@@ -75,4 +75,19 @@ public static class FileProgressTracker
             return result;
         }
     }
+
+    //Return true if a lvel has at least 1 file collected
+    public static bool HasCompletedLevel(string levelName)
+    {
+        return fileCounts.ContainsKey(levelName) && fileCounts[levelName] > 0;
+    }
+
+    //Return total number of files across all levels
+    public static int GetTotalFiles()
+    {
+        int total = 0;
+        foreach (var count in  fileCounts.Values)
+            total += count;
+        return total;
+    }
 }

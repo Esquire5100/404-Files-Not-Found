@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FilesScene : MonoBehaviour
 {
+    //Panels
     public GameObject Phiona;
     public GameObject Dialer;
     public GameObject Scottie;
@@ -15,10 +16,49 @@ public class FilesScene : MonoBehaviour
     public GameObject Flashbang;
     public GameObject NightMode;
 
-    // Start is called before the first frame update
+    //Buttons
+    public GameObject btnPhiona;
+    public GameObject btnDialer;
+    public GameObject btnScottie;
+
+    public GameObject btnSecurity;
+    public GameObject btnKeycard;
+    public GameObject btnHacking;
+
+    public GameObject btnFlashbang;
+    public GameObject btnNightMode;
+
     void Start()
     {
-        
+        HideLockedButtons();
+
+        /*dialerButton.gameObject.SetActive(totalFiles >= 5);
+        phionaButton.gameObject.SetActive(totalFiles >= 6);
+        scottieButton.gameObject.SetActive(totalFiles >= 7);*/
+    }
+
+    private void HideLockedButtons()
+    {
+        //Unlock based on level completion
+        if (!FileProgressTracker.HasCompletedLevel("Level 1"))
+        {
+            btnFlashbang.SetActive(false);
+            btnKeycard.SetActive(false);
+            btnHacking.SetActive(false);
+            btnSecurity.SetActive(false);
+        }
+
+        if (!FileProgressTracker.HasCompletedLevel("Level 2"))
+        {
+            btnNightMode.SetActive(false);
+        }
+
+        //Unlock based on total file count
+        int totalFiles = FileProgressTracker.GetTotalFiles();
+
+        if (totalFiles > 5) btnPhiona.SetActive(false);
+        if (totalFiles > 6) btnDialer.SetActive(false);
+        if (totalFiles > 7) btnScottie.SetActive(false);
     }
 
     // Update is called once per frame

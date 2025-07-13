@@ -22,7 +22,10 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Only show tab buttons for levels where files were collected
+        Lvl1.SetActive(FileProgressTracker.GetFiles("Level 1") > 0);
+        Lvl2.SetActive(FileProgressTracker.GetFiles("Level 2") > 0);
+        Lvl3.SetActive(FileProgressTracker.GetFiles("Level 3") > 0);
     }
 
     // Update is called once per frame

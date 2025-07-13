@@ -115,7 +115,7 @@ public class VN_Pregame : MonoBehaviour
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
 
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(4f);
         PhionaTalk.Pause();
         PhionaShout.Play();
         charPhiona.GetComponent<Image>().sprite = PhionaAngry;                      //Change Phiona's sprite
@@ -123,7 +123,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
         responses1.SetActive(true);
 
@@ -154,7 +154,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         PhionaTalk.Stop();
 
         yield return new WaitForSeconds(1.5f);
@@ -165,7 +165,7 @@ public class VN_Pregame : MonoBehaviour
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
 
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(4f);
         PhionaTalk.Pause();
         PhionaShout.Play();
         charPhiona.GetComponent<Image>().sprite = PhionaAngry;                                //Change Phiona's sprite
@@ -175,7 +175,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
         responses1.SetActive(true);
 
@@ -205,7 +205,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
         responses2.SetActive(true);
 
@@ -238,7 +238,7 @@ public class VN_Pregame : MonoBehaviour
         responses2.SetActive(false);
         fadeScreenOut.SetActive(true);
 
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Level 1");
 
 
