@@ -156,6 +156,7 @@ public class Scottie_Controller : MonoBehaviour
     //Movement Script
     public void Move(float dir)
     {
+        
         if (!canMove)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -166,13 +167,13 @@ public class Scottie_Controller : MonoBehaviour
         {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
-            audioManager.PlaySFX(audioManager.WalkSFX);
+            SoundEffectManager.Play("Walking");
         }
         else if (dir < 0)
         {
             rb.velocity = new Vector2(-MoveSpeed, rb.velocity.y);                //Move Left
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);               //When move left, face left
-            audioManager.PlaySFX(audioManager.WalkSFX);
+            SoundEffectManager.Play("Walking");
         }
         else
         {
@@ -245,7 +246,8 @@ public class Scottie_Controller : MonoBehaviour
     //Mobile Control for hiding
     public void Hide()
     {
-        if(!hiding && canHide)
+        SoundEffectManager.Play("Hiding");
+        if (!hiding && canHide)
         {
             Physics2D.IgnoreLayerCollision(6, 7, true);
             Physics2D.IgnoreLayerCollision(6, 11, true);
@@ -303,6 +305,7 @@ public class Scottie_Controller : MonoBehaviour
         Debug.Log($"playerInTrigger: {playerInTrigger}");
         Debug.Log($"uiButtonPressed: {uiButtonPressed}"); 
         */
+        SoundEffectManager.Play("Hack");
 
         if (hackableObject != null && playerInTrigger && uiButtonPressed)
         {
