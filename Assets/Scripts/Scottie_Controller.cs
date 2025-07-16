@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.UI;
 
 public class Scottie_Controller : MonoBehaviour
 {
+    public GameObject CaptchaScene;
 
     private static Scottie_Controller instance;                                  //Singleton reference to ensure only one player exists
 
@@ -32,7 +34,7 @@ public class Scottie_Controller : MonoBehaviour
             return;
         }
 
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
     }
 
@@ -47,7 +49,7 @@ public class Scottie_Controller : MonoBehaviour
 
     private Animator myAnim;                                                     //Store a ref to animtions to access later
 
-    AudioManager audioManager;                                                   //reference the Audio Manager Script
+    //AudioManager audioManager;                                                   //reference the Audio Manager Script
 
     LvlManager thelvlManager;                                                    //Reference Level Manager
 
@@ -79,6 +81,10 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite hideIcon;
     private enum ActionMode { None, Hide, Hack }
     private ActionMode currentMode = ActionMode.None;
+
+    //Sound Effect
+    public float walkingSpeed = 0.5f;
+
 
     void Start()
     {
@@ -323,9 +329,9 @@ public class Scottie_Controller : MonoBehaviour
             Debug.Log("Captcha");
             StartCoroutine(LoadCaptchaSceneAsync());*/
 
-            GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
+            //GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
             Debug.Log("Captcha");
-            StartCoroutine(LoadCaptchaSceneAsync());
+            CaptchaScene.SetActive(true);
         }
         else
         {
@@ -333,13 +339,9 @@ public class Scottie_Controller : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadCaptchaSceneAsync()
+    public void CloseCaptcha()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha", LoadSceneMode.Additive);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;  //Wait until scene is fully loaded
-        }
+        CaptchaScene.SetActive(false);
     }
 
     private void UpdateActionButtonUI()
