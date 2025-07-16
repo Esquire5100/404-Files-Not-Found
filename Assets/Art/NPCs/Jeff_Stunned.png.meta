@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jeff_Stunned_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1300
+        width: 335
+        height: 746
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487f9b3d8a8c53d4b9b2d8ae8550bad9
+      internalID: 1506350419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_3
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1300
+        width: 341
+        height: 746
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98313cae78a502c49a868b21f1c8439f
+      internalID: -1230217192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1297
+        width: 348
+        height: 751
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64798360371eeb4cb64ebc382349a38
+      internalID: -157076981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_7
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1295
+        width: 323
+        height: 748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd21de059992fff43962495ce71e161b
+      internalID: 1740957124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jeff_Stunned_0: 1506350419
+      Jeff_Stunned_1: -412790060
+      Jeff_Stunned_10: 664311754
+      Jeff_Stunned_11: -1955277956
+      Jeff_Stunned_12: -74512668
+      Jeff_Stunned_2: -884960531
+      Jeff_Stunned_3: -1230217192
+      Jeff_Stunned_4: -157076981
+      Jeff_Stunned_5: 1628371945
+      Jeff_Stunned_6: -1129278984
+      Jeff_Stunned_7: 1740957124
+      Jeff_Stunned_8: 1051644272
+      Jeff_Stunned_9: 819883412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
