@@ -129,9 +129,9 @@ TextureImporter:
         x: 16
         y: 1391
         width: 643
-        height: 374
+        height: 625
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 643
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 643
         height: 374
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,6 +199,7 @@ TextureImporter:
       Scott_Hide_Table_0: -983319073
       Scott_Hide_Table_1: 5864299
       Scott_Hide_Table_2: -1465207022
+      Scott_Hide_Table_3: -866014071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
