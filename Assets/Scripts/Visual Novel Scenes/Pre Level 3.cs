@@ -16,11 +16,18 @@ public class PreLevel3 : MonoBehaviour
     public Sprite PhionaAnnoyed;
     public Sprite PhionaAngry;
 
+    public GameObject charDialer;
+    public Sprite DialerNeutral;
+    public Sprite DialerAnnoyed;
+    public Sprite DialerCocky;
+
     public GameObject Dialogue;
 
     [SerializeField] AudioSource PhionaTalk;
     [SerializeField] AudioSource PhionaSqueal;
     [SerializeField] AudioSource PhionaShout;
+
+    [SerializeField] AudioSource DialerTalk;
 
     [SerializeField] string textToSpeak;
     [SerializeField] int currentTextLength;
@@ -29,6 +36,9 @@ public class PreLevel3 : MonoBehaviour
 
     [SerializeField] GameObject responses;
     [SerializeField] GameObject responses1;
+    [SerializeField] GameObject responses2;
+    [SerializeField] GameObject responses3;
+    [SerializeField] GameObject responses4;
 
     [SerializeField] int eventPos = 0;
 
@@ -37,7 +47,7 @@ public class PreLevel3 : MonoBehaviour
     {
         textLength = TextCreator.charCount; //Ref to the charCount in TextCreator script
 
-        if (eventPos == 2)
+        if (eventPos == 5)
         {
             //Wait for a bit before fading out and loading next scene
             new WaitForSeconds(2f);
@@ -138,7 +148,7 @@ public class PreLevel3 : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won’t let you off easy, but I really need these last few files to piece together their strategies.";   //Define the text that needs to be printed
+        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won’t let you off easy, but I really need these last few files to piec3 t0gE$her tHei% 5t$@teG/eS.";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -147,21 +157,7 @@ public class PreLevel3 : MonoBehaviour
 
         yield return new WaitForSeconds(7f);
         PhionaTalk.Stop();
-
-
-        yield return new WaitForSeconds(1.5f);
-        charPhiona.GetComponent<Image>().sprite = PhionaAngry;                    //Change Phiona's sprite
-        PhionaShout.Play();                                                          //Play the sfx for Phiona talking
-
-        textToSpeak = "You have to finish this job.";   //Define the text that needs to be printed
-        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
-        currentTextLength = textToSpeak.Length;
-        TextCreator.runTextPrint = true;
-
-        yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
-
-        yield return new WaitForSeconds(4f);
-        PhionaTalk.Stop();
+        responses1.SetActive(true);
 
         eventPos = 2;
     }
@@ -210,7 +206,7 @@ public class PreLevel3 : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won’t let you off easy, but I really need these last few files to piece together their strategies.";   //Define the text that needs to be printed
+        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won’t let you off easy, but I really need these last few files to piec3 t0gE$her tHei% 5t$@teG/eS.";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -219,22 +215,68 @@ public class PreLevel3 : MonoBehaviour
 
         yield return new WaitForSeconds(7f);
         PhionaTalk.Stop();
+        responses1.SetActive(true);
 
+        eventPos = 2;
+    }
 
-        yield return new WaitForSeconds(1.5f);
-        charPhiona.GetComponent<Image>().sprite = PhionaAngry;                    //Change Phiona's sprite
-        PhionaShout.Play();                                                          //Play the sfx for Phiona talking
+    //Event 2
+    public void MsPhiona()
+    {
+        if (eventPos == 2)
+        {
+            StartCoroutine(ResponseMsPhiona());
+        }
+    }
 
-        textToSpeak = "You have to finish this job.";   //Define the text that needs to be printed
+    private IEnumerator ResponseMsPhiona()
+    {
+        yield return new WaitForSeconds(0.03f);
+        responses.SetActive(false);                                                      //Disable the buttons so the player can't keep clicking them
+        charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                         //Change Phiona's sprite
+        PhionaTalk.Play();
+
+        textToSpeak = "$ho0t. S@otTi3-";                                            //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(0.5f);
+        PhionaTalk.Stop();
+        charPhiona.SetActive(false);
+        mainTextObject.SetActive(false);
+
+
+        yield return new WaitForSeconds(1.5f);
+        PhionaTalk.Play();                                                                         //Play the sfx for Phiona talking
+
+        textToSpeak = "YoU h@ve t0 F/ni$h th9s J*b.";                                              //Define the text that needs to be printed
+        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                                //Easily ref the TMPro component
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+
+        yield return new WaitUntil(() => textLength == currentTextLength);                         //Wait until the text has finished 
+
+        yield return new WaitForSeconds(1f);
         PhionaTalk.Stop();
 
-        eventPos = 2;
+        yield return new WaitForSeconds(1f);
+        charDialer.SetActive(true);
+        charDialer.GetComponent<Image>().sprite = DialerNeutral;                                   //Change Dialer's sprite
+        DialerTalk.Play();
+
+        textToSpeak = "Well, well, well.";                                                         //Define the text that needs to be printed
+        Dialogue.GetComponent<TMPro.TMP_Text>().color = new Color(115f/255f, 91f/255f, 65f/255f);  //Change the colour of the text
+        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                                //Easily ref the TMPro component
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+
+        yield return new WaitUntil(() => textLength == currentTextLength);                         //Wait until the text has finished
+        yield return new WaitForSeconds(1f);
+        DialerTalk.Stop();
+
+        eventPos = 3;
     }
 }
