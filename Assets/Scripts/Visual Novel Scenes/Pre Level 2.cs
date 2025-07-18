@@ -43,7 +43,6 @@ public class PreLevel2 : MonoBehaviour
             new WaitForSeconds(2f);
             fadeScreenOut.SetActive(true);
 
-            Time.timeScale = 1.0f; //Resume game after the dialogue
             This.SetActive(false);
         }
     }
@@ -84,7 +83,7 @@ public class PreLevel2 : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3.5f);
         PhionaTalk.Stop();
 
         yield return new WaitForSeconds(1.5f);
