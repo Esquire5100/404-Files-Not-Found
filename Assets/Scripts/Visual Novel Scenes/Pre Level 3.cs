@@ -261,11 +261,13 @@ public class PreLevel3 : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         PhionaTalk.Stop();
+        mainTextObject.transform.Find("CharaName").gameObject.SetActive(false);
 
         yield return new WaitForSeconds(1f);
         charDialer.SetActive(true);
         charDialer.GetComponent<Image>().sprite = DialerNeutral;                                   //Change Dialer's sprite
         DialerTalk.Play();
+        mainTextObject.transform.Find("???").gameObject.SetActive(true);                           //"change" the name
 
         textToSpeak = "Well, well, well.";                                                         //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().color = new Color(115f/255f, 91f/255f, 65f/255f);  //Change the colour of the text
@@ -276,6 +278,7 @@ public class PreLevel3 : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);                         //Wait until the text has finished
         yield return new WaitForSeconds(1f);
         DialerTalk.Stop();
+        responses2.SetActive(true);
 
         eventPos = 3;
     }
