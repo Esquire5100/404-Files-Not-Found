@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1321
+        width: 251
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18efc985957094e408c29472d24cb5dc
+      internalID: -1006048551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1316
+        width: 323
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e423db0b9811643bcb9e79c8a31931
+      internalID: 1675877813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1326
+        width: 471
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9061f2c2cc5355d49b5d74938ab15508
+      internalID: -1260224636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1309
+        width: 480
+        height: 704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd06e1670e3767d419963e35546726a7
+      internalID: -908645951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 567
+        width: 341
+        height: 747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91a8b79f1a5b604285a321c3236f50f
+      internalID: 232888479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_5
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 582
+        width: 340
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4f39bf9e3eea54e88c4d536fc0b287
+      internalID: -1146463625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_6
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 579
+        width: 463
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8ad856b1412844a9ff97a0cd78d4a6
+      internalID: 738017784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Walk_Right_Alt_7
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 567
+        width: 485
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3a6b33440688949b7f2fb45a4c737c
+      internalID: -798163920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jeff_Walk_Right_Alt_0: -1006048551
+      Jeff_Walk_Right_Alt_1: 1675877813
+      Jeff_Walk_Right_Alt_2: -1260224636
+      Jeff_Walk_Right_Alt_3: -908645951
+      Jeff_Walk_Right_Alt_4: 232888479
+      Jeff_Walk_Right_Alt_5: -1146463625
+      Jeff_Walk_Right_Alt_6: 738017784
+      Jeff_Walk_Right_Alt_7: -798163920
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

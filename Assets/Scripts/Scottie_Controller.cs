@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class Scottie_Controller : MonoBehaviour
 {
+    public GameObject CaptchaScene;
 
     private static Scottie_Controller instance;                                  //Singleton reference to ensure only one player exists
 
@@ -32,7 +35,7 @@ public class Scottie_Controller : MonoBehaviour
             return;
         }
 
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         //Add "audioManager.PlaySFX(audioManager.XX);" to movements/hacking etc
     }
 
@@ -47,13 +50,13 @@ public class Scottie_Controller : MonoBehaviour
 
     private Animator myAnim;                                                     //Store a ref to animtions to access later
 
-    AudioManager audioManager;                                                   //reference the Audio Manager Script
+    //AudioManager audioManager;                                                   //reference the Audio Manager Script
 
     LvlManager thelvlManager;                                                    //Reference Level Manager
 
     private bool canHide = false;                                                //Define if player is able to hde or not
     private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
-    public bool IsHiding {  get; private set; }                                  //Allows guards FOV's scipt to determine if player is hding and adjust behaviour
+    public bool IsHiding { get; private set; }                                  //Allows guards FOV's scipt to determine if player is hding and adjust behaviour
     public Sprite normalSprite;                                                  //Allow to assign normal sprite directly from inspector
     public Sprite crouchingSprite;                                                  //Allow to assign hiding sprite directly from inspector
 
@@ -79,6 +82,13 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite hideIcon;
     private enum ActionMode { None, Hide, Hack }
     private ActionMode currentMode = ActionMode.None;
+
+    //Sound Effect
+    public float walkingSpeed = 0.5f;
+
+    public Sprite[] hideSprites;
+    private int currentZoneIndex = -1;  
+
 
     void Start()
     {
@@ -189,6 +199,7 @@ public class Scottie_Controller : MonoBehaviour
         if(other.gameObject.name.Equals("Table"))                                //If name of gameObject is detected, player is able to hide in said object
         {
             canHide = true;
+            SoundEffectManager.Play("Hiding");
             currentMode = ActionMode.Hide;
             UpdateActionButtonUI();
         }
@@ -246,26 +257,59 @@ public class Scottie_Controller : MonoBehaviour
     //Mobile Control for hiding
     public void Hide()
     {
-        SoundEffectManager.Play("Hiding");
-        if (!hiding && canHide)
+        
+        if (!hiding && canHide && currentZoneIndex >= 0 && currentZoneIndex < hideSprites.Length)
         {
+            Debug.Log($"Hiding at zone {currentZoneIndex}, sprite: {hideSprites[currentZoneIndex].name}");
+            SoundEffectManager.Play("Hiding");
+
+            myAnim.enabled = false;
+            sr.sprite = hideSprites[currentZoneIndex];                                // Choose the zone-specific sprite
+            myAnim.enabled = true;
             Physics2D.IgnoreLayerCollision(6, 7, true);
             Physics2D.IgnoreLayerCollision(6, 11, true);
             sr.sortingOrder = 0;
-            sr.sprite = crouchingSprite;
             hiding = true;
             IsHiding = true;
             canMove = false;
         }
-        else
+        else if (hiding)                                                             //Unhide
         {
+            sr.sprite = normalSprite;
+            myAnim.enabled = true;
             Physics2D.IgnoreLayerCollision(6, 7, false);
             Physics2D.IgnoreLayerCollision(6, 11, false);
             sr.sortingOrder = 2;
-            sr.sprite = normalSprite;
             hiding = false;
             IsHiding = false;
             canMove = true;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (hiding && currentZoneIndex >= 0)
+        sr.sprite = hideSprites[currentZoneIndex];
+    }
+    public void EnterHideZone(int index)
+    {
+        currentZoneIndex = index;
+        canHide = true;
+        currentMode = ActionMode.Hide;
+        UpdateActionButtonUI();
+    }
+
+    public void ExitHideZone(int index)
+    {
+        if (index == currentZoneIndex)
+        {
+            currentZoneIndex = -1;
+            canHide = false;
+            if (currentMode == ActionMode.Hide)
+            {
+                currentMode = ActionMode.None;
+                UpdateActionButtonUI();
+            }
         }
     }
 
@@ -323,9 +367,9 @@ public class Scottie_Controller : MonoBehaviour
             Debug.Log("Captcha");
             StartCoroutine(LoadCaptchaSceneAsync());*/
 
-            GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
+            //GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
             Debug.Log("Captcha");
-            StartCoroutine(LoadCaptchaSceneAsync());
+            CaptchaScene.SetActive(true);
         }
         else
         {
@@ -333,13 +377,9 @@ public class Scottie_Controller : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadCaptchaSceneAsync()
+    public void CloseCaptcha()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha", LoadSceneMode.Additive);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;  //Wait until scene is fully loaded
-        }
+        CaptchaScene.SetActive(false);
     }
 
     private void UpdateActionButtonUI()

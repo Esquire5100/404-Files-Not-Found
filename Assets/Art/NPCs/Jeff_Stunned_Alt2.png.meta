@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jeff_Stunned_Alt2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1269
+        width: 350
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c899a997498a8e143a86c20157017404
+      internalID: -675636166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_Alt2_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1300
+        width: 333
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972479b976f674640824a00403aaef04
+      internalID: 1024613794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_Alt2_4
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1298
+        width: 329
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673668d6d1058a84eba235bc5adead0b
+      internalID: 68479040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Stunned_Alt2_7
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1300
+        width: 351
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f0de33b127f9540aa945dc422b451d
+      internalID: 1535913033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jeff_Stunned_Alt2_0: -675636166
+      Jeff_Stunned_Alt2_1: 1947259282
+      Jeff_Stunned_Alt2_10: 1376290149
+      Jeff_Stunned_Alt2_11: 801235050
+      Jeff_Stunned_Alt2_12: 841084376
+      Jeff_Stunned_Alt2_2: 872863990
+      Jeff_Stunned_Alt2_3: 1024613794
+      Jeff_Stunned_Alt2_4: 68479040
+      Jeff_Stunned_Alt2_5: -643707836
+      Jeff_Stunned_Alt2_6: -1380423338
+      Jeff_Stunned_Alt2_7: 1535913033
+      Jeff_Stunned_Alt2_8: -1282814560
+      Jeff_Stunned_Alt2_9: 997014726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1350
+        width: 542
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fccfed5ef46a744ab54c4826a13afa0
+      internalID: -1089201580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_1
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1369
+        width: 336
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ba4b7fd35dffe4aa6b7b3292c020a6
+      internalID: 513527857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_2
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1366
+        width: 442
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f7d86e94ba59e42ae561233beb8423
+      internalID: -723195268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 655
+        width: 622
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998afe8a4c0ad8e4ea7c6a9a0cf221da
+      internalID: -943100665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_4
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 670
+        width: 524
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48650e84e972e4429ef1c95de8c91d5
+      internalID: -419047560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jeff_Chase_Right_Alt2_5
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 668
+        width: 477
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b560b63cb88a134c8c66245256d310e
+      internalID: -704302760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jeff_Chase_Right_Alt2_0: -1089201580
+      Jeff_Chase_Right_Alt2_1: 513527857
+      Jeff_Chase_Right_Alt2_2: -723195268
+      Jeff_Chase_Right_Alt2_3: -943100665
+      Jeff_Chase_Right_Alt2_4: -419047560
+      Jeff_Chase_Right_Alt2_5: -704302760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Scott_Flashbang_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1443
+        width: 249
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb249cdfca72d342b53b76d83036d71
+      internalID: -898415266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_1
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1443
+        width: 304
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb476702ee97d0443a69660e72276e9e
+      internalID: 696891253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_2
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1442
+        width: 291
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc89c0b012ef74b46b2c4a1bef26e714
+      internalID: 1328624376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1456
+        width: 367
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde0405c79663c7468488af978f8cee2
+      internalID: -638837214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_9
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 1448
+        width: 398
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84be94ab6a197a34990b340c168f3a0d
+      internalID: 460236930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 838
+        width: 249
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e36e91c14f08447b53c10baa5f022d
+      internalID: -137574250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_11
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 838
+        width: 249
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b798ebfd37db0994fbe637efb155c102
+      internalID: 868456732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_12
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 838
+        width: 249
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a043cea47ec634fbc717063072d876
+      internalID: -4997409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scott_Flashbang_13
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 838
+        width: 249
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121a92c32f0c7c742b2bac1edf35f0a6
+      internalID: 330479248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scott_Flashbang_0: -898415266
+      Scott_Flashbang_1: 696891253
+      Scott_Flashbang_10: -137574250
+      Scott_Flashbang_11: 868456732
+      Scott_Flashbang_12: -4997409
+      Scott_Flashbang_13: 330479248
+      Scott_Flashbang_2: 1328624376
+      Scott_Flashbang_3: 1873900699
+      Scott_Flashbang_4: 1627080330
+      Scott_Flashbang_5: -1013062850
+      Scott_Flashbang_6: 1744170665
+      Scott_Flashbang_7: 339193320
+      Scott_Flashbang_8: -638837214
+      Scott_Flashbang_9: 460236930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
