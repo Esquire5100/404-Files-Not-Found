@@ -8,17 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571079918823258092, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
+      propertyPath: zoneIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,19 +30,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.316
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Size.x
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Size.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Enabled
@@ -46,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Offset.y
-      value: -4.13
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -58,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 6.5
+      value: 1.8320312
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 14.050781
+      value: 2.7734375
       objectReference: {fileID: 0}
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Size.x
@@ -75,18 +79,18 @@ PrefabInstance:
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1383880280, guid: 592a1219812c5c748b6105d5233887ad, type: 3}
+      objectReference: {fileID: -1326024885, guid: 7af6a9c96eacdce49ba5d6252dded6ce, type: 3}
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.957531
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.702
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -122,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7165325118389082249, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Name
-      value: Hiding Plant (3) Variant
+      value: Hiding Plant 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

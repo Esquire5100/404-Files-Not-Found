@@ -84,7 +84,8 @@ public class Scottie_Controller : MonoBehaviour
     private ActionMode currentMode = ActionMode.None;
 
     //Sound Effect
-    public float walkingSpeed = 0.5f;
+    private bool playingFootsteps = false;
+    public float footstepSpeed = 0.5f;
 
     public Sprite[] hideSprites;
     private int currentZoneIndex = -1;  
@@ -177,19 +178,34 @@ public class Scottie_Controller : MonoBehaviour
         {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
-            SoundEffectManager.Play("Walking");
         }
         else if (dir < 0)
         {
             rb.velocity = new Vector2(-MoveSpeed, rb.velocity.y);                //Move Left
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);               //When move left, face left
-            SoundEffectManager.Play("Walking");
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);                         //Stand still when input detects nothing
         }
         moveDirection = dir;
+    }
+
+    void StartFootsteps()
+    {
+        playingFootsteps = true;
+        InvokeRepeating(nameof(PlayFootsteps), 0f, footstepSpeed);
+    }
+
+    void StopFootsteps()
+    {
+        playingFootsteps = false;
+        CancelInvoke(nameof(PlayFootsteps));
+    }
+
+    void PlayFootsteps()
+    {
+        SoundEffectManager.Play("Footstep");
     }
 
     //Hiding Script

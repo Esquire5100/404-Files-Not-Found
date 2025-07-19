@@ -34,10 +34,10 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); }); 
-    }
+    }*/
 
     public static void SetVolume(float volume)
     {
