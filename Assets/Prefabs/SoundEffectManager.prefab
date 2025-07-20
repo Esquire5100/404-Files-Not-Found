@@ -148,7 +148,6 @@ MonoBehaviour:
     - {fileID: 0}
   - name: Walking
     audioClips:
-    - {fileID: 0}
     - {fileID: 8300000, guid: c69316bca85e6254697483ba4823e98c, type: 3}
     - {fileID: 8300000, guid: 33472f9419b610e4ca1a3621dcfd1ac9, type: 3}
     - {fileID: 8300000, guid: 785cd133ed83d9b4383f6a9e3833642f, type: 3}
@@ -172,7 +171,14 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fff78a2ed6cafc045ba36daa8fddadd8, type: 3}
   - name: Hiding
     audioClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: b07144f8e6321e644baf219c7cf5580f, type: 3}
+    - {fileID: 8300000, guid: 97bf8901968d38d4883fcd06c70c7886, type: 3}
+    - {fileID: 8300000, guid: 29ff317722ee0864cb3b755603ec16e2, type: 3}
+    - {fileID: 8300000, guid: b93a9713ef26ccf42b32baa781eacc8b, type: 3}
+    - {fileID: 8300000, guid: cee1177648a90af49821690da9347137, type: 3}
+    - {fileID: 8300000, guid: b1c48878256ae4a4c869e991d353325b, type: 3}
+    - {fileID: 8300000, guid: 0391f0a72a49e994ab265961161c5780, type: 3}
+    - {fileID: 8300000, guid: 04eb6098292391e42ba27de5c1efe9bd, type: 3}
 --- !u!114 &1382252288489287130
 MonoBehaviour:
   m_ObjectHideFlags: 0

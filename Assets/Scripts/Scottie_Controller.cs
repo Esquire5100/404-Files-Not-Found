@@ -178,11 +178,13 @@ public class Scottie_Controller : MonoBehaviour
         {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
+            SoundEffectManager.Play("Footstep");
         }
         else if (dir < 0)
         {
             rb.velocity = new Vector2(-MoveSpeed, rb.velocity.y);                //Move Left
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);               //When move left, face left
+            SoundEffectManager.Play("Footstep");
         }
         else
         {
@@ -191,7 +193,7 @@ public class Scottie_Controller : MonoBehaviour
         moveDirection = dir;
     }
 
-    void StartFootsteps()
+    /*void StartFootsteps()
     {
         playingFootsteps = true;
         InvokeRepeating(nameof(PlayFootsteps), 0f, footstepSpeed);
@@ -206,7 +208,7 @@ public class Scottie_Controller : MonoBehaviour
     void PlayFootsteps()
     {
         SoundEffectManager.Play("Footstep");
-    }
+    }*/
 
     //Hiding Script
     private void OnTriggerEnter2D(Collider2D other)
@@ -215,7 +217,6 @@ public class Scottie_Controller : MonoBehaviour
         if(other.gameObject.name.Equals("Table"))                                //If name of gameObject is detected, player is able to hide in said object
         {
             canHide = true;
-            SoundEffectManager.Play("Hiding");
             currentMode = ActionMode.Hide;
             UpdateActionButtonUI();
         }
@@ -299,6 +300,7 @@ public class Scottie_Controller : MonoBehaviour
             hiding = false;
             IsHiding = false;
             canMove = true;
+            SoundEffectManager.Play("Hiding");
         }
     }
 
