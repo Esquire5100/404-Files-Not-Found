@@ -9,7 +9,7 @@ using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class Scottie_Controller : MonoBehaviour
 {
-    public GameObject CaptchaScene;
+    public GameObject Minigame;
 
     private static Scottie_Controller instance;                                  //Singleton reference to ensure only one player exists
 
@@ -361,7 +361,7 @@ public class Scottie_Controller : MonoBehaviour
             Debug.Log("can hack");
             hackableObject.Hack();
             Debug.Log("Captcha");
-            CaptchaScene.SetActive(true);
+            Minigame.SetActive(true);
             /*//Save player position
            PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
            PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
@@ -396,7 +396,7 @@ public class Scottie_Controller : MonoBehaviour
 
     public void CloseCaptcha()
     {
-        CaptchaScene.SetActive(false);
+        Minigame.SetActive(false);
     }
 
     private void UpdateActionButtonUI()

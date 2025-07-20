@@ -51,7 +51,7 @@ public class CaptchaUI : MonoBehaviour
     }
 
     //Checks if the player's input matches current captcha
-    private void Submit()
+    public void Submit()
     {
         string enteredCode = uiCodeInput.text;                     //Get text from input field
 

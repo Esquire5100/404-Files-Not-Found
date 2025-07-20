@@ -25,6 +25,11 @@ public class Guard_Controller : MonoBehaviour
 
     private Animator myAnim;                                                     //Store a ref to animtions to access later
 
+    //Stun State / Timer
+    private bool isStunned = false;
+    public float stunDuration;
+    private float stunTimer = 0f;
+
     //Start is called before the first frame update
     void Start()
     {
@@ -36,6 +41,18 @@ public class Guard_Controller : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        if (isStunned)
+        {
+            stunTimer -= Time.deltaTime;
+            if (stunTimer <= 0f)
+            {
+                isStunned = false;
+                myAnim.SetBool("Stunned", false);
+            }
+            enemyRb.velocity = Vector2.zero;
+            myAnim.SetFloat("Speed", 0f);
+            return;
+        }
         /*if enemy is moving right and has gone past the right point, it should turn and move left
         if (movingRight && (transform.position.x > rightPoint.position.x))
         {
@@ -154,5 +171,16 @@ public class Guard_Controller : MonoBehaviour
         {
             SceneManager.LoadScene("Game Over"); //...then bring player to the Game Over scene
         }
+    }
+
+    public void Stun(float duration)
+    {
+        isStunned = true;
+        stunTimer = duration;
+        Debug.Log($"{gameObject.name} stunned for {duration}s");
+
+        myAnim.SetTrigger("Stunned");
+
+        
     }
 }

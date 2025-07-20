@@ -122,13 +122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1396800327958094788}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 8566681287987130257}
+        m_TargetAssemblyTypeName: CaptchaUI, Assembly-CSharp
+        m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -1966,7 +1966,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenCaptcha
         m_Mode: 1
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenTab2
         m_Mode: 1
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -2969,7 +2969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1821727979758382453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3118,7 +3118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -3259,7 +3259,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Tab 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &3932739020101257388
@@ -3382,7 +3382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenTab4
         m_Mode: 1
@@ -4066,7 +4066,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -4364,7 +4364,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -4496,7 +4496,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenTab3
         m_Mode: 1
@@ -4703,7 +4703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -5051,7 +5051,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenTab1
         m_Mode: 1
@@ -5183,7 +5183,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -5291,7 +5291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7877281085494983027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5554,7 +5554,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -5686,7 +5686,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -5897,7 +5897,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -6029,7 +6029,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -6161,7 +6161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -6332,7 +6332,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -6464,7 +6464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -7012,7 +7012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -7144,7 +7144,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoyEmpty
         m_Mode: 1
@@ -7276,7 +7276,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy2
         m_Mode: 1
@@ -7489,7 +7489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -7621,7 +7621,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: OpenDecoy1
         m_Mode: 1
@@ -7753,7 +7753,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8031702593391518071}
         m_TargetAssemblyTypeName: FileMinigame, Assembly-CSharp
         m_MethodName: CloseTab
         m_Mode: 5
@@ -8189,6 +8189,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3196654838405349078, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
+      propertyPath: Minigame
+      value: 
+      objectReference: {fileID: 3751064052656520314}
+    - target: {fileID: 3196654838405349078, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
       propertyPath: buttonIcon
       value: 
       objectReference: {fileID: 5904948585531059373}
@@ -8226,7 +8230,7 @@ PrefabInstance:
       objectReference: {fileID: -1326258173, guid: bc7acabf9687bc6449f2dd9256f76b2f, type: 3}
     - target: {fileID: 3461415542766025403, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3461415542766025403, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
       propertyPath: m_UseFullKinematicContacts
@@ -8239,7 +8243,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7880227698655692935, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9092534903786539916}
+    - targetCorrespondingSourceObject: {fileID: 7880227698655692935, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8335394487124735955}
   m_SourcePrefab: {fileID: 100100000, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
 --- !u!4 &126022846812971321 stripped
 Transform:
@@ -8251,17 +8261,82 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3196654838405349078, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
   m_PrefabInstance: {fileID: 2433625803510490766}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396800327958094788}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7e4d1995f7e0644ab4f59b80e70457c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1396800327958094788 stripped
+--- !u!1 &5519663343581179401 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3650052845247448394, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7880227698655692935, guid: c5835eb45d822fd41bf87594b5b53c4b, type: 3}
   m_PrefabInstance: {fileID: 2433625803510490766}
   m_PrefabAsset: {fileID: 0}
+--- !u!60 &9092534903786539916
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519663343581179401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: -0.05}
+      - {x: -2.12, y: 4.69}
+      - {x: 1.8939724, y: 5.075008}
+  m_UseDelaunayMesh: 0
+--- !u!114 &8335394487124735955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519663343581179401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e38fd20bbf98548a14923df322418c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 5519663343581179401}
+  stunButton: {fileID: 281164029569473065}
+  cooldownOverlay: {fileID: 453620301060947432}
+  stunDuration: 2
+  stunCooldown: 20
 --- !u!1001 &8092599935919082086
 PrefabInstance:
   m_ObjectHideFlags: 0
