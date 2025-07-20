@@ -354,6 +354,31 @@ public class Scottie_Controller : MonoBehaviour
     }
     public void Hack()
     {
+        SoundEffectManager.Play("Hack");
+
+        if (hackableObject != null && playerInTrigger && uiButtonPressed)
+        {
+            Debug.Log("can hack");
+            hackableObject.Hack();
+            Debug.Log("Captcha");
+            CaptchaScene.SetActive(true);
+            /*//Save player position
+           PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+           PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+
+           //Save file count
+           PlayerPrefs.SetInt("FileCount", thelvlManager.FileCount);
+           PlayerPrefs.Save(); //actually saves the stuff to disk
+
+           Debug.Log("Captcha");
+           StartCoroutine(LoadCaptchaSceneAsync());*/
+
+            //GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
+        }
+        else
+        {
+            Debug.Log("Hack conditions not met.");
+        }
         /*if (hackableObject != null && playerInTrigger && uiButtonPressed)
         {
             Debug.Log("can hack");
@@ -367,32 +392,6 @@ public class Scottie_Controller : MonoBehaviour
         Debug.Log($"playerInTrigger: {playerInTrigger}");
         Debug.Log($"uiButtonPressed: {uiButtonPressed}"); 
         */
-        SoundEffectManager.Play("Hack");
-
-        if (hackableObject != null && playerInTrigger && uiButtonPressed)
-        {
-            Debug.Log("can hack");
-            hackableObject.Hack();
-
-            /*//Save player position
-            PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
-            PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
-
-            //Save file count
-            PlayerPrefs.SetInt("FileCount", thelvlManager.FileCount);
-            PlayerPrefs.Save(); //actually saves the stuff to disk
-
-            Debug.Log("Captcha");
-            StartCoroutine(LoadCaptchaSceneAsync());*/
-
-            //GameData.SavedPlayerPosition = transform.position; //Save current position before going into Captcha
-            Debug.Log("Captcha");
-            CaptchaScene.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("Hack conditions not met.");
-        }
     }
 
     public void CloseCaptcha()

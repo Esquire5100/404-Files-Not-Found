@@ -45,8 +45,8 @@ public class SoundEffectManager : MonoBehaviour
         audioSource.volume = volume;
     }
 
-    public void OnValueChanged()
+    /*public void OnValueChanged()
     {
         SetVolume(sfxSlider.value); 
-    }
+    }*/
 }

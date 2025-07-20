@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 396cecd4878ab354b8f8b039f93e2e73
+guid: eef7740a5033ffd42b065ae0d16aa30c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,30 +106,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BOSS_LEVEL_FRAME_0
+      name: BG_ROOFTOP_LVL2_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 639
-        width: 1920
-        height: 441
+        x: 59
+        y: 76
+        width: 904
+        height: 381
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,50 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf81a8822c61634da2e19791c8ced07
-      internalID: 1412678465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOSS_LEVEL_FRAME_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 331
-        width: 1920
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a723f69f9b1665443924b16bda125c4e
-      internalID: -1626658534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOSS_LEVEL_FRAME_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a3a6d0a509b80d4db02fe0109dfa82a
-      internalID: -62825167
+      spriteID: d3e19ee9bdb5f34449d60cd5f404a0dd
+      internalID: 911598393
       vertices: []
       indices: 
       edges: []
@@ -189,16 +134,16 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BOSS_LEVEL_FRAME_0: 1412678465
-      BOSS_LEVEL_FRAME_1: -1626658534
-      BOSS_LEVEL_FRAME_2: -62825167
+      BG_ROOFTOP_LVL2_0: -1217782863
+      BG_ROOFTOP_LVL2_1: 4612480
+      BG_ROOFTOP_LVL2_2: 911598393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

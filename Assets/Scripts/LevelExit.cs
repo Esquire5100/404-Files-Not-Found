@@ -19,9 +19,16 @@ public class LevelExit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.CompareTag("Player")) //If the Player hits the object...
+
+        if (LvlManager.Instance.CanExitLevel())
         {
             SceneManager.LoadScene("Main Menu"); //...then bring player to the next level
+        }
+        else
+        {
+            Debug.Log($"Collect {LvlManager.Instance.filesRequired - LvlManager.Instance.FileCount} more files!");
         }
     }
 }

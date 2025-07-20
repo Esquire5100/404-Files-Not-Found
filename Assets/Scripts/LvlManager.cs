@@ -16,6 +16,9 @@ public class LvlManager : MonoBehaviour
 
     public TextMeshProUGUI FileCounter; //declare FileCounter as a UI text type
 
+    public int filesRequired = 0;
+  
+
     private void Awake()
     {
         //If no instance exists, keep this one and prevent it from being destroyed
@@ -150,5 +153,10 @@ public class LvlManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(levelname + "_Complete", 1);
         PlayerPrefs.Save();
+    }
+
+    public bool CanExitLevel()
+    {
+        return FileCount >= filesRequired;
     }
 }
