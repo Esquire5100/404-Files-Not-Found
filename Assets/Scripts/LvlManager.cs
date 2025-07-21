@@ -68,16 +68,19 @@ public class LvlManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void AddFiles()
+    public void AddFiles(int count)
     {
-        FileCount += 1; //essentially means "x + 1" in simple math terms
+        FileCount += count;
 
         /*PlayerPrefs.SetInt("FileCount", FileCount); // Auto-save new value
         PlayerPrefs.Save();*/
 
         UpdateUI();
     }
-
+    public void AddFiles()
+    {
+        AddFiles(1);
+    }
     // Update is called once per frame
     private void UpdateUI()
     {

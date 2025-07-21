@@ -20,9 +20,11 @@ public class HackableObject : MonoBehaviour
             Debug.Log($"{gameObject.name} has been hacked!");
 
 
-            this.enabled = false;
+            enabled = false;
+
             var col = GetComponent<Collider2D>();
-            if (col != null) col.enabled = false;
+            if (col != null)
+                col.enabled = false;
 
         }
     }

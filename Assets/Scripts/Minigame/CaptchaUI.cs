@@ -25,7 +25,9 @@ public class CaptchaUI : MonoBehaviour
 
     private FileMinigame theFileMinigame;
 
-    public int fileValue = 1;
+    public int fileValue = 1;       //attempt to fix x2 bug
+
+    
 
     //Start is called before the first frame update
     private void Start()
@@ -70,6 +72,12 @@ public class CaptchaUI : MonoBehaviour
             uiErrorsText.gameObject.SetActive(true);
             uiSuccessText.gameObject.SetActive(false);
         }
+    }
+
+    //Attempt to fix bug
+    public void AddFiles(int count, bool doSave)
+    {
+        AddFiles(count, true);
     }
 
     private IEnumerator SuccessSequence()

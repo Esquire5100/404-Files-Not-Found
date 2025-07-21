@@ -17,20 +17,17 @@ public class FlashlightStun : MonoBehaviour
     {
         flashlightOn = flashlight.activeInHierarchy;
 
-        if (Time.time < lastStunTime + stunCooldown)
+        float remaining = (lastStunTime + stunCooldown) - Time.time;
+
+        if (remaining > 0f)
         {
-            float elapsed = Time.time - lastStunTime;
-            if (elapsed < stunCooldown)
-            {
-                float t = elapsed / stunCooldown;
-                cooldownOverlay.fillAmount = 1 - t; // from full→empty
-                stunButton.interactable = false;
-            }
-            else
-            {
-                cooldownOverlay.fillAmount = 0f;
-                stunButton.interactable = true;
-            }
+            cooldownOverlay.fillAmount = remaining / stunCooldown;
+            stunButton.interactable = false;
+        }
+        else
+        {
+            cooldownOverlay.fillAmount = 0f;
+            stunButton.interactable = true;
         }
     }
     public void TurnOnFlashLight(float duration)
@@ -38,13 +35,12 @@ public class FlashlightStun : MonoBehaviour
         if (Time.time < lastStunTime + stunCooldown) return;
         {
             flashlight.SetActive(true);
-            flashlightOn = true;
             lastStunTime = Time.time;
             Invoke("TurnOffFlashlight", duration);
         }
     }
 
-    private void TurnOffFlashLight()
+    private void TurnOffFlashlight()
     {
         flashlight.SetActive(false);
         flashlightOn = false;
@@ -65,11 +61,14 @@ public class FlashlightStun : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!flashlightOn || Time.time < lastStunTime + stunCooldown) return;
+        if (!flashlightOn)
+            return;
+
         if (other.CompareTag("Enemy"))
         {
             var guard = other.GetComponent<Guard_Controller>();
-            guard?.Stun(stunDuration);
+            if (guard != null)
+                guard?.Stun(stunDuration);
         }
     }
 }
