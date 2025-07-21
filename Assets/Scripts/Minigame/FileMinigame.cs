@@ -86,4 +86,19 @@ public class FileMinigame : MonoBehaviour
             Debug.LogWarning("GameObject with name " + tabName + " not found.");
         }
     }
+
+    public void CloseEverything()
+    {
+        CaptchaScreen.SetActive(false);
+        tab1.SetActive(false);
+        tab2.SetActive(false);
+        tab3.SetActive(false);
+        tab4.SetActive(false);
+
+        decoy1.SetActive(false);
+        decoy2.SetActive(false);
+        decoyEmpty.SetActive(false);
+
+        minigame.SetActive(false);
+    }
 }

@@ -23,7 +23,7 @@ public class CaptchaUI : MonoBehaviour
 
     private LvlManager theLvlManager; //make ref to lvlmanager script
 
-    private Scottie_Controller theScottie_Controller;
+    private FileMinigame theFileMinigame;
 
     public int fileValue = 1;
 
@@ -38,7 +38,7 @@ public class CaptchaUI : MonoBehaviour
 
         theLvlManager = FindAnyObjectByType<LvlManager>();
 
-        theScottie_Controller = FindAnyObjectByType<Scottie_Controller>();
+        theFileMinigame = FindAnyObjectByType<FileMinigame>();
     }
 
     //Generate a new captcha from the generator and update UI
@@ -90,6 +90,6 @@ public class CaptchaUI : MonoBehaviour
         yield return new WaitForSeconds(2f); //show success message for 2 seconds
 
         //Return to Level 1 (close the popup)
-        theScottie_Controller.CloseCaptcha();
+        theFileMinigame.CloseEverything();
     }
 }

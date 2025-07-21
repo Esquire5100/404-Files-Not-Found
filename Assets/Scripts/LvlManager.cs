@@ -68,9 +68,9 @@ public class LvlManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void AddFiles(int FilestoAdd)
+    public void AddFiles()
     {
-        FileCount += FilestoAdd; //essentially means "x + 1" in simple math terms
+        FileCount += 1; //essentially means "x + 1" in simple math terms
 
         /*PlayerPrefs.SetInt("FileCount", FileCount); // Auto-save new value
         PlayerPrefs.Save();*/
