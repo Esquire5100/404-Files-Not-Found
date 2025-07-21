@@ -39,8 +39,6 @@ public class VN_Pregame : MonoBehaviour
     [SerializeField] GameObject responses2;
     [SerializeField] GameObject responses3;
     [SerializeField] GameObject responses4;
-    [SerializeField] GameObject responses5;
-    [SerializeField] GameObject responses6;
 
     [SerializeField] int eventPos = 0;
     
@@ -48,11 +46,6 @@ public class VN_Pregame : MonoBehaviour
     void Update()
     {
         textLength = TextCreator.charCount; //Ref to the charCount in TextCreator script
-
-        if (eventPos == 4)
-        {
-            StartCoroutine(Tutorial);
-        }
     }
 
     // Start is called before the first frame update
@@ -91,7 +84,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);  //Wait until the text has finished 
         
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
         responses.SetActive(true);
 
@@ -121,7 +114,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         PhionaTalk.Stop();
 
         yield return new WaitForSeconds(1.5f);
@@ -141,7 +134,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         PhionaTalk.Stop();
         responses1.SetActive(true);
 
@@ -167,7 +160,7 @@ public class VN_Pregame : MonoBehaviour
 
         PhionaSqueal.Play();
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
@@ -193,7 +186,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         PhionaTalk.Stop();
         responses1.SetActive(true);
 
@@ -223,7 +216,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);          //Wait until the text has finished 
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         PhionaTalk.Stop();
         responses2.SetActive(true);
 
@@ -251,16 +244,12 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
-        //Wait for a bit before fading out and loading next scene
-       /* yield return new WaitForSeconds(3.5f);
-        responses2.SetActive(false);
-        fadeScreenOut.SetActive(true);
-
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Level 1");*/
-
-
         eventPos = 4;
+
+        if (eventPos == 4)
+        {
+            StartCoroutine(Tutorial());
+        }
     }
 
 
@@ -287,19 +276,24 @@ public class VN_Pregame : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
         eventPos = 4;
+
+
+        if (eventPos == 4)
+        {
+            StartCoroutine(Tutorial());
+        }
     }
 
-    private IEnumerator Tutorial
+    private IEnumerator Tutorial()
     {
-        get
-        {
+            yield return new WaitForSeconds(0.03f);
             ProjectorScreen.SetActive(true);
             PhionaHand.SetActive(true);
 
             PhionaTalk.Play();                                                                  //Play the sfx for Phiona talking
             charPhiona.GetComponent<Image>().sprite = PhionaTutorial;                             //Change Phiona's sprite
 
-            textToSpeak = "First things first, these are the computers that you need to target. They’ll hold all the necessary files I need.";
+            textToSpeak = "First thing's first, these are the computers that you need to target. They’ll hold all the necessary files I need.";
             Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
             currentTextLength = textToSpeak.Length;
             TextCreator.runTextPrint = true;
@@ -322,15 +316,17 @@ public class VN_Pregame : MonoBehaviour
 
             yield return new WaitUntil(() => textLength == currentTextLength);
 
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2f);
             PC.SetActive(false);
             File.SetActive(true);
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             PhionaTalk.Stop();
 
             yield return new WaitForSeconds(1.5f);
             PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
+            File.SetActive(false);
+            Security.SetActive(true);
 
             textToSpeak = "Next, remember to watch out for MGD’s security system. Unfortunately, Dialer has significantly enhanced his security since the last time.";   //Define the text that needs to be printed
             Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
@@ -339,12 +335,11 @@ public class VN_Pregame : MonoBehaviour
 
             yield return new WaitUntil(() => textLength == currentTextLength);
 
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(6f);
             PhionaTalk.Stop();
             responses3.SetActive(true);
 
             eventPos = 5;
-        }
     }
 
     public void LastTime()
@@ -358,6 +353,7 @@ public class VN_Pregame : MonoBehaviour
     private IEnumerator ResponseLT()
     {
         yield return new WaitForSeconds(0.03f);
+        responses3.SetActive(false);
         PhionaHand.SetActive(false);
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                             //Change Phiona's sprite
         PhionaShout.Play();                                                                    //Play the sfx for Phiona talking
@@ -381,7 +377,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);
 
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(6f);
         PhionaTalk.Stop();
         responses4.SetActive(true);
 
@@ -399,7 +395,10 @@ public class VN_Pregame : MonoBehaviour
     private IEnumerator ResponseITC()
     {
         yield return new WaitForSeconds(0.03f);
+        responses4.SetActive(false);
         PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
+        foreshadowing.SetActive(true);
+
 
         textToSpeak = "Well, let’s just say you’ll be escorted out of the building.";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
@@ -410,12 +409,13 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
         PhionaTalk.Stop();
+        foreshadowing.SetActive(false);
 
         //Wait for a bit before fading out and loading next scene
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(0.03f);
         fadeScreenOut.SetActive(true);
 
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Tutorial Level");
 
         eventPos = 7;
