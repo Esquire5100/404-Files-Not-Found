@@ -76,7 +76,7 @@ public class Tutorial_Level : MonoBehaviour
 
         //Set a small delay between when the text box appears and when the text starts printing
         yield return new WaitForSeconds(1f);
-        textToSpeak = "Now then, let’s see if you were paying attention.";                        //Define the text that needs to be printed
+        textToSpeak = "Now then, letï¿½s see if you were paying attention.";                        //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -105,7 +105,7 @@ public class Tutorial_Level : MonoBehaviour
         responses.SetActive(false);                                                 //Disable the buttons so the player can't keep clicking them
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This’ll give you a taste of what’s to come, Scottie. This way, you’ll know what to expect!";                        //Define the text that needs to be printed
+        textToSpeak = "Thisï¿½ll give you a taste of whatï¿½s to come, Scottie. This way, youï¿½ll know what to expect!";                        //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -133,7 +133,7 @@ public class Tutorial_Level : MonoBehaviour
         responses1.SetActive(false);                                                 //Disable the buttons so the player can't keep clicking them
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "Long hallways will lead to the next building. If there isn’t one, then take the stairs on the top floor. That will be your way out of the current building.";                        //Define the text that needs to be printed
+        textToSpeak = "Long hallways will lead to the next building. If there isnï¿½t one, then take the stairs on the top floor. That will be your way out of the current building.";                        //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -146,7 +146,7 @@ public class Tutorial_Level : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "Good Luck!~";                                                //Define the text that needs to be printed
+        textToSpeak = "You must get all the files before leaving. Good Luck!~";                                                //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

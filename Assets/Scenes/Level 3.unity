@@ -1490,8 +1490,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[4].name
+      value: Background Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
       propertyPath: soundEffectGroups.Array.data[2].audioClips.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[3].audioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[4].audioClips.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
       propertyPath: soundEffectGroups.Array.data[2].audioClips.Array.data[0]
@@ -1525,6 +1541,26 @@ PrefabInstance:
       propertyPath: soundEffectGroups.Array.data[2].audioClips.Array.data[7]
       value: 
       objectReference: {fileID: 8300000, guid: 04eb6098292391e42ba27de5c1efe9bd, type: 3}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[3].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[3].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[3].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[4].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
+    - target: {fileID: 6088778264072081777, guid: 4f743ee4f38d9e2448cf5859301a46b0, type: 3}
+      propertyPath: soundEffectGroups.Array.data[4].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5361,6 +5397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (3)
@@ -16281,7 +16321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1709102928
 Transform:
   m_ObjectHideFlags: 0
@@ -16816,6 +16856,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5213893268001151856, guid: 61b0e4a6a6dbb33468b3340257ac01db, type: 3}
+      propertyPath: sceneToLoad
+      value: Victory
+      objectReference: {fileID: 0}
     - target: {fileID: 7532733957890147672, guid: 61b0e4a6a6dbb33468b3340257ac01db, type: 3}
       propertyPath: m_Name
       value: LevelExit
@@ -20480,6 +20524,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (13)
@@ -21458,6 +21506,7 @@ MonoBehaviour:
   - {fileID: 119139512, guid: 0a289ea1679707447803cf961ec5aa03, type: 3}
   - {fileID: -140428866, guid: 3de0254ea371b7849b9ef8f0922082bd, type: 3}
   - {fileID: -1326258173, guid: bc7acabf9687bc6449f2dd9256f76b2f, type: 3}
+  footstepInterval: 0.5
 --- !u!114 &293674826529779361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24622,6 +24671,7 @@ GameObject:
   - component: {fileID: 2284733888704566811}
   - component: {fileID: 279406686701277814}
   - component: {fileID: 4916167406834091385}
+  - component: {fileID: 4916167406834091386}
   m_Layer: 6
   m_Name: Scott
   m_TagString: Player
@@ -25502,6 +25552,7 @@ MonoBehaviour:
   hideIcon: {fileID: -19587787, guid: 9c659dc99b4a3f74cbe1b47f1c4ce500, type: 3}
   footstepSpeed: 0.5
   hideSprites: []
+  footstepInterval: 0.5
 --- !u!114 &2714091161746853751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28758,6 +28809,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4916167406834091386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097549312131934698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15021f7cd671c9498a04f828522b874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minInterval: 0.3
 --- !u!1 &4935869880916412679
 GameObject:
   m_ObjectHideFlags: 0

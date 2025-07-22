@@ -418,8 +418,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1121762109}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.77397764}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -0.000061035156}
   m_SizeDelta: {x: 29.5874, y: 0}
   m_Pivot: {x: 1, y: 0.5}
@@ -697,7 +697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &510776711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1224,9 +1224,12 @@ MonoBehaviour:
     Co-programmer\r                                                                           
     Nur Husnina \nProgrammer, Co-artist\u200B\r                                                                              
     Markus Oh\nProgrammer, Co-game designer\u200B\r                                                                         
-    Teo Kayl Leah\n\nSound Effects\nhttps://pixabay.com\n\nMusic\nLevel Music                       
-    Stealth - 8bit/Chiptunes  https://www.youtube.com/watch?v=fbqX_16ufYg\n\nMain
-    Menu Music             Platformer Menu Music Game Music - Royalty Free Music:\nhttps://www.youtube.com/watch?v=6_bWzJcUONU&list=PLVxtIwXu-0CXHCivGonX0dqbtUPkt8Li_&index=21"
+    Teo Kayl Leah\n\nSound Effects\nKeyboard typing - Chanel, SP\r\nCharacter Talking
+    SFX - Hann Lyang, RP\r\nHiding SFX  - https://www.youtube.com/watch?v=EFY9TX2Fghg\r\nFootsteps
+    SFX - https://dryoma.itch.io/footsteps-sounds\r\nGlass shattering - https://youtu.be/IDWza6ZFU2U?si=JlBHPZBLfCi2TqpG\nOther
+    SFX - https://pixabay.com\n\nMusic\nLevel Music                        Stealth
+    - 8bit/Chiptunes  https://www.youtube.com/watch?v=fbqX_16ufYg\n\nMain Menu Music            
+    Platformer Menu Music Game Music - Royalty Free Music:\nhttps://www.youtube.com/watch?v=6_bWzJcUONU&list=PLVxtIwXu-0CXHCivGonX0dqbtUPkt8Li_&index=21"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1321,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1204794907
 RectTransform:
   m_ObjectHideFlags: 0
