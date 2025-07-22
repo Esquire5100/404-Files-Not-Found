@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcf9eca720479064995322b03d5bf0fb
+guid: 23c109288091aa147b0baf654d3cd041
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -126,9 +126,9 @@ TextureImporter:
       name: BG1_0
       rect:
         serializedVersion: 2
-        x: 61
+        x: 506
         y: 573
-        width: 1798
+        width: 387
         height: 461
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -149,7 +149,7 @@ TextureImporter:
         serializedVersion: 2
         x: 61
         y: 69
-        width: 1797
+        width: 28
         height: 447
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
