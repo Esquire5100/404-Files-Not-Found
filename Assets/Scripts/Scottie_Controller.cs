@@ -88,8 +88,9 @@ public class Scottie_Controller : MonoBehaviour
     public float footstepSpeed = 0.5f;
 
     public Sprite[] hideSprites;
-    private int currentZoneIndex = -1;  
+    private int currentZoneIndex = -1;
 
+    [SerializeField] private float footstepInterval = 0.5f;
 
     void Start()
     {
@@ -98,6 +99,7 @@ public class Scottie_Controller : MonoBehaviour
         myAnim = GetComponent<Animator>();                                       //Get easy access to the Animator component
         thelvlManager = FindObjectOfType<LvlManager>();                          //Get reference for the level manager
         sr.sprite = normalSprite;
+        SoundEffectManager.Play("Background Music");
 
         /*//Restore position if saved
         if (PlayerPrefs.HasKey("PlayerPosX") && PlayerPrefs.HasKey("PlayerPosY"))
@@ -178,13 +180,13 @@ public class Scottie_Controller : MonoBehaviour
         {   
             rb.velocity = new Vector2(MoveSpeed, rb.velocity.y);                 //Move right
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);                //When move right, face right
-            SoundEffectManager.Play("Footstep");
+     //     SoundEffectManager.Play("Walking");
         }
         else if (dir < 0)
         {
             rb.velocity = new Vector2(-MoveSpeed, rb.velocity.y);                //Move Left
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);               //When move left, face left
-            SoundEffectManager.Play("Footstep");
+      //    SoundEffectManager.Play("Walking");
         }
         else
         {
@@ -193,22 +195,48 @@ public class Scottie_Controller : MonoBehaviour
         moveDirection = dir;
     }
 
+    private Coroutine footstepRoutine;
+
+    private IEnumerator FootstepLoop()
+    {
+        while (true)
+        {
+            Debug.Log("SoundEffectisplaying");
+            yield return new WaitForSeconds(footstepInterval);
+            SoundEffectManager.Play("Walking");
+        }
+    }
+
+    public void StartWalking()
+    {
+        if (footstepRoutine == null)
+            footstepRoutine = StartCoroutine(FootstepLoop());
+    }
+
+    public void StopWalking()
+    {
+        if (footstepRoutine != null)
+        {
+            StopCoroutine(footstepRoutine);
+            footstepRoutine = null;
+        }
+    }
     /*void StartFootsteps()
-    {
-        playingFootsteps = true;
-        InvokeRepeating(nameof(PlayFootsteps), 0f, footstepSpeed);
-    }
+      {
+          playingFootsteps = true;
+          InvokeRepeating(nameof(PlayFootsteps), 0f, footstepSpeed);
+      }
 
-    void StopFootsteps()
-    {
-        playingFootsteps = false;
-        CancelInvoke(nameof(PlayFootsteps));
-    }
+      void StopFootsteps()
+      {
+          playingFootsteps = false;
+          CancelInvoke(nameof(PlayFootsteps));
+      }
 
-    void PlayFootsteps()
-    {
-        SoundEffectManager.Play("Footstep");
-    }*/
+      void PlayFootsteps()
+      {
+          SoundEffectManager.Play("Footstep");
+      }*/
 
     //Hiding Script
     private void OnTriggerEnter2D(Collider2D other)
@@ -278,7 +306,7 @@ public class Scottie_Controller : MonoBehaviour
         if (!hiding && canHide && currentZoneIndex >= 0 && currentZoneIndex < hideSprites.Length)
         {
             Debug.Log($"Hiding at zone {currentZoneIndex}, sprite: {hideSprites[currentZoneIndex].name}");
-            SoundEffectManager.Play("Hiding");
+            
 
             myAnim.enabled = false;
             sr.sprite = hideSprites[currentZoneIndex];                                // Choose the zone-specific sprite
@@ -289,6 +317,7 @@ public class Scottie_Controller : MonoBehaviour
             hiding = true;
             IsHiding = true;
             canMove = false;
+            SoundEffectManager.Play("Hiding");
         }
         else if (hiding)                                                             //Unhide
         {
@@ -352,16 +381,17 @@ public class Scottie_Controller : MonoBehaviour
         uiButtonPressed = true;
         Hack();
     }
+
     public void Hack()
     {
-        SoundEffectManager.Play("Hack");
-
+        
         if (hackableObject != null && playerInTrigger && uiButtonPressed)
         {
             Debug.Log("can hack");
             hackableObject.Hack();
             Debug.Log("Captcha");
             Minigame.SetActive(true);
+            SoundEffectManager.Play("Hacking");
             /*//Save player position
            PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
            PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);

@@ -66,6 +66,8 @@ public class LvlManager : MonoBehaviour
         }*/
 
         UpdateUI();
+
+        SoundEffectManager.Play("Background Music");
     }
 
     public void AddFiles(int count)

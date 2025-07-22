@@ -80,6 +80,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Files");
     }
 
+  
+
     //Credits and Settings Buttons
     public void OpenCreditsTabs()
     {

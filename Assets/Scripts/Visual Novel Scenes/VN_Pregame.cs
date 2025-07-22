@@ -121,7 +121,7 @@ public class VN_Pregame : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaNeutral;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
      
-        textToSpeak = "Now, I need you to break into MGD Corp. and steal their top-tier files. Get as many as you can, but don’t you dare return empty-handed!";   //Define the text that needs to be printed
+        textToSpeak = "Now, I need you to break into MGD Corp. and steal their top-tier files. Get as many as you can, but donï¿½t you dare return empty-handed!";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -171,7 +171,7 @@ public class VN_Pregame : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
 
-        textToSpeak = "Now, I need you to break into MGD Corp. and steal their top-tier files. Get as many as you can, but don’t you dare return empty-handed!";   //Define the text that needs to be printed
+        textToSpeak = "Now, I need you to break into MGD Corp. and steal their top-tier files. Get as many as you can, but donï¿½t you dare return empty-handed!";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -293,7 +293,7 @@ public class VN_Pregame : MonoBehaviour
             PhionaTalk.Play();                                                                  //Play the sfx for Phiona talking
             charPhiona.GetComponent<Image>().sprite = PhionaTutorial;                             //Change Phiona's sprite
 
-            textToSpeak = "First thing's first, these are the computers that you need to target. They’ll hold all the necessary files I need.";
+            textToSpeak = "First thing's first, these are the computers that you need to target. Theyï¿½ll hold all the necessary files I need.";
             Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
             currentTextLength = textToSpeak.Length;
             TextCreator.runTextPrint = true;
@@ -309,7 +309,7 @@ public class VN_Pregame : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
 
-            textToSpeak = "Hack into them and find the right file. It’ll look like this.";   //Define the text that needs to be printed
+            textToSpeak = "Hack into them and find the right file. Itï¿½ll look like this.";   //Define the text that needs to be printed
             Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
             currentTextLength = textToSpeak.Length;
             TextCreator.runTextPrint = true;
@@ -328,7 +328,7 @@ public class VN_Pregame : MonoBehaviour
             File.SetActive(false);
             Security.SetActive(true);
 
-            textToSpeak = "Next, remember to watch out for MGD’s security system. Unfortunately, Dialer has significantly enhanced his security since the last time.";   //Define the text that needs to be printed
+            textToSpeak = "Next, remember to watch out for MGDï¿½s security system. Unfortunately, Dialer has significantly enhanced his security since the last time.";   //Define the text that needs to be printed
             Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
             currentTextLength = textToSpeak.Length;
             TextCreator.runTextPrint = true;
@@ -370,7 +370,7 @@ public class VN_Pregame : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaTutorial;                             //Change Phiona's sprite
         PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
 
-        textToSpeak = "Now then, don’t get caught in their light. The camera will alert all the guards in the vicinity, and if they catch you…";   //Define the text that needs to be printed
+        textToSpeak = "Now then, donï¿½t get caught in their light. The camera will alert all the guards in the vicinity, and if they catch youï¿½";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -400,7 +400,7 @@ public class VN_Pregame : MonoBehaviour
         foreshadowing.SetActive(true);
 
 
-        textToSpeak = "Well, let’s just say you’ll be escorted out of the building.";   //Define the text that needs to be printed
+        textToSpeak = "Well, letï¿½s just say youï¿½ll be escorted out of the building.";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

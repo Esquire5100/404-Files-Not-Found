@@ -46,7 +46,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   soundEffectGroups:
   - name: Hacking
     audioClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: c0e90451d810a5d44a5b37679cb8a780, type: 3}
   - name: Walking
     audioClips:
     - {fileID: 8300000, guid: c69316bca85e6254697483ba4823e98c, type: 3}
@@ -179,6 +179,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: b1c48878256ae4a4c869e991d353325b, type: 3}
     - {fileID: 8300000, guid: 0391f0a72a49e994ab265961161c5780, type: 3}
     - {fileID: 8300000, guid: 04eb6098292391e42ba27de5c1efe9bd, type: 3}
+  - name: Background Music
+    audioClips:
+    - {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
 --- !u!114 &1382252288489287130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,4 +194,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4b531759f06f44d8126e60b0971253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSlider: {fileID: 0}

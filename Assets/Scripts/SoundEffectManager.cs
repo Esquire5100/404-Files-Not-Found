@@ -5,25 +5,30 @@ using UnityEngine.UI;
 
 public class SoundEffectManager : MonoBehaviour
 {
-    private static SoundEffectManager Instance;
+    public static SoundEffectManager Instance { get; private set; }
 
     private static AudioSource audioSource;
     private static SoundEffectLibrary soundEffectLibrary;
     //[SerializeField] private Slider sfxSlider;
 
-    private void Awake()
+    void Awake()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-            audioSource = GetComponent<AudioSource>();
-            soundEffectLibrary = GetComponent<SoundEffectLibrary>();
-            DontDestroyOnLoad(gameObject);
-        }
-        else
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+            Debug.LogError("SoundEffectManager needs an AudioSource component!");
+
+        var lib = GetComponent<SoundEffectLibrary>();
+        if (lib == null)
+            Debug.LogError("SoundEffectLibrary component missing!");
+        soundEffectLibrary = lib;
     }
 
     public static void Play(string soundName)
@@ -49,4 +54,9 @@ public class SoundEffectManager : MonoBehaviour
     {
         SetVolume(sfxSlider.value); 
     }*/
+
+    public void StopMusic()
+    {
+        audioSource.Stop();
+    }
 }
