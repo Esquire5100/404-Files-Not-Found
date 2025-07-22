@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class Lift : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -30,5 +19,11 @@ public class Lift : MonoBehaviour
         {
             other.transform.SetParent(null);  //Detaches player from platform by removing it as a child of platform
         }
+    }
+
+    private IEnumerator DelayedUnparent(Transform child)
+    {
+        yield return null;
+        child.SetParent(null);
     }
 }

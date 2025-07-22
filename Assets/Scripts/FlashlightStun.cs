@@ -26,7 +26,7 @@ public class FlashlightStun : MonoBehaviour
         }
         else
         {
-            cooldownOverlay.fillAmount = 0f;
+            //cooldownOverlay.fillAmount = 0f;
             stunButton.interactable = true;
         }
     }
