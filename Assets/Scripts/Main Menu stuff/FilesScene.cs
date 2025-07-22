@@ -56,9 +56,9 @@ public class FilesScene : MonoBehaviour
         //Unlock based on total file count
         int totalFiles = FileProgressTracker.GetTotalFiles();
 
-        if (totalFiles > 5) btnPhiona.SetActive(false);
-        if (totalFiles > 6) btnDialer.SetActive(false);
-        if (totalFiles > 7) btnScottie.SetActive(false);
+        if (totalFiles > 5) btnPhiona.SetActive(true);
+        if (totalFiles > 6) btnDialer.SetActive(true);
+        if (totalFiles > 7) btnScottie.SetActive(true);
     }
 
     // Update is called once per frame
