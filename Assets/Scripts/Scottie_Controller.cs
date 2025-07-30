@@ -53,6 +53,7 @@ public class Scottie_Controller : MonoBehaviour
     //AudioManager audioManager;                                                   //reference the Audio Manager Script
 
     LvlManager thelvlManager;                                                    //Reference Level Manager
+    public FlashlightStun flashlightStun;
 
     private bool canHide = false;                                                //Define if player is able to hde or not
     private bool hiding = false;                                                 //Define if player is hiding to avoid enemy
@@ -67,6 +68,9 @@ public class Scottie_Controller : MonoBehaviour
 
     //FlashLight Varibles
     public GameObject flashlight;
+    private float nextAvailableTime = 0f;
+    private float cooldownDuration = 15f;
+    public Image cooldownOverlay;
     /*public Color flashColor = Color.white;
     public float flashDuration = 0.5f;
     public float flashSpeed = 10f;
@@ -91,6 +95,7 @@ public class Scottie_Controller : MonoBehaviour
     private int currentZoneIndex = -1;
 
     [SerializeField] private float footstepInterval = 0.5f;
+
 
     void Start()
     {
@@ -142,6 +147,10 @@ public class Scottie_Controller : MonoBehaviour
             if (rb == null)
                 Debug.LogError("Rigidbody component is not assigned!");
         }
+
+        float remaining = (nextAvailableTime - Time.time);
+        cooldownOverlay.fillAmount = Mathf.Clamp01(remaining / cooldownDuration);
+        actionButton.interactable = remaining <= 0f;
 
         /*if (isFlashing)
         {
@@ -362,15 +371,16 @@ public class Scottie_Controller : MonoBehaviour
 
     public void Flashlight()
     {
-        /*isFlashing = true;
-        flashTime = 0;*/
+        if (Time.time < nextAvailableTime)
+            return;
 
-        StartCoroutine(DeactivateAfterDelay());
+        nextAvailableTime = Time.time + cooldownDuration;
+        StartCoroutine(DeactivateAfterTime());
     }
 
-    private IEnumerator DeactivateAfterDelay() //Activate preset flashlight, wait for 2s, then deactivate
+    private IEnumerator DeactivateAfterTime() //Activate preset flashlight, wait for 2s, then deactivate
     {
-        flashlight.SetActive(flashlight); 
+        flashlight.SetActive(true); 
         yield return new WaitForSeconds(1.5f);
         flashlight.SetActive(false);
     }

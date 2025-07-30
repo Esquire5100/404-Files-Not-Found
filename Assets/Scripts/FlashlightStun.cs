@@ -30,20 +30,20 @@ public class FlashlightStun : MonoBehaviour
             stunButton.interactable = true;
         }
     }
-    public void TurnOnFlashLight(float duration)
+    public void TurnOnFlashLight()
     {
         if (Time.time < lastStunTime + stunCooldown) return;
         {
             flashlight.SetActive(true);
             lastStunTime = Time.time;
-            Invoke("TurnOffFlashlight", duration);
+            Invoke(nameof(TurnOffFlashlight),stunDuration);
         }
     }
 
     private void TurnOffFlashlight()
     {
         flashlight.SetActive(false);
-        flashlightOn = false;
+        
     }
 
     /*private IEnumerator DelayedActivate(float duration)
@@ -61,13 +61,12 @@ public class FlashlightStun : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!flashlightOn)
+        if (!flashlight.activeInHierarchy)
             return;
 
         if (other.CompareTag("Enemy"))
         {
             var guard = other.GetComponent<Guard_Controller>();
-            if (guard != null)
                 guard?.Stun(stunDuration);
         }
     }

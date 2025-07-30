@@ -4715,6 +4715,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -4.03
       objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8600023
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (3)
@@ -6208,6 +6216,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242828542}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0100005
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (1)
@@ -6829,6 +6845,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242828542}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0400002
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera
@@ -10899,6 +10923,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242828542}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8899987
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (2)

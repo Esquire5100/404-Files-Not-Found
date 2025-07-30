@@ -3730,6 +3730,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0699995
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (8)
@@ -4057,6 +4065,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049999
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (9)
@@ -4348,6 +4364,14 @@ PrefabInstance:
     - target: {fileID: 11097205939478381, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1099985
       objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
@@ -5314,6 +5338,14 @@ PrefabInstance:
     - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2399995
       objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
@@ -7324,6 +7356,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4200037
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (12)
@@ -8769,6 +8809,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0799997
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (10)
@@ -9796,6 +9844,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0200002
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera
@@ -10602,6 +10658,14 @@ PrefabInstance:
     - target: {fileID: 11097205939478381, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.220003
       objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
@@ -12628,6 +12692,14 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1900003
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (6)
@@ -14098,6 +14170,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (7)
@@ -20134,6 +20214,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1126218955}
     m_Modifications:
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9199998
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (1)
@@ -20869,6 +20957,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -7.05
       objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1200006
+      objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
       value: Security Camera (13)
@@ -21073,6 +21169,14 @@ PrefabInstance:
     - target: {fileID: 11097205939478381, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 593679192448261418, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722091132470334745, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.050001
       objectReference: {fileID: 0}
     - target: {fileID: 2016795264918459387, guid: 21d070cbd94afd4409c11a1950565b28, type: 3}
       propertyPath: m_Name
