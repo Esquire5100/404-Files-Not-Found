@@ -152,6 +152,7 @@ public class LvlManager : MonoBehaviour
     {
         string levelName = SceneManager.GetActiveScene().name; //Use current scene name as the level identifier
         FileProgressTracker.AddFiles(levelName, FileCount);    //Add this run�s files to the total tracker
+        Debug.Log("Added Files from lvl manager");
     }
 
     public void MarkLevelComplete(string levelname)

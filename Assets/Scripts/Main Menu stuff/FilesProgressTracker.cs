@@ -16,6 +16,7 @@ public static class FileProgressTracker
             fileCounts[levelName] = 0;                           //Initialize if first time visiting this level
 
         fileCounts[levelName] += count;                          //Add to the total
+        Debug.Log("File Added");
         SaveData();                                              //Save updated data to PlayerPrefs
     }
 

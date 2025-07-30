@@ -36,8 +36,7 @@ public class CaptchaUI : MonoBehaviour
 
         //Set up buttons
         uiRefreshButton.onClick.AddListener(GenerateCaptcha); //Refresh button calls GenerateCaptcha
-        uiSubmitButton.onClick.AddListener(Submit);           //Submit button calls Submit
-
+      
         theLvlManager = FindAnyObjectByType<LvlManager>();
 
         theFileMinigame = FindAnyObjectByType<FileMinigame>();
@@ -62,7 +61,7 @@ public class CaptchaUI : MonoBehaviour
             // Correct captcha: hide the error message
             uiErrorsText.gameObject.SetActive(false);
             uiSuccessText.gameObject.SetActive(true);
-
+            Debug.Log("Submit pressed");
             //Start coroutine to wait, +1 files to the counter, then return to level 1
             StartCoroutine(SuccessSequence());
         }
