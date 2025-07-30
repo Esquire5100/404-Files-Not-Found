@@ -5,62 +5,47 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-    public AudioClip mainMenuMusic;
-    public AudioClip levelMusic;
-    private AudioSource audioSource;
     private static MusicManager Instance;
+    private AudioSource AudioSource;
+    public AudioClip backgroundMusic;
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if(Instance == null)
+        {
+            Instance = this;
+            AudioSource = GetComponent<AudioSource>();
+            DontDestroyOnLoad(gameObject);
+
+            if (backgroundMusic != null)
+                AudioSource.Play();
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        audioSource = GetComponent<AudioSource>();
     }
-
-    void OnEnable()
+    void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        switch (scene.name)
+        if(backgroundMusic != null)
         {
-            case "MainMenu":
-                PlayMusic(mainMenuMusic);
-                break;
-            case "Level1":
-            case "Level2":
-                PlayMusic(levelMusic);
-                break;
-            default:
-                StopMusic();
-                break;
+            PlayBackgroundMusic(false, backgroundMusic);
         }
     }
-
-    private void PlayMusic(AudioClip clip)
+    
+    public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {
-        if (audioSource.clip != clip)
+        if(audioClip != null)
         {
-            audioSource.clip = clip;
-            audioSource.loop = true;
-            audioSource.Play();
+            AudioSource.clip = audioClip;
         }
-    }
-
-    private void StopMusic()
-    {
-        audioSource.Stop();
+        else if(AudioSource != null)
+        {
+            if(resetSong)
+            {
+                AudioSource.Stop();
+            }
+            AudioSource.Play();
+        }
     }
 }
