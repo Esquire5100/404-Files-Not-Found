@@ -434,11 +434,6 @@ public class Scottie_Controller : MonoBehaviour
         */
     }
 
-    /*public void CloseCaptcha()
-    {
-        Minigame.SetActive(false);
-    }*/
-
     private void UpdateActionButtonUI()
     {
         switch (currentMode)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FileMinigame : MonoBehaviour
 {
@@ -66,12 +67,18 @@ public class FileMinigame : MonoBehaviour
 
     public void OpenCaptcha()
     {
-        CaptchaScreen.SetActive(true);
+        Debug.Log("Captcha");
+        StartCoroutine(LoadCaptchaSceneAsync());
     }
 
-    public void success()
+    private IEnumerator LoadCaptchaSceneAsync()
     {
-        minigame.SetActive(false);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Captcha", LoadSceneMode.Additive);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 
     public void CloseTab(string tabName)
