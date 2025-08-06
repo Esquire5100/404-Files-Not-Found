@@ -274,6 +274,7 @@ public class VN_Pregame : MonoBehaviour
 
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
+        yield return new WaitForSeconds(0.5f);
         eventPos = 4;
 
 
