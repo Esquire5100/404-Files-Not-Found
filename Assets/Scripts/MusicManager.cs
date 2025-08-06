@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
     private static MusicManager Instance;
-    private AudioSource AudioSource;
+    private AudioSource audioSource;
     public AudioClip backgroundMusic;
 
     private void Awake()
@@ -14,13 +14,18 @@ public class MusicManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            AudioSource = GetComponent<AudioSource>();
             DontDestroyOnLoad(gameObject);
+            audioSource = GetComponent<AudioSource>();
 
             if (backgroundMusic != null)
-                AudioSource.Play();
+            {
+                audioSource.clip = backgroundMusic;
+                audioSource.volume = audioSource.volume > 0 ? audioSource.volume : 1f;
+                audioSource.pitch = audioSource.pitch != 0 ? audioSource.pitch : 1f;
+                audioSource.Play();
+            }
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
@@ -37,15 +42,20 @@ public class MusicManager : MonoBehaviour
     {
         if(audioClip != null)
         {
-            AudioSource.clip = audioClip;
+            audioSource.clip = audioClip;
         }
-        else if(AudioSource != null)
+        else if(audioSource != null)
         {
             if(resetSong)
             {
-                AudioSource.Stop();
+                audioSource.Stop();
             }
-            AudioSource.Play();
+            audioSource.Play();
         }
+    }
+
+    public void PausedBackgroundMusic()
+    {
+        audioSource.Pause();
     }
 }

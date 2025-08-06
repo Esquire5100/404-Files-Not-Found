@@ -4607,6 +4607,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &438715454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2682.4983
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 500.16846
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.512022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355532261278434186, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
 --- !u!1 &441058931
 GameObject:
   m_ObjectHideFlags: 0
@@ -13276,6 +13333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 441058932}
     m_Modifications:
+    - target: {fileID: 825002168630849198, guid: 9cf66236bc5ebce40987c86804926fe1, type: 3}
+      propertyPath: m_Intensity
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2878452266286922299, guid: 9cf66236bc5ebce40987c86804926fe1, type: 3}
       propertyPath: m_Name
       value: BG Lighting
@@ -23842,3 +23903,4 @@ SceneRoots:
   - {fileID: 2092540372}
   - {fileID: 854702818}
   - {fileID: 1527826980}
+  - {fileID: 438715454}
