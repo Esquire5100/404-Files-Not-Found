@@ -67,7 +67,10 @@ public class LvlManager : MonoBehaviour
 
         UpdateUI();
 
-        
+        SceneTracker.LastSceneName = SceneManager.GetActiveScene().name;
+        SceneTracker.LastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Saved LastSceneName: " + SceneTracker.LastSceneName);
+
     }
 
     public void AddFiles(int count)

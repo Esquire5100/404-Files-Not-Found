@@ -7,7 +7,16 @@ public class GameOver : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("Level 3");
+        if (!string.IsNullOrEmpty(SceneTracker.LastSceneName))
+        {
+            SceneManager.LoadScene(SceneTracker.LastSceneName);
+        }
+        else
+        {
+            Debug.LogError("Error: LastSceneName not set!");
+            // Fallback option:
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 
     public void MainMenu()
