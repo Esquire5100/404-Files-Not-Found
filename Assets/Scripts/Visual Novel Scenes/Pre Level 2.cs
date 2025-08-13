@@ -50,6 +50,8 @@ public class PreLevel2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        eventPos = 0;
+
         //Set everyth but the fade screen to false so its easier to edit the scene in unity
         fadeScreenIn.SetActive(true);
         charPhiona.SetActive(false);

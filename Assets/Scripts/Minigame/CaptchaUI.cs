@@ -88,11 +88,6 @@ public class CaptchaUI : MonoBehaviour
             Debug.Log("File added! Total: " + LvlManager.Instance.FileCount);
 
             LvlManager.Instance.SaveRunToTotal();
-
-            yield return new WaitForSeconds(1.5f);
-            //Return to Level 1 (close the popup)
-            theFileMinigame.CloseEverything();
-            SceneManager.UnloadSceneAsync("Captcha");
         }
         else
         {
@@ -100,6 +95,11 @@ public class CaptchaUI : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f); //show success message for 2 seconds
+
+        yield return new WaitForSeconds(1.5f);
+        //Return to Level 1 (close the popup)
+        theFileMinigame.CloseEverything();
+        SceneManager.UnloadSceneAsync("Captcha");
 
     }
 }
