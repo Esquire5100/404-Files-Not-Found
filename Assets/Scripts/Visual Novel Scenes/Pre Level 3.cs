@@ -91,7 +91,7 @@ public class PreLevel3 : MonoBehaviour
 
         //Set a small delay between when the text box appears and when the text starts printing
         yield return new WaitForSeconds(1f);
-        textToSpeak = "You�re doing great, Scottie! Just one more building and I'll be able to overthrow them.";                        //Define the text that needs to be printed
+        textToSpeak = "You're doing great, Scottie! Just one more building and I'll be able to overthrow them.";                        //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -121,7 +121,7 @@ public class PreLevel3 : MonoBehaviour
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
 
-        textToSpeak = "Oh Scottie�you should know by now� Why do you think you're in their building stealing their files right now?";                        //Define the text that needs to be printed
+        textToSpeak = "Oh Scottie...you should know by now� Why do you think you're in their building stealing their files right now?";                        //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -136,7 +136,7 @@ public class PreLevel3 : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This last building will be your hardest challenge yet�";     //Define the text that needs to be printed
+        textToSpeak = "This last building will be your hardest challenge ye...";     //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -151,7 +151,7 @@ public class PreLevel3 : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaAngry;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won�t let you off easy, but I really need these last few files to piec3 t0gE$her tHei% 5t$@teG/eS.";   //Define the text that needs to be printed
+        textToSpeak = "This is the building his office is in. Calister Dialer, CEO of MGD Corp. He won't let you off easy, but I really need these last few files to piec3 t0gE$her tHei% 5t$@teG/eS.";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -194,7 +194,7 @@ public class PreLevel3 : MonoBehaviour
         charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                    //Change Phiona's sprite
         PhionaTalk.Play();                                                          //Play the sfx for Phiona talking
 
-        textToSpeak = "This last building will be your hardest challenge yet�";   //Define the text that needs to be printed
+        textToSpeak = "This last building will be your hardest challenge yet...";   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -303,7 +303,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerNeutral;                         //Change Phiona's sprite
         DialerTalk.Play();
 
-        textToSpeak = "You must be this �Scottie� I�ve heard so much about.";                                            //Define the text that needs to be printed
+        textToSpeak = "You must be this 'Scottie' I've heard so much about.";                                            //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                 //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -333,7 +333,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerAnnoyed;
         DialerTalk.Play();
 
-        textToSpeak = "Not much of a talker, I see�";                                   //Define the text that needs to be printed
+        textToSpeak = "Not much of a talker, I see...";                                   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                     //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -364,7 +364,7 @@ public class PreLevel3 : MonoBehaviour
         mainTextObject.transform.Find("DialerName").gameObject.SetActive(true);
         DialerTalk.Play();
 
-        textToSpeak = "I�m Mr Dialer, CEO of MGD Corp. It�s come to my attention that you're the one with enough gall to steal my files these past few days.";                                  //Define the text that needs to be printed
+        textToSpeak = "I'm Mr Dialer, CEO of MGD Corp. It's come to my attention that you're the one with enough gall to steal my files these past few days.";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -392,7 +392,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerAnnoyed;
         DialerTalk.Play();
 
-        textToSpeak = "Don�t worry, I only disconnected her so she can�t interfere anymore.";                                   //Define the text that needs to be printed
+        textToSpeak = "Don't worry, I only disconnected her so she can't interfere anymore.";                                   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                     //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -423,7 +423,7 @@ public class PreLevel3 : MonoBehaviour
         mainTextObject.transform.Find("DialerName").gameObject.SetActive(true);
         DialerTalk.Play();
 
-        textToSpeak = "I�m Mr Dialer, CEO of MGD Corp. It�s come to my attention that you're the one with enough gall to steal my files these past few days.";                                  //Define the text that needs to be printed
+        textToSpeak = "I'm Mr Dialer, CEO of MGD Corp. It's come to my attention that you're the one with enough gall to steal my files these past few days.";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -466,7 +466,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerNeutral;
         DialerTalk.Play();
 
-        textToSpeak = "So I�ll wager you this: if you can get all the files and not get caught by my guards, I�ll let you run free.";                                  //Define the text that needs to be printed
+        textToSpeak = "So I'll wager you this: if you can get all the files and not get caught by my guards, I'll let you run free.";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -479,7 +479,7 @@ public class PreLevel3 : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         DialerTalk.Play();
 
-        textToSpeak = "However, if you fail to do so, I�ll not only ruin you forever but Ms Phiona�s company as well. Deal?";                                  //Define the text that needs to be printed
+        textToSpeak = "However, if you fail to do so, I'll not only ruin you forever but Ms Phiona's company as well. Deal?";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -507,7 +507,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerAnnoyed;
         DialerTalk.Play();
 
-        textToSpeak = "Well, aren�t you righteous after getting caught...";                                   //Define the text that needs to be printed
+        textToSpeak = "Well, aren't you righteous after getting caught...";                                   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                     //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -536,7 +536,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerNeutral;
         DialerTalk.Play();
 
-        textToSpeak = "So I�ll wager you this: if you can get all the files and not get caught by my guards, I�ll let you run free.";                                  //Define the text that needs to be printed
+        textToSpeak = "So I'll wager you this: if you can get all the files and not get caught by my guards, I'll let you run free.";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -549,7 +549,7 @@ public class PreLevel3 : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         DialerTalk.Play();
 
-        textToSpeak = "However, if you fail to do so, I�ll not only ruin you forever but Ms Phiona�s company as well. Deal?";                                  //Define the text that needs to be printed
+        textToSpeak = "However, if you fail to do so, I'll not only ruin you forever but Ms Phiona's company as well. Deal?";                                  //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                    //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -578,7 +578,7 @@ public class PreLevel3 : MonoBehaviour
         charDialer.GetComponent<Image>().sprite = DialerNeutral;
         DialerTalk.Play();
 
-        textToSpeak = "No objections? Then it looks like we've got a friendly wager. Let the games begin in 3, 2, 1� Go~";                                   //Define the text that needs to be printed
+        textToSpeak = "No objections? Then it looks like we've got a friendly wager. Let the games begin in 3, 2, 1; Go~";                                   //Define the text that needs to be printed
         Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                     //Easily ref the TMPro component
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

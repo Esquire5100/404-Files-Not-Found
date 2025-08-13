@@ -8,17 +8,18 @@ public class SkipButton : MonoBehaviour
 {
     public GameObject This;
     public GameObject SceneController;
+    public GameObject AYS;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Skip(string sceneName)
@@ -30,5 +31,20 @@ public class SkipButton : MonoBehaviour
     {
         This.SetActive(false);
         SceneController.SetActive(false);
+    }
+
+    public void SkipTutorial()
+    {
+        AYS.SetActive(true);
+    }
+
+    public void YesSkip()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void NoSkip()
+    {
+        AYS.SetActive(false);
     }
 }

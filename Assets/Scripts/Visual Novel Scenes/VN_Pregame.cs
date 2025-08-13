@@ -9,13 +9,6 @@ public class VN_Pregame : MonoBehaviour
     public GameObject fadeScreenIn;
     public GameObject fadeScreenOut;
 
-    public GameObject ProjectorScreen;
-    public GameObject PhionaHand;
-    public GameObject PC;
-    public GameObject File;
-    public GameObject Security;
-    public GameObject foreshadowing;
-
     public GameObject charPhiona;
     public Sprite PhionaNeutral;
     public Sprite PhionaAnnoyed;
@@ -36,8 +29,6 @@ public class VN_Pregame : MonoBehaviour
     [SerializeField] GameObject responses;
     [SerializeField] GameObject responses1;
     [SerializeField] GameObject responses2;
-    [SerializeField] GameObject responses3;
-    [SerializeField] GameObject responses4;
 
     [SerializeField] int eventPos = 0;
     
@@ -247,7 +238,7 @@ public class VN_Pregame : MonoBehaviour
 
         if (eventPos == 4)
         {
-            StartCoroutine(Tutorial());
+            SceneManager.LoadScene("Tutorial Dialogue");
         }
     }
 
@@ -280,144 +271,8 @@ public class VN_Pregame : MonoBehaviour
 
         if (eventPos == 4)
         {
-            StartCoroutine(Tutorial());
+            SceneManager.LoadScene("Tutorial Dialogue");
         }
     }
 
-    private IEnumerator Tutorial()
-    {
-            yield return new WaitForSeconds(0.03f);
-            ProjectorScreen.SetActive(true);
-            PhionaHand.SetActive(true);
-
-            PhionaTalk.Play();                                                                  //Play the sfx for Phiona talking
-            charPhiona.GetComponent<Image>().sprite = PhionaTutorial;                             //Change Phiona's sprite
-
-            textToSpeak = "First thing's first, these are the computers that you need to target. They�ll hold all the necessary files I need.";
-            Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
-            currentTextLength = textToSpeak.Length;
-            TextCreator.runTextPrint = true;
-
-            yield return new WaitUntil(() => textLength == currentTextLength);
-
-            yield return new WaitForSeconds(1f);
-            PC.SetActive(true);
-
-            yield return new WaitForSeconds(5f);
-            PhionaTalk.Stop();
-
-            yield return new WaitForSeconds(1.5f);
-            PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
-
-            textToSpeak = "Hack into them and find the right file. It�ll look like this.";   //Define the text that needs to be printed
-            Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
-            currentTextLength = textToSpeak.Length;
-            TextCreator.runTextPrint = true;
-
-            yield return new WaitUntil(() => textLength == currentTextLength);
-
-            yield return new WaitForSeconds(2f);
-            PC.SetActive(false);
-            File.SetActive(true);
-
-            yield return new WaitForSeconds(3f);
-            PhionaTalk.Stop();
-
-            yield return new WaitForSeconds(1.5f);
-            PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
-            File.SetActive(false);
-            Security.SetActive(true);
-
-            textToSpeak = "Next, remember to watch out for MGD�s security system. Unfortunately, Dialer has significantly enhanced his security since the last time.";   //Define the text that needs to be printed
-            Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
-            currentTextLength = textToSpeak.Length;
-            TextCreator.runTextPrint = true;
-
-            yield return new WaitUntil(() => textLength == currentTextLength);
-
-            yield return new WaitForSeconds(6f);
-            PhionaTalk.Stop();
-            responses3.SetActive(true);
-
-            eventPos = 5;
-    }
-
-    public void LastTime()
-    {
-        if (eventPos == 5)
-        {
-            StartCoroutine(ResponseLT());
-        }
-    }
-
-    private IEnumerator ResponseLT()
-    {
-        yield return new WaitForSeconds(0.03f);
-        responses3.SetActive(false);
-        PhionaHand.SetActive(false);
-        charPhiona.GetComponent<Image>().sprite = PhionaAnnoyed;                             //Change Phiona's sprite
-        PhionaShout.Play();                                                                    //Play the sfx for Phiona talking
-
-        textToSpeak = "Problem, Scottie?";                                                    //Define the text that needs to be printed
-        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
-        currentTextLength = textToSpeak.Length;
-        TextCreator.runTextPrint = true;
-
-        yield return new WaitUntil(() => textLength == currentTextLength);
-
-        yield return new WaitForSeconds(1.5f);
-        PhionaHand.SetActive(true);
-        charPhiona.GetComponent<Image>().sprite = PhionaTutorial;                             //Change Phiona's sprite
-        PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
-
-        textToSpeak = "Now then, don�t get caught in their light. The camera will alert all the guards in the vicinity, and if they catch you�";   //Define the text that needs to be printed
-        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
-        currentTextLength = textToSpeak.Length;
-        TextCreator.runTextPrint = true;
-
-        yield return new WaitUntil(() => textLength == currentTextLength);
-
-        yield return new WaitForSeconds(6f);
-        PhionaTalk.Stop();
-        responses4.SetActive(true);
-
-        eventPos = 6;
-    }
-
-    public void IfTheyCatch()
-    {
-        if (eventPos == 6)
-        {
-            StartCoroutine(ResponseITC());
-        }
-    }
-
-    private IEnumerator ResponseITC()
-    {
-        yield return new WaitForSeconds(0.03f);
-        responses4.SetActive(false);
-        PhionaTalk.Play();                                                                    //Play the sfx for Phiona talking
-        foreshadowing.SetActive(true);
-
-
-        textToSpeak = "Well, let�s just say you�ll be escorted out of the building.";   //Define the text that needs to be printed
-        Dialogue.GetComponent<TMPro.TMP_Text>().text = textToSpeak;                           //Easily ref the TMPro component
-        currentTextLength = textToSpeak.Length;
-        TextCreator.runTextPrint = true;
-
-        yield return new WaitUntil(() => textLength == currentTextLength);
-
-        yield return new WaitForSeconds(4f);
-        PhionaTalk.Stop();
-        foreshadowing.SetActive(false);
-
-        //Wait for a bit before fading out and loading next scene
-        yield return new WaitForSeconds(0.03f);
-        fadeScreenOut.SetActive(true);
-
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Tutorial Level");
-
-        eventPos = 7;
-    }
 }
