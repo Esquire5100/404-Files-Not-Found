@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,658 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 945
+        width: 147
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742a2a67f57a30e46a5b490c3d13d765
+      internalID: 2038971257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 938
+        width: 105
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c070222ea48d3bb43b1a6f8fcd253516
+      internalID: 218902741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_2
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 955
+        width: 89
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa490fd2c7dc048b059abbca01809f
+      internalID: -567537059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 963
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bc8b69900c7c64e901fc53cd20b585
+      internalID: -2105485293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_4
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 965
+        width: 60
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9580602fb0f1d6740954658aa13ba04b
+      internalID: 222653172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_5
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 962
+        width: 137
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfdffc85c5b22a478564fe6fba8836e
+      internalID: 960894312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_6
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 961
+        width: 151
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d8cf8c847c47044a52ed884c25147b
+      internalID: -910284608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_7
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 916
+        width: 77
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593f02d11bb4c3f4b9cf45a0586e07f1
+      internalID: -1125755782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_8
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 916
+        width: 132
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1fd7115898c4448af14517179b5191
+      internalID: 1315371906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 727
+        width: 235
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e2483dfeed2bc4eb05e280291f1b30
+      internalID: -28165832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_10
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 730
+        width: 383
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6840bffc7bda5ce43b19c8b37ddd068e
+      internalID: -477757495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_11
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 732
+        width: 226
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9468d7b5f956f3d4791f6b7cec2bb6c1
+      internalID: -253351681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_12
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 740
+        width: 225
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d921b86e861d284fa4d0a303d2c12ae
+      internalID: 488133649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_13
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 759
+        width: 87
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78a4364a9e9bdb47a6d9cbf322dc92b
+      internalID: -1934434100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_14
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 764
+        width: 129
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcdf862589688c4ead08c43d12de5e9
+      internalID: -1593279590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_15
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 373
+        width: 330
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34599b0bb83254b48a87707d9c92f5bd
+      internalID: -709376243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_16
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 361
+        width: 325
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65a09441d3fa0e4f8945240d025f5fd
+      internalID: 1716484230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_17
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 582
+        width: 116
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27554e3427dddd4ca6e175cec6fefde
+      internalID: -70192566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_18
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 583
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad360e52478416d429d51a279dbe8213
+      internalID: -1207829931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_19
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 355
+        width: 100
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20e3d26f48d7ef4cace42c038bf3d16
+      internalID: 914199740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_20
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 156
+        width: 67
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c5e6d6a03415e44bbc8c5b5ef72d8f
+      internalID: -1920417123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_21
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 360
+        width: 197
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d24de94d48a1644950aa1c6eb8a8d8
+      internalID: 1935630441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_22
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 357
+        width: 186
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff4d44c7e913154087dfe39edf7d510
+      internalID: -1407033198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_23
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 461
+        width: 103
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d69406d4777db41abf9dbc7a04bf47
+      internalID: -810061852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_24
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 368
+        width: 89
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6012b9b28f53e944e91f1b7114fe12c9
+      internalID: 456820577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_25
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 179
+        width: 263
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694640a31a3e53c48a90efe496034586
+      internalID: -377867594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_26
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 156
+        width: 149
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f401a024b07d0418d45b837803923c
+      internalID: -1462706452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_27
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 156
+        width: 149
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ab1deea4db4f54fb19d9df04d5c135
+      internalID: 1213094735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_28
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 156
+        width: 151
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c892a9e3fc41824fb0834f9a2230359
+      internalID: -786116393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_29
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 179
+        width: 269
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692e85144fcc9fc4bbb6a2c48478bc84
+      internalID: 534391501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FG_Props_Interior_Frame_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 43
+        width: 1920
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0988cc4eb5d784fa886f8741934db9
+      internalID: 250187941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +770,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FG_Props_Interior_Frame_0: 2038971257
+      FG_Props_Interior_Frame_1: 218902741
+      FG_Props_Interior_Frame_10: -477757495
+      FG_Props_Interior_Frame_11: -253351681
+      FG_Props_Interior_Frame_12: 488133649
+      FG_Props_Interior_Frame_13: -1934434100
+      FG_Props_Interior_Frame_14: -1593279590
+      FG_Props_Interior_Frame_15: -709376243
+      FG_Props_Interior_Frame_16: 1716484230
+      FG_Props_Interior_Frame_17: -70192566
+      FG_Props_Interior_Frame_18: -1207829931
+      FG_Props_Interior_Frame_19: 914199740
+      FG_Props_Interior_Frame_2: -567537059
+      FG_Props_Interior_Frame_20: -1920417123
+      FG_Props_Interior_Frame_21: 1935630441
+      FG_Props_Interior_Frame_22: -1407033198
+      FG_Props_Interior_Frame_23: -810061852
+      FG_Props_Interior_Frame_24: 456820577
+      FG_Props_Interior_Frame_25: -377867594
+      FG_Props_Interior_Frame_26: -1462706452
+      FG_Props_Interior_Frame_27: 1213094735
+      FG_Props_Interior_Frame_28: -786116393
+      FG_Props_Interior_Frame_29: 534391501
+      FG_Props_Interior_Frame_3: -2105485293
+      FG_Props_Interior_Frame_30: 250187941
+      FG_Props_Interior_Frame_4: 222653172
+      FG_Props_Interior_Frame_5: 960894312
+      FG_Props_Interior_Frame_6: -910284608
+      FG_Props_Interior_Frame_7: -1125755782
+      FG_Props_Interior_Frame_8: 1315371906
+      FG_Props_Interior_Frame_9: -28165832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
