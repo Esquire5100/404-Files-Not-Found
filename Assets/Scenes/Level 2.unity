@@ -18064,15 +18064,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1177279669772259885, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0593001
+      value: 0.98439693
       objectReference: {fileID: 0}
     - target: {fileID: 1177279669772259885, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9350545
+      value: 0.8689368
       objectReference: {fileID: 0}
     - target: {fileID: 1177279669772259885, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8754546
+      value: 0.8135512
       objectReference: {fileID: 0}
     - target: {fileID: 1177279669772259885, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -18280,23 +18280,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7362500585831780243, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4836528
+      value: 1.3997226
       objectReference: {fileID: 0}
     - target: {fileID: 7362500585831780243, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4836528
+      value: 1.3997226
       objectReference: {fileID: 0}
     - target: {fileID: 7362500585831780243, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4836528
+      value: 1.3997226
       objectReference: {fileID: 0}
     - target: {fileID: 7362500585831780243, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 116
+      value: 181
       objectReference: {fileID: 0}
     - target: {fileID: 7362500585831780243, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7607499872876684002, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_IsActive
