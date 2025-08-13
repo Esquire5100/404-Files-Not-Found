@@ -9,11 +9,8 @@ public class FileMinigame : MonoBehaviour
 
     public GameObject tab1;
     public GameObject tab2;
-    public GameObject tab3;
-    public GameObject tab4;
 
     public GameObject decoy1;
-    public GameObject decoy2;
     public GameObject decoyEmpty;
 
     //public GameObject CaptchaScreen;
@@ -41,23 +38,9 @@ public class FileMinigame : MonoBehaviour
         tab2.SetActive(true);
     }
 
-    public void OpenTab3()
-    {
-        tab3.SetActive(true);
-    }
-    public void OpenTab4()
-    {
-        tab4.SetActive(true);
-    }
-
     public void OpenDecoy1()
     {
         decoy1.SetActive(true);
-    }
-
-    public void OpenDecoy2()
-    {
-        decoy2.SetActive(true);
     }
 
     public void OpenDecoyEmpty()
@@ -99,11 +82,8 @@ public class FileMinigame : MonoBehaviour
         //CaptchaScreen.SetActive(false);
         tab1.SetActive(false);
         tab2.SetActive(false);
-        tab3.SetActive(false);
-        tab4.SetActive(false);
 
         decoy1.SetActive(false);
-        decoy2.SetActive(false);
         decoyEmpty.SetActive(false);
 
         minigame.SetActive(false);
