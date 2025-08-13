@@ -16,7 +16,7 @@ public class FileMinigame : MonoBehaviour
     public GameObject decoy2;
     public GameObject decoyEmpty;
 
-    public GameObject CaptchaScreen;
+    //public GameObject CaptchaScreen;
 
 
     // Start is called before the first frame update
@@ -96,7 +96,7 @@ public class FileMinigame : MonoBehaviour
 
     public void CloseEverything()
     {
-        CaptchaScreen.SetActive(false);
+        //CaptchaScreen.SetActive(false);
         tab1.SetActive(false);
         tab2.SetActive(false);
         tab3.SetActive(false);
