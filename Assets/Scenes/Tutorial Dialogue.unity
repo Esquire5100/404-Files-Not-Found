@@ -1989,7 +1989,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885008535}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -3475,7 +3475,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885008535}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -3607,7 +3607,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885008535}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -5394,14 +5394,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885008530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ffcc883dda1c449947236ee1138697, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b48de25c89e4ab4b9d035922286de4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobileUI: {fileID: 0}
-  showMobileUI: 0
-  FileCount: 0
-  FileCounter: {fileID: 0}
-  filesRequired: 0
   pauseMenuUI: {fileID: 600002995}
 --- !u!1 &1886896866
 GameObject:
@@ -5659,7 +5654,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885008535}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:

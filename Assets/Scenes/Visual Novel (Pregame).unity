@@ -529,14 +529,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 147403240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ffcc883dda1c449947236ee1138697, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b48de25c89e4ab4b9d035922286de4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobileUI: {fileID: 0}
-  showMobileUI: 0
-  FileCount: 0
-  FileCounter: {fileID: 0}
-  filesRequired: 0
   pauseMenuUI: {fileID: 1217433917}
 --- !u!1 &171676220
 GameObject:
@@ -3503,6 +3498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 1217433917}
+  Scottie: {fileID: 0}
+  LvlManager: {fileID: 0}
 --- !u!114 &1217433920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3896,7 +3893,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 147403245}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -5067,7 +5064,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 147403245}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -5334,7 +5331,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 147403245}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -5886,7 +5883,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 147403245}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -6274,7 +6271,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 213683867}
-  - {fileID: 147403244}
   - {fileID: 885740159}
   - {fileID: 1129419249}
   - {fileID: 1402016813}
+  - {fileID: 147403244}

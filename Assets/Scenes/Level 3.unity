@@ -4991,8 +4991,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527066763}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 1340203453}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -6389,8 +6389,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527066763}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 1340203453}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -7046,8 +7046,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527066763}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 1340203453}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -8920,7 +8920,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2966091696197038215, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
   m_PrefabInstance: {fileID: 1527826980}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1366806464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec87169201503614e9c6b6990fb6d9ac, type: 3}
@@ -12814,6 +12814,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7635132115933979712, guid: d33497f0edbde4d4793ce6c9bda335f3, type: 3}
   m_PrefabInstance: {fileID: 1338368787}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340203453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366806464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b48de25c89e4ab4b9d035922286de4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 928528934}
+--- !u!1 &1366806463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2741757684941325970, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
+  m_PrefabInstance: {fileID: 1527826980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366806464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8601455892539937954, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
+  m_PrefabInstance: {fileID: 1527826980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1389132291
 GameObject:
   m_ObjectHideFlags: 0
@@ -14821,8 +14844,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527066763}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 1340203453}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -14871,17 +14894,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526529366}
   m_CullTransparentMesh: 1
---- !u!114 &1527066763 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5010722039831295454, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
-  m_PrefabInstance: {fileID: 1527826980}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ffcc883dda1c449947236ee1138697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1527826980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15022,6 +15034,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 198.65
       objectReference: {fileID: 0}
+    - target: {fileID: 2966091696197038215, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
+      propertyPath: decoy1
+      value: 
+      objectReference: {fileID: 1366806463}
     - target: {fileID: 2966091696197038215, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: CaptchaScreen
       value: 
@@ -15176,6 +15192,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1551625214}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8601455892539937954, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1340203453}
     - targetCorrespondingSourceObject: {fileID: 7607499872876684002, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1527826987}

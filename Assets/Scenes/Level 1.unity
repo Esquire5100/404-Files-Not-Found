@@ -630,8 +630,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3621650565839147686}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 3621650565839147688}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -2893,8 +2893,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3621650565839147686}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 3621650565839147688}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -5390,8 +5390,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3621650565839147686}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 3621650565839147688}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -6600,8 +6600,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3621650565839147686}
-        m_TargetAssemblyTypeName: LvlManager, Assembly-CSharp
+      - m_Target: {fileID: 3621650565839147688}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -7015,7 +7015,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8031702593391518071, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
   m_PrefabInstance: {fileID: 3621650565839147685}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3621650565839147686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec87169201503614e9c6b6990fb6d9ac, type: 3}
@@ -9798,26 +9798,36 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 847044901}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7427962206401292840, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3621650565839147688}
     - targetCorrespondingSourceObject: {fileID: 1396800327958094788, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8399232531096553156}
   m_SourcePrefab: {fileID: 100100000, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
---- !u!114 &3621650565839147686 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3158131693846037849, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
+--- !u!1 &3621650565839147686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7427962206401292840, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
   m_PrefabInstance: {fileID: 3621650565839147685}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ffcc883dda1c449947236ee1138697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3621650565839147687 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7196721871917543575, guid: fbe2431c0663f4f448e99077a8b84a46, type: 3}
   m_PrefabInstance: {fileID: 3621650565839147685}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3621650565839147688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621650565839147686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b48de25c89e4ab4b9d035922286de4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 544108101}
 --- !u!114 &3782933454214849314
 MonoBehaviour:
   m_ObjectHideFlags: 0

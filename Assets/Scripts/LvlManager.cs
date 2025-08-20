@@ -18,10 +18,6 @@ public class LvlManager : MonoBehaviour
 
     public int filesRequired = 0;
 
-    public GameObject pauseMenuUI;
-    private bool isPaused = false;
-
-
     private void Awake()
     {
         //If no instance exists, keep this one and prevent it from being destroyed
@@ -170,42 +166,5 @@ public class LvlManager : MonoBehaviour
     public bool CanExitLevel()
     {
         return FileCount >= filesRequired;
-    }
-
-    public void TogglePause()
-    {
-        if (isPaused)
-        {
-            ResumeGame();
-        }
-
-        else
-        {
-            PauseGame();
-        }
-    }
-
-    public void PauseGame()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f; //freeze time to pause the game
-        isPaused = true;
-    }
-
-    public void ResumeGame()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;  //Unfreeze time to continue game
-        isPaused = false;
-    }
-    public void RestartGame()
-    {
-        Time.timeScale = 1f; // Ensure time is running again
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  //Reload the scene
-    }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
     }
 }
