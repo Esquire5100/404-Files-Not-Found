@@ -9,6 +9,9 @@ public class MusicManager : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
 
+    private AudioSource audioSource2;
+    public AudioClip secondBackgroundMusic;
+
     private void Awake()
     {
         if(Instance == null)
@@ -29,6 +32,8 @@ public class MusicManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioSource2 = gameObject.AddComponent<AudioSource>();
     }
     void Start()
     {
@@ -57,5 +62,15 @@ public class MusicManager : MonoBehaviour
     public void PausedBackgroundMusic()
     {
         audioSource.Pause();
+    }
+
+    public void PlaySecondMusic()
+    {
+        if (secondBackgroundMusic != null)
+        {
+            audioSource2.clip = secondBackgroundMusic;
+            audioSource2.loop = false;
+            audioSource2.Play();
+        }
     }
 }
