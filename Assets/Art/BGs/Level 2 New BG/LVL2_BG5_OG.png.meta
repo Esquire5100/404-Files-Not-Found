@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab9856e2ee834fa4f85b1cbc89b92146
+guid: 394d387fd78dde144924805475ce1fb7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LVL2_BG5_OG_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 36
+        width: 1788
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54463586eb3535d448ca7b8a0ba69f02
+      internalID: -1239340677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +153,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LVL2_BG5_OG_0: -1239340677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
