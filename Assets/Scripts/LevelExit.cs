@@ -30,8 +30,8 @@ public class LevelExit : MonoBehaviour
         if (other.CompareTag("Player")) //If the Player hits the object...
         {
             SoundEffectManager.Instance.StopMusic();
-            transition = GetComponent<Animator>();
-            //transition = GameObject.Find("FadingImage").GetComponent<Animator>();
+            transition = GameObject.Find("Fading Image").GetComponent<Animator>();
+            transition.SetTrigger("Start");            //transition = GameObject.Find("FadingImage").GetComponent<Animator>();
             StartCoroutine(levelLoad());
         }
 
@@ -46,9 +46,9 @@ public class LevelExit : MonoBehaviour
         }*/
     }
 
-    private IEnumerator levelLoad()
+    IEnumerator levelLoad()
         {
-            transition.SetTrigger("Start");
+            //transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(sceneToLoad);
         }
