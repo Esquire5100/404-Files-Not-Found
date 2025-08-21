@@ -15,11 +15,7 @@ MonoBehaviour:
   captchas:
   - Image: {fileID: 840472893, guid: ee81f543764ed1a43834701c3b4dd911, type: 3}
     Value: b4LL5@ck
-  - Image: {fileID: 21300008, guid: 005e559c11868604fbb8d7fec0646fb2, type: 3}
-    Value: 2mH65i
-  - Image: {fileID: 21300012, guid: 005e559c11868604fbb8d7fec0646fb2, type: 3}
-    Value: 3ib3n9
-  - Image: {fileID: 21300010, guid: 005e559c11868604fbb8d7fec0646fb2, type: 3}
-    Value: aFe3bx
-  - Image: {fileID: 21300014, guid: 005e559c11868604fbb8d7fec0646fb2, type: 3}
-    Value: mvi1nL
+  - Image: {fileID: -867852450, guid: ec2cff286fbe8e94f9d56826367783fb, type: 3}
+    Value: d1Ng@Lin9
+  - Image: {fileID: -437225232, guid: 8a22a98398c724a4dbc7a2093c501793, type: 3}
+    Value: p12zL3
