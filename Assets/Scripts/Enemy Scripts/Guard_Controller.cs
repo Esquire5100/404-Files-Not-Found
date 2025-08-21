@@ -30,6 +30,8 @@ public class Guard_Controller : MonoBehaviour
     public float stunDuration;
     private float stunTimer = 0f;
 
+    private VideoTransition caught;
+
     //Start is called before the first frame update
     void Start()
     {
@@ -169,7 +171,9 @@ public class Guard_Controller : MonoBehaviour
     {
         if (other.collider.CompareTag("Player")) //If the guard directly hits the Player hitbox...
         {
-            SceneManager.LoadScene("Game Over"); //...then bring player to the Game Over scene
+            caught = FindFirstObjectByType <VideoTransition> ();
+            caught.PlayVideo();
+            //SceneManager.LoadScene("Game Over"); //...then bring player to the Game Over scene
         }
     }
 

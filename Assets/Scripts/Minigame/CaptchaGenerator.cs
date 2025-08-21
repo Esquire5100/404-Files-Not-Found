@@ -13,8 +13,9 @@ public class CaptchaGenerator : ScriptableObject
     //Returns a Captcha from the list, rotating through them
     public Captcha Generate()
     {
+        int randomIndex = Random.Range(0, captchas.Length); //pick  random element
         //Use modulo (%) to loop around if index exceeds list length
-        return captchas[(index++ % captchas.Length)];
+        return captchas[(randomIndex)];
     }
 
     //Checks if the user input matches the captcha's correct value
