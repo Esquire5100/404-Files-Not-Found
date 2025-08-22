@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 011d8c407d5221641a9a6498a786f1ff
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: poor chair back_0
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 448
+        width: 739
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840f7dd7ff170c74194d6acedc2d9849
+      internalID: 446937087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      poor chair back_0: 446937087
+      poor chair back_1: 1241764882
+      poor chair back_10: 1984470046
+      poor chair back_11: 509722578
+      poor chair back_12: -723971944
+      poor chair back_13: -767109868
+      poor chair back_14: 1715917042
+      poor chair back_15: 1855994326
+      poor chair back_16: -775756257
+      poor chair back_17: 582350261
+      poor chair back_18: -18075067
+      poor chair back_19: -647415290
+      poor chair back_2: 715000139
+      poor chair back_20: -1840994859
+      poor chair back_21: -528786651
+      poor chair back_22: 716924918
+      poor chair back_23: -1413286456
+      poor chair back_24: 1187769055
+      poor chair back_25: -869669876
+      poor chair back_26: -861221873
+      poor chair back_27: 781092886
+      poor chair back_28: -1211233790
+      poor chair back_29: 806339202
+      poor chair back_3: -890606115
+      poor chair back_30: -2119929202
+      poor chair back_31: 1284825809
+      poor chair back_32: -1895684727
+      poor chair back_33: 20928721
+      poor chair back_34: 320853072
+      poor chair back_35: 396029201
+      poor chair back_36: -840650049
+      poor chair back_37: -1952339685
+      poor chair back_38: 714852277
+      poor chair back_39: -955128229
+      poor chair back_4: -210508073
+      poor chair back_40: -286407234
+      poor chair back_41: 1455640117
+      poor chair back_42: -2050194608
+      poor chair back_43: -1822641915
+      poor chair back_44: -1385116711
+      poor chair back_45: -1421332866
+      poor chair back_46: 268894192
+      poor chair back_47: 17777784
+      poor chair back_48: -1228889363
+      poor chair back_49: 1815324576
+      poor chair back_5: -401149201
+      poor chair back_50: 165084735
+      poor chair back_51: 504377319
+      poor chair back_6: -1790025995
+      poor chair back_7: 66005285
+      poor chair back_8: 41984832
+      poor chair back_9: -568550638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
