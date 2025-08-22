@@ -13,6 +13,8 @@ public class Stairs : MonoBehaviour
     public GameObject stairsTarget;                                              //Space in scene where the player will end up after "using the stairs"
     //private bool hasTeleported = false;                                          //Define if player has already teleported ONCE (used the stairs)
 
+    private GameObject playerInRange = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,27 +25,28 @@ public class Stairs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Collider Triggered");
-
-        if (other.CompareTag("Player"))
+        if (playerInRange != null && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Tag = Player");
-            player = other.gameObject;
             StartCoroutine(UseStairs());
         }
     }
 
-    private void OnTriggerExitCollider2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //hasTeleported = false; //Reset when leaving the stairs
+            Debug.Log("Player entered stairs range");
+            playerInRange = other.gameObject;
+            sr.sprite = open; // Optional: visually indicate it's usable
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player left stairs range");
+            playerInRange = null;
             sr.sprite = closed;
         }
     }
@@ -53,7 +56,11 @@ public class Stairs : MonoBehaviour
         sr.sprite = open; // Show open before teleport
 
         yield return new WaitForSeconds(1.5f);
-        player.transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
+        //player.transform.position = new Vector2(stairsTarget.transform.position.x, stairsTarget.transform.position.y);
+        if (playerInRange !=null)
+        {
+            playerInRange.transform.position = stairsTarget.transform.position;
+        }
 
         sr.sprite = closed; // Switch back to closed after teleport
 

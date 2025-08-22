@@ -84,7 +84,7 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite defaultIcon;
     public Sprite hackIcon;
     public Sprite hideIcon;
-    private enum ActionMode { None, Hide, Hack }
+    private enum ActionMode { None, Hide, Hack, UseStairs }
     private ActionMode currentMode = ActionMode.None;
 
     //Sound Effect
@@ -95,6 +95,9 @@ public class Scottie_Controller : MonoBehaviour
     private int currentZoneIndex = -1;
 
     [SerializeField] private float footstepInterval = 0.5f;
+
+    private GameObject stairsTarget;
+    private bool nearStairs = false;
 
 
     void Start()
@@ -266,6 +269,17 @@ public class Scottie_Controller : MonoBehaviour
             UpdateActionButtonUI();
         }
 
+        if (other.CompareTag("Stairs"))
+        {
+            stairsTarget = other.GetComponent<Stairs>()?.stairsTarget;
+            nearStairs = stairsTarget != null;
+            if (nearStairs)
+            {
+                currentMode = ActionMode.UseStairs;
+                UpdateActionButtonUI();
+            }
+        }
+
     }
     
     private void OnTriggerExit2D(Collider2D other)                               //If name of gameObject is exited, player will not be hide anymore
@@ -285,6 +299,17 @@ public class Scottie_Controller : MonoBehaviour
             hackableObject = null;
             playerInTrigger = false;
             if (currentMode == ActionMode.Hack)
+            {
+                currentMode = ActionMode.None;
+                UpdateActionButtonUI();
+            }
+        }
+
+        if (other.CompareTag("Stairs"))
+        {
+            stairsTarget = null;
+            nearStairs = false;
+            if (currentMode == ActionMode.UseStairs)
             {
                 currentMode = ActionMode.None;
                 UpdateActionButtonUI();
@@ -434,6 +459,16 @@ public class Scottie_Controller : MonoBehaviour
         */
     }
 
+    public void UseStairs()
+    {
+        if (stairsTarget != null && nearStairs)
+        {
+            Debug.Log("Using stairs...");
+            SoundEffectManager.Play("Stairs"); // optional
+            transform.position = stairsTarget.transform.position;
+        }
+    }
+
     private void UpdateActionButtonUI()
     {
         switch (currentMode)
@@ -473,6 +508,20 @@ public class Scottie_Controller : MonoBehaviour
                     }
                 }
                 actionButton.onClick.RemoveAllListeners();
+                break;
+
+            case ActionMode.UseStairs:
+                if (buttonIcon != null && defaultIcon != null) // You can assign a stairs icon instead if you have one
+                {
+                    buttonIcon.sprite = defaultIcon;
+                    buttonIcon.gameObject.SetActive(true);
+                }
+                actionButton.onClick.RemoveAllListeners();
+                actionButton.onClick.AddListener(() =>
+                {
+                    UseStairs();
+                    UpdateActionButtonUI(); // optional, if stairs usage disables anything
+                });
                 break;
         }
     }
