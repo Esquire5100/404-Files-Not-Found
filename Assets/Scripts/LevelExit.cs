@@ -47,9 +47,9 @@ public class LevelExit : MonoBehaviour
     }
 
     IEnumerator levelLoad()
-        {
+    {
             //transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(sceneToLoad);
-        }
+    }
 }
