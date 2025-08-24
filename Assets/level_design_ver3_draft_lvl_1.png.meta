@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: level_design_ver3_draft_lvl_1_0
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 167
+        width: 5505
+        height: 1239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f88d75a5b2a08146b6d52886b214d15
+      internalID: -1119654979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +140,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      level_design_ver3_draft_lvl_1_0: -1119654979
+      level_design_ver3_draft_lvl_1_1: 1759193153
+      level_design_ver3_draft_lvl_1_2: 539366522
+      level_design_ver3_draft_lvl_1_3: 1229229079
+      level_design_ver3_draft_lvl_1_4: 256548402
+      level_design_ver3_draft_lvl_1_5: 660348029
+      level_design_ver3_draft_lvl_1_6: -1407071013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
