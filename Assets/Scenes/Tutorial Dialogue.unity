@@ -204,9 +204,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1822315004}
         m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
-        m_MethodName: YesSkip
+        m_MethodName: NoSkip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -423,8 +423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 190, y: 32}
-  m_SizeDelta: {x: 700, y: 900}
+  m_AnchoredPosition: {x: 152.62, y: 0}
+  m_SizeDelta: {x: 628.4822, y: 808.0485}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &236549977
 GameObject:
@@ -1448,7 +1448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465d3f2d06080e04c92bce8a19ac7566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 600002995}
 --- !u!114 &600002997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,9 +3207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1822315004}
         m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
-        m_MethodName: YesSkip
+        m_MethodName: NoSkip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5786,7 +5785,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1822315004}
         m_TargetAssemblyTypeName: SkipButton, Assembly-CSharp
         m_MethodName: YesSkip
         m_Mode: 1
