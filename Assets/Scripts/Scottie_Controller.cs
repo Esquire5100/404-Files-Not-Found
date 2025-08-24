@@ -84,6 +84,7 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite defaultIcon;
     public Sprite hackIcon;
     public Sprite hideIcon;
+    public Sprite UseStairsIcon;
     private enum ActionMode { None, Hide, Hack, UseStairs }
     private ActionMode currentMode = ActionMode.None;
 
@@ -513,7 +514,7 @@ public class Scottie_Controller : MonoBehaviour
             case ActionMode.UseStairs:
                 if (buttonIcon != null && defaultIcon != null) // You can assign a stairs icon instead if you have one
                 {
-                    buttonIcon.sprite = defaultIcon;
+                    buttonIcon.sprite = UseStairsIcon;
                     buttonIcon.gameObject.SetActive(true);
                 }
                 actionButton.onClick.RemoveAllListeners();
