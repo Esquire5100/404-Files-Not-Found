@@ -11,9 +11,10 @@ public class HidingZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Scottie_Controller>().EnterHideZone(zoneIndex);          // Tell player it's in this zone
-            if (targetRenderer != null)                                                 // Make the object visually disappear
-                targetRenderer.enabled = false;
+            var player = other.GetComponent<Scottie_Controller>();
+            player.EnterHideZone(zoneIndex, this);
+
+
         }
     }
 
@@ -21,9 +22,8 @@ public class HidingZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Scottie_Controller>().ExitHideZone(zoneIndex);            // Notify player that it's exiting the zone
-            if (targetRenderer != null)                                                  // Restore the object's visibility
-                targetRenderer.enabled = true;
+            var player = other.GetComponent<Scottie_Controller>();
+            player.ExitHideZone(zoneIndex, this);
         }
     }
 }

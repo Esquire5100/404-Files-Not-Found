@@ -85,7 +85,7 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite hackIcon;
     public Sprite hideIcon;
     public Sprite UseStairsIcon;
-    private enum ActionMode { None, Hide, Hack, UseStairs }
+    private enum ActionMode { None, Hide, Hack, UseStairs, UseLift }
     private ActionMode currentMode = ActionMode.None;
 
     //Sound Effect
@@ -93,12 +93,17 @@ public class Scottie_Controller : MonoBehaviour
     public float footstepSpeed = 0.5f;
 
     public Sprite[] hideSprites;
-    private int currentZoneIndex = -1;
+    public int currentZoneIndex = -1;
+    //public int currentZoneIndex;
+    public HidingZone currentHidingZone;
 
     [SerializeField] private float footstepInterval = 0.5f;
 
     private GameObject stairsTarget;
+    private GameObject liftTarget;
     private bool nearStairs = false;
+    private bool nearLift = false;
+    private LiftDoor currentLiftDoor;
 
 
     void Start()
@@ -280,6 +285,18 @@ public class Scottie_Controller : MonoBehaviour
                 UpdateActionButtonUI();
             }
         }
+        /*
+        if (other.CompareTag("Lift"))
+        {
+            liftTarget = other.GetComponent<Lift>()?.LiftTarget;
+            currentLiftDoor = other.GetComponent<Lift>()?.sr;
+            nearLift = liftTarget != null;
+            if (nearLift)
+            {
+                currentMode = ActionMode.UseLift;
+                UpdateActionButtonUI();
+            }
+        }*/
 
     }
     
@@ -316,6 +333,33 @@ public class Scottie_Controller : MonoBehaviour
                 UpdateActionButtonUI();
             }
         }
+
+        if (other.CompareTag("Lift"))
+        {
+            liftTarget = null;
+            nearLift = false;
+            currentLiftDoor = null;
+            if (currentMode == ActionMode.UseLift)
+            {
+                currentMode = ActionMode.None;
+                UpdateActionButtonUI();
+            }
+        }
+    }
+
+    public void EnterHideZone(int index, HidingZone zone)
+    {
+        currentZoneIndex = index;
+        currentHidingZone = zone;
+    }
+
+    public void ExitHideZone(int index, HidingZone zone)
+    {
+        if (currentHidingZone == zone)
+        {
+            currentZoneIndex = -1;
+            currentHidingZone = null;
+        }
     }
 
     /*private void OnTriggerEnter2D(Collider2D other)
@@ -337,36 +381,53 @@ public class Scottie_Controller : MonoBehaviour
     //Mobile Control for hiding
     public void Hide()
     {
-        
         if (!hiding && canHide && currentZoneIndex >= 0 && currentZoneIndex < hideSprites.Length)
         {
             Debug.Log($"Hiding at zone {currentZoneIndex}, sprite: {hideSprites[currentZoneIndex].name}");
-            
 
             myAnim.enabled = false;
-            sr.sprite = hideSprites[currentZoneIndex];                                // Choose the zone-specific sprite
+            sr.sprite = hideSprites[currentZoneIndex];
             myAnim.enabled = true;
+
             Physics2D.IgnoreLayerCollision(6, 7, true);
             Physics2D.IgnoreLayerCollision(6, 11, true);
             sr.sortingOrder = 0;
+
+            // ❌ HIDE the hiding spot
+            if (currentHidingZone != null && currentHidingZone.targetRenderer != null)
+            {
+                currentHidingZone.targetRenderer.enabled = false;
+            }
+
             hiding = true;
             IsHiding = true;
             canMove = false;
+
             SoundEffectManager.Play("Hiding");
         }
-        else if (hiding)                                                             //Unhide
+        else if (hiding)
         {
             sr.sprite = normalSprite;
             myAnim.enabled = true;
+
             Physics2D.IgnoreLayerCollision(6, 7, false);
             Physics2D.IgnoreLayerCollision(6, 11, false);
             sr.sortingOrder = 2;
+
+            // ✅ SHOW the hiding spot again
+            if (currentHidingZone != null && currentHidingZone.targetRenderer != null)
+            {
+                currentHidingZone.targetRenderer.enabled = true;
+            }
+
             hiding = false;
             IsHiding = false;
             canMove = true;
+
             SoundEffectManager.Play("Hiding");
         }
     }
+
 
     private void LateUpdate()
     {
@@ -469,6 +530,31 @@ public class Scottie_Controller : MonoBehaviour
             transform.position = stairsTarget.transform.position;
         }
     }
+    /*
+    public void UseLift()
+    {
+        if (liftTarget != null && nearLift)
+        {
+            Debug.Log("Using lift...");
+            StartCoroutine(UseLiftRoutine());
+        }
+    }
+    
+    private IEnumerator UseLiftRoutine()
+    {
+        if (currentLiftDoor != null)
+            yield return currentLiftDoor.OpenDoor();
+
+        SoundEffectManager.Play("Lift");
+
+        yield return new WaitForSeconds(1.5f);
+
+        transform.position = liftTarget.transform.position;
+
+        if (currentLiftDoor != null)
+            yield return currentLiftDoor.CloseDoor();
+    }
+    */
 
     private void UpdateActionButtonUI()
     {
@@ -524,6 +610,18 @@ public class Scottie_Controller : MonoBehaviour
                     UpdateActionButtonUI(); // optional, if stairs usage disables anything
                 });
                 break;
+            /*
+            case ActionMode.UseLift:
+                buttonIcon.sprite = UseStairsIcon; // Use a separate icon if you have one
+                buttonIcon.gameObject.SetActive(true);
+                actionButton.onClick.RemoveAllListeners();
+                actionButton.onClick.AddListener(() =>
+                {
+                    UseLift();
+                    UpdateActionButtonUI();
+                });
+                break;
+            */
         }
     }
 }
