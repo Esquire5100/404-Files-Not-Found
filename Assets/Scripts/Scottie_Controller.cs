@@ -85,6 +85,7 @@ public class Scottie_Controller : MonoBehaviour
     public Sprite hackIcon;
     public Sprite hideIcon;
     public Sprite UseStairsIcon;
+    public Sprite UseLiftIcon;
     private enum ActionMode { None, Hide, Hack, UseStairs, UseLift }
     private ActionMode currentMode = ActionMode.None;
 
@@ -100,10 +101,11 @@ public class Scottie_Controller : MonoBehaviour
     [SerializeField] private float footstepInterval = 0.5f;
 
     private GameObject stairsTarget;
-    private GameObject liftTarget;
     private bool nearStairs = false;
+    private Lift currentLift;
+    private Transform liftTarget;
     private bool nearLift = false;
-    private LiftDoor currentLiftDoor;
+    
 
 
     void Start()
@@ -285,18 +287,18 @@ public class Scottie_Controller : MonoBehaviour
                 UpdateActionButtonUI();
             }
         }
-        /*
+
         if (other.CompareTag("Lift"))
         {
-            liftTarget = other.GetComponent<Lift>()?.LiftTarget;
-            currentLiftDoor = other.GetComponent<Lift>()?.sr;
-            nearLift = liftTarget != null;
+            currentLift = other.GetComponent<Lift>();
+            nearLift = currentLift != null && currentLift.IsPlayerInRange();
+
             if (nearLift)
             {
                 currentMode = ActionMode.UseLift;
                 UpdateActionButtonUI();
             }
-        }*/
+        }
 
     }
     
@@ -336,9 +338,9 @@ public class Scottie_Controller : MonoBehaviour
 
         if (other.CompareTag("Lift"))
         {
-            liftTarget = null;
+            currentLift = null;
             nearLift = false;
-            currentLiftDoor = null;
+
             if (currentMode == ActionMode.UseLift)
             {
                 currentMode = ActionMode.None;
@@ -393,7 +395,7 @@ public class Scottie_Controller : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 11, true);
             sr.sortingOrder = 0;
 
-            // ❌ HIDE the hiding spot
+            
             if (currentHidingZone != null && currentHidingZone.targetRenderer != null)
             {
                 currentHidingZone.targetRenderer.enabled = false;
@@ -414,7 +416,7 @@ public class Scottie_Controller : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 11, false);
             sr.sortingOrder = 2;
 
-            // ✅ SHOW the hiding spot again
+            
             if (currentHidingZone != null && currentHidingZone.targetRenderer != null)
             {
                 currentHidingZone.targetRenderer.enabled = true;
@@ -530,32 +532,36 @@ public class Scottie_Controller : MonoBehaviour
             transform.position = stairsTarget.transform.position;
         }
     }
-    /*
     public void UseLift()
     {
-        if (liftTarget != null && nearLift)
+        if (currentLift == null)
         {
-            Debug.Log("Using lift...");
-            StartCoroutine(UseLiftRoutine());
+            Debug.LogWarning("UseLift: currentLift is null.");
+            return;
         }
-    }
-    
-    private IEnumerator UseLiftRoutine()
-    {
-        if (currentLiftDoor != null)
-            yield return currentLiftDoor.OpenDoor();
 
+        if (!currentLift.IsPlayerInRange())
+        {
+            Debug.LogWarning("UseLift: Player is not in range of the lift.");
+            return;
+        }
+
+        Debug.Log("Using lift...");
+        StartCoroutine(currentLift.TeleportPlayer(gameObject));
+    }
+
+    /*private IEnumerator UseLiftRoutine()
+    {
         SoundEffectManager.Play("Lift");
 
-        yield return new WaitForSeconds(1.5f);
+        // Door animation is handled in Lift script — optional
+        yield return new WaitForSeconds(3f); // Wait before teleport
 
         transform.position = liftTarget.transform.position;
 
-        if (currentLiftDoor != null)
-            yield return currentLiftDoor.CloseDoor();
+        Debug.Log("Lift teleport complete.");
     }
     */
-
     private void UpdateActionButtonUI()
     {
         switch (currentMode)
@@ -610,10 +616,14 @@ public class Scottie_Controller : MonoBehaviour
                     UpdateActionButtonUI(); // optional, if stairs usage disables anything
                 });
                 break;
-            /*
+
             case ActionMode.UseLift:
-                buttonIcon.sprite = UseStairsIcon; // Use a separate icon if you have one
-                buttonIcon.gameObject.SetActive(true);
+                if (buttonIcon != null && UseLiftIcon != null)
+                {
+                    buttonIcon.sprite = UseLiftIcon;
+                    buttonIcon.gameObject.SetActive(true);
+                }
+
                 actionButton.onClick.RemoveAllListeners();
                 actionButton.onClick.AddListener(() =>
                 {
@@ -621,7 +631,6 @@ public class Scottie_Controller : MonoBehaviour
                     UpdateActionButtonUI();
                 });
                 break;
-            */
         }
     }
 }

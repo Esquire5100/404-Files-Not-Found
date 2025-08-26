@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 792797094688356989}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.38, y: 4.65, z: -0.036683455}
+  m_LocalPosition: {x: 2.08, y: 4.65, z: -0.036683455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: -102905751
   m_SortingLayer: -5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -528456384, guid: 566bab8aa46641944a3963e454e28bda, type: 3}
+  m_Sprite: {fileID: -1005085520, guid: f6a7aaad71605c9458ec44be90ad58f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.32, y: 3.3866668}
+    oldSize: {x: 2.4555557, y: 3.524074}
     newSize: {x: 0.6796875, y: 0.9921875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 3388172432966646971}
-  closed: {fileID: -528456384, guid: 566bab8aa46641944a3963e454e28bda, type: 3}
+  closed: {fileID: -1005085520, guid: f6a7aaad71605c9458ec44be90ad58f9, type: 3}
   open: {fileID: -1510125271, guid: b268d21e53c17114e81ac079a9bbb91f, type: 3}
   player: {fileID: 0}
   stairsTarget: {fileID: 792797094688356989}

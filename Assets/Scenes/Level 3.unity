@@ -12278,6 +12278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lvl Starter Pack 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6200033230338871057, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6225315822751027559, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_IsActive
       value: 0

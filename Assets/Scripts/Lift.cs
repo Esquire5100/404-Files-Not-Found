@@ -5,28 +5,17 @@ using UnityEngine;
 public class Lift : MonoBehaviour
 {
     public SpriteRenderer sr;
-    public Sprite closed;
-    public Sprite halfway;
-    public Sprite open;
-
-    public GameObject LiftTarget; // Where the elevator takes the player
-    public float liftDelay = 3f;
+    public Sprite closedSprite;
+    public Sprite halfOpenSprite;
+    public Sprite openSprite;
+    public Transform liftTarget;
 
     private GameObject playerInRange = null;
-    private bool isUsingElevator = false;
 
-    private void Start()
+    void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
-        sr.sprite = closed;
-    }
-
-    private void Update()
-    {
-        if (playerInRange != null && !isUsingElevator && Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(UseElevator());
-        }
+        if (sr == null) sr = GetComponent<SpriteRenderer>();
+        sr.sprite = closedSprite;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,7 +23,7 @@ public class Lift : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = other.gameObject;
-            sr.sprite = open;
+            sr.sprite = halfOpenSprite;
         }
     }
 
@@ -43,35 +32,36 @@ public class Lift : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = null;
-            sr.sprite = closed;
+            sr.sprite = closedSprite;
         }
     }
 
-    private IEnumerator UseElevator()
+    public bool IsPlayerInRange()
     {
-        isUsingElevator = true;
-
-        sr.sprite = open;
-
-        // Optional: play elevator sound here
-        SoundEffectManager.Play("ElevatorStart");
-
-        yield return new WaitForSeconds(liftDelay);
-
-        if (playerInRange != null)
-            playerInRange.transform.position = LiftTarget.transform.position;
-
-        yield return new WaitForSeconds(0.2f); // small delay before enabling movement again
-
-        sr.sprite = closed;
-        isUsingElevator = false;
+        return playerInRange != null;
     }
 
-    private IEnumerator AnimateDoorOpening()
-{
-    sr.sprite = halfway;
-    yield return new WaitForSeconds(0.2f);
-    sr.sprite = open;
-}
+    public IEnumerator TeleportPlayer(GameObject player)
+    {
+        if (sr != null)
+            sr.sprite = halfOpenSprite;
+
+        SoundEffectManager.Play("Lift");
+
+        yield return new WaitForSeconds(1f);
+
+        if (sr != null)
+            sr.sprite = openSprite;
+
+        yield return new WaitForSeconds(1f);
+
+        if (player != null && liftTarget != null)
+            player.transform.position = liftTarget.position;
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (sr != null)
+            sr.sprite = closedSprite;
+    }
 }
 
