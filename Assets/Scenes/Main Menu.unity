@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: 84d000005ae4a2c43924e2d9c0364b9e, type: 3}
-  secondBackgroundMusic: {fileID: 0}
+  secondBackgroundMusic: {fileID: 8300000, guid: 57d5a120d7120d54c806564bf7dc1c45, type: 3}
 --- !u!4 &5756888091978930029
 Transform:
   m_ObjectHideFlags: 0

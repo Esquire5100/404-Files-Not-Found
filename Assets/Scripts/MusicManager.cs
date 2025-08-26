@@ -7,70 +7,68 @@ public class MusicManager : MonoBehaviour
 {
     private static MusicManager Instance;
     private AudioSource audioSource;
-    public AudioClip backgroundMusic;
-
-    private AudioSource audioSource2;
-    public AudioClip secondBackgroundMusic;
+    public AudioClip backgroundMusic; // Main Menu
+    public AudioClip secondBackgroundMusic; // In-game
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
             audioSource = GetComponent<AudioSource>();
 
-            if (backgroundMusic != null)
-            {
-                audioSource.clip = backgroundMusic;
-                audioSource.volume = audioSource.volume > 0 ? audioSource.volume : 1f;
-                audioSource.pitch = audioSource.pitch != 0 ? audioSource.pitch : 1f;
-                audioSource.Play();
-            }
+            SceneManager.sceneLoaded += OnSceneLoaded; // Hook into scene load
+
+            PlayMusicForScene(SceneManager.GetActiveScene().name); // Play music for the current scene
         }
-        else if (Instance != this)
+        else
         {
             Destroy(gameObject);
         }
+    }
 
-        audioSource2 = gameObject.AddComponent<AudioSource>();
-    }
-    void Start()
+    void OnDestroy()
     {
-        if(backgroundMusic != null)
-        {
-            PlayBackgroundMusic(false, backgroundMusic);
-        }
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe to prevent memory leaks
     }
-    
-    public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(audioClip != null)
+        PlayMusicForScene(scene.name);
+    }
+
+    void PlayMusicForScene(string sceneName)
+    {
+        if (sceneName == "Main Menu")
         {
-            audioSource.clip = audioClip;
+            SwitchMusic(backgroundMusic);
         }
-        else if(audioSource != null)
+        else
         {
-            if(resetSong)
-            {
-                audioSource.Stop();
-            }
-            audioSource.Play();
+            SwitchMusic(secondBackgroundMusic);
         }
     }
 
-    public void PausedBackgroundMusic()
+    void SwitchMusic(AudioClip clip)
+    {
+        if (audioSource.clip == clip)
+            return; // Don't restart if it's already playing this clip
+
+        audioSource.Stop();
+        audioSource.clip = clip;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    public void PauseBackgroundMusic()
     {
         audioSource.Pause();
     }
 
-    public void PlaySecondMusic()
+    public void ResumeBackgroundMusic()
     {
-        if (secondBackgroundMusic != null)
-        {
-            audioSource2.clip = secondBackgroundMusic;
-            audioSource2.loop = false;
-            audioSource2.Play();
-        }
+        if (!audioSource.isPlaying)
+            audioSource.Play();
     }
 }
