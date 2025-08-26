@@ -547,8 +547,22 @@ public class Scottie_Controller : MonoBehaviour
         }
 
         Debug.Log("Using lift...");
-        StartCoroutine(currentLift.TeleportPlayer(gameObject));
+        currentLift.UseLift(gameObject, sr);
+        SoundEffectManager.Play("Lift");
     }
+
+    private IEnumerator LiftSequence()
+    {
+        // Animate lift doors and teleport player
+        yield return StartCoroutine(currentLift.AnimateLiftAndTeleport(gameObject, sr));
+
+        // Restore Scottie's sorting order after teleport and animation
+        sr.sortingOrder = 10; // or whatever is the normal front sorting order
+
+        // Enable player movement again
+        canMove = true;
+    }
+
 
     /*private IEnumerator UseLiftRoutine()
     {
