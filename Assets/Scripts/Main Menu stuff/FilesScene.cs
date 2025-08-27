@@ -11,10 +11,8 @@ public class FilesScene : MonoBehaviour
     public GameObject Scottie;
     public GameObject Security;
 
-    public GameObject Keycard;
     public GameObject Hacking;
     public GameObject Flashbang;
-    public GameObject NightMode;
 
     //Buttons
     public GameObject btnPhiona;
@@ -22,11 +20,9 @@ public class FilesScene : MonoBehaviour
     public GameObject btnScottie;
 
     public GameObject btnSecurity;
-    public GameObject btnKeycard;
     public GameObject btnHacking;
 
     public GameObject btnFlashbang;
-    public GameObject btnNightMode;
 
     void Start()
     {
@@ -43,14 +39,8 @@ public class FilesScene : MonoBehaviour
         if (!FileProgressTracker.HasCompletedLevel("Level 1"))
         {
             btnFlashbang.SetActive(false);
-            btnKeycard.SetActive(false);
             btnHacking.SetActive(false);
             btnSecurity.SetActive(false);
-        }
-
-        if (!FileProgressTracker.HasCompletedLevel("Level 2"))
-        {
-            btnNightMode.SetActive(false);
         }
 
         //Unlock based on total file count
@@ -59,6 +49,9 @@ public class FilesScene : MonoBehaviour
         if (totalFiles > 5) btnPhiona.SetActive(true);
         if (totalFiles > 6) btnDialer.SetActive(true);
         if (totalFiles > 7) btnScottie.SetActive(true);
+        if (totalFiles > 8) btnSecurity.SetActive(true);
+        if (totalFiles > 9) btnHacking.SetActive(true);
+        if (totalFiles > 10) btnFlashbang.SetActive(true);
     }
 
     // Update is called once per frame
@@ -73,10 +66,8 @@ public class FilesScene : MonoBehaviour
         Dialer.SetActive(false);
         Scottie.SetActive(false);
         Security.SetActive(false);
-        Keycard.SetActive(false);
         Hacking.SetActive(false);
         Flashbang.SetActive(false);
-        NightMode.SetActive(false);
 
         switch (buttonName)
         {
@@ -93,17 +84,11 @@ public class FilesScene : MonoBehaviour
                 Security.SetActive(true);
                 break;
 
-            case "Keycard":
-                Keycard.SetActive(true);
-                break;
             case "Hacking":
                 Hacking.SetActive(true);
                 break;
             case "Flashbang":
                 Flashbang.SetActive(true);
-                break;
-            case "NightMode":
-                NightMode.SetActive(true);
                 break;
             default:
                 Debug.LogWarning("Invalid page name: " + buttonName);

@@ -1481,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hiding Plant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.58
@@ -1634,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hiding Plant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.95
@@ -1747,6 +1755,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.89
       objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1506046423
+      objectReference: {fileID: 0}
     - target: {fileID: 8787764646342139907, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_Name
       value: Stairs (8)
@@ -1819,6 +1835,14 @@ PrefabInstance:
     - target: {fileID: 3200536856260779684, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1506046423
       objectReference: {fileID: 0}
     - target: {fileID: 8787764646342139907, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_Name
@@ -2240,6 +2264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hiding Plant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.03
@@ -2296,6 +2324,10 @@ PrefabInstance:
     - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_Name
       value: Hiding Plant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3543,8 +3575,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 927443198}
     - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1506046423
       objectReference: {fileID: 0}
     - target: {fileID: 8787764646342139907, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_Name
@@ -4520,9 +4560,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 476781627142353841, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_Name
       value: Hiding Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4585,6 +4633,10 @@ PrefabInstance:
     - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_Name
       value: Hiding Plant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4982,8 +5034,16 @@ PrefabInstance:
       value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1506046423
       objectReference: {fileID: 0}
     - target: {fileID: 8787764646342139907, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_Name
@@ -6265,6 +6325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hiding Plant (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.86
@@ -6354,6 +6418,10 @@ PrefabInstance:
     - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_Name
       value: Hiding Plant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6653,6 +6721,14 @@ PrefabInstance:
     - target: {fileID: 3200536856260779684, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388172432966646971, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1506046423
       objectReference: {fileID: 0}
     - target: {fileID: 8787764646342139907, guid: 6f22e15125ecf65439895887446d7e0e, type: 3}
       propertyPath: m_Name
@@ -7011,7 +7087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1662038436
 Transform:
   m_ObjectHideFlags: 0
@@ -9234,6 +9310,10 @@ PrefabInstance:
     - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_Name
       value: Hiding Plant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335864548079358376, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6981296877726515703, guid: f3f30ed418c5c5c42997e91cfd74736f, type: 3}
       propertyPath: m_LocalPosition.x

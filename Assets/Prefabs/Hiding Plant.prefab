@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571079918823258092, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
+      propertyPath: zoneIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 571079918823258092, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
+      propertyPath: targetRenderer
+      value: 
+      objectReference: {fileID: 8878435696642846528}
     - target: {fileID: 3891326357522327831, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.566
@@ -26,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.1953125
+      value: 1.8320312
       objectReference: {fileID: 0}
     - target: {fileID: 5413090154896966581, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.4570312
+      value: 2.7734375
       objectReference: {fileID: 0}
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Size.x
@@ -43,18 +51,18 @@ PrefabInstance:
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -96068401, guid: 1c0078ff58cfe9545ac901caf71e2755, type: 3}
+      objectReference: {fileID: -1326024885, guid: 7af6a9c96eacdce49ba5d6252dded6ce, type: 3}
     - target: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.957532
+      value: -2.990615
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0002604
+      value: -3.5911205
       objectReference: {fileID: 0}
     - target: {fileID: 6088680337790978262, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7165325118389082249, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
       propertyPath: m_Name
-      value: Hiding Plant Variant
+      value: Hiding Plant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -99,3 +107,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
+--- !u!212 &8878435696642846528 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5740770379296302689, guid: 38468b462aff3f244bfc6151b8e7115d, type: 3}
+  m_PrefabInstance: {fileID: 3791426187474045217}
+  m_PrefabAsset: {fileID: 0}
