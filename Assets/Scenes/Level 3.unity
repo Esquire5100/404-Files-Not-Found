@@ -8276,7 +8276,7 @@ GameObject:
   - component: {fileID: 1046849522}
   - component: {fileID: 1046849521}
   m_Layer: 0
-  m_Name: FG_Props_Windows_Lights_25
+  m_Name: DialerWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8390,7 +8390,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 916578221
+  m_SortingLayerID: 1210046703
   m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1055400425, guid: fce259d25c1c32444bc1a241db800739, type: 3}
@@ -8802,7 +8802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1136078517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12380,11 +12380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4458398032024032141, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.02
+      value: -4.51
       objectReference: {fileID: 0}
     - target: {fileID: 4458398032024032141, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.46
+      value: 27.73
       objectReference: {fileID: 0}
     - target: {fileID: 5075050081338716860, guid: e04a332b051d36e42a9ade621c696a3d, type: 3}
       propertyPath: m_AnchoredPosition.x
