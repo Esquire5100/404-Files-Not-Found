@@ -7,8 +7,14 @@ public class MusicManager : MonoBehaviour
 {
     private static MusicManager Instance;
     private AudioSource audioSource;
-    public AudioClip backgroundMusic; // Main Menu
-    public AudioClip secondBackgroundMusic; // In-game
+
+    public AudioClip backgroundMusic;        // For Main Menu, Settings, Credits, Files
+    public AudioClip secondBackgroundMusic;  // For in-game scenes
+
+    public AudioClip victoryYippie;          // Plays once at the start of victory
+    public AudioClip victoryCheerLoop;       // Loops after yippie
+
+    private Coroutine victoryCoroutine;      // To prevent overlapping coroutines
 
     private void Awake()
     {
@@ -18,9 +24,11 @@ public class MusicManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             audioSource = GetComponent<AudioSource>();
 
-            SceneManager.sceneLoaded += OnSceneLoaded; // Hook into scene load
+            // Subscribe to scene loaded callback
+            SceneManager.sceneLoaded += OnSceneLoaded;
 
-            PlayMusicForScene(SceneManager.GetActiveScene().name); // Play music for the current scene
+            // Play music for the current scene
+            PlayMusicForScene(SceneManager.GetActiveScene().name);
         }
         else
         {
@@ -28,19 +36,34 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe to prevent memory leaks
+        // Unsubscribe to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         PlayMusicForScene(scene.name);
     }
 
     void PlayMusicForScene(string sceneName)
     {
-        if (sceneName == "Main Menu")
+        // Stop any running coroutine if switching scenes
+        if (victoryCoroutine != null)
+        {
+            StopCoroutine(victoryCoroutine);
+            victoryCoroutine = null;
+        }
+
+        if (sceneName == "Victory")
+        {
+            victoryCoroutine = StartCoroutine(PlayVictorySequence());
+        }
+        else if (sceneName == "Main Menu" ||
+                 sceneName == "Settings" ||
+                 sceneName == "Credits" ||
+                 sceneName == "Files")
         {
             SwitchMusic(backgroundMusic);
         }
@@ -48,6 +71,24 @@ public class MusicManager : MonoBehaviour
         {
             SwitchMusic(secondBackgroundMusic);
         }
+    }
+
+    IEnumerator PlayVictorySequence()
+    {
+        // Stop any currently playing music
+        audioSource.Stop();
+        audioSource.loop = false;
+
+        // Play one-shot Yippie
+        audioSource.PlayOneShot(victoryYippie);
+
+        // Wait for it to finish
+        yield return new WaitForSeconds(victoryYippie.length);
+
+        // Now play the looping cheering audio
+        audioSource.clip = victoryCheerLoop;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 
     void SwitchMusic(AudioClip clip)

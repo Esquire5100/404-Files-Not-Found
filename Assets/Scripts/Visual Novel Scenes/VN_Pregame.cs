@@ -266,11 +266,13 @@ public class VN_Pregame : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);                    //Wait until the text has finished 
 
         yield return new WaitForSeconds(0.5f);
+        
         eventPos = 4;
 
 
         if (eventPos == 4)
         {
+            yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene("Tutorial Dialogue");
         }
     }

@@ -471,12 +471,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254602484}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 882ce6dda0d7d894b9bf3eb62b78ccf1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04606dd0bfa39864f8e6af1fcf10a357, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.598
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -703,9 +703,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1201938386793634836, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201938386793634836, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
       propertyPath: m_Volume
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1201938386793634836, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 882ce6dda0d7d894b9bf3eb62b78ccf1, type: 3}
     - target: {fileID: 3510943877416753731, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2682.4983
@@ -747,13 +755,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4753993785987735127, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: victoryYippie
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753993785987735127, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
       propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 04606dd0bfa39864f8e6af1fcf10a357, type: 3}
+      objectReference: {fileID: 8300000, guid: 882ce6dda0d7d894b9bf3eb62b78ccf1, type: 3}
+    - target: {fileID: 4753993785987735127, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
+      propertyPath: victoryCheerLoop
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4753993785987735127, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
       propertyPath: secondBackgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 882ce6dda0d7d894b9bf3eb62b78ccf1, type: 3}
+      objectReference: {fileID: 8300000, guid: 04606dd0bfa39864f8e6af1fcf10a357, type: 3}
     - target: {fileID: 5355532261278434186, guid: 187b81ad4f0e89446af823d9ce5a44d6, type: 3}
       propertyPath: m_Name
       value: MusicManager
